@@ -2,6 +2,7 @@
 #include "MonsterStructures/energia.h"
 #include "MonsterStructures/maldad.h"
 #include "MonsterStructures/materia.h"
+#include "MonsterStructures/mounstro.h"
 #include "./ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
@@ -21,6 +22,7 @@ void MainWindow::on_button_test_clicked()
     Energia* energia = new Energia();
     Maldad* maldad = new Maldad();
     Materia* materia = new Materia();
-    qDebug() << energia -> type << " " << maldad -> type << " " << materia -> type;
+    Mounstro* mounstro = new Mounstro(energia -> type, materia -> type, maldad -> type);
+    qDebug() << mounstro -> type;
 }
 
