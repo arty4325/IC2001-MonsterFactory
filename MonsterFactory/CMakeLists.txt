@@ -27,6 +27,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MonsterStructures/materia.h
         MonsterStructures/maldad.h
         MonsterStructures/mounstro.h
+        DataStructures/cola.h
+        DataStructures/nodoCola.h
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET MonsterFactory APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

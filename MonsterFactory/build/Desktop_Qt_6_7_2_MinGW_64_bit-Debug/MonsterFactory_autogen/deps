@@ -516,6 +516,8 @@ MonsterFactory_autogen/timestamp: \
 	C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/CMakeLists.txt \
+	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/DataStructures/cola.h \
+	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/DataStructures/nodoCola.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/energia.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/maldad.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/materia.h \
