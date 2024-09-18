@@ -5,6 +5,7 @@
 #include "MonsterStructures/materia.h"
 #include "MonsterStructures/mounstro.h"
 #include "DataStructures/cola.h"
+#include "MonsterStructures/energythread.h"
 #include "./ui_mainwindow.h"
 Cola<Mounstro*>* cola = new Cola<Mounstro*>();
 
@@ -13,6 +14,10 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    EnergyThread* energyThread = new EnergyThread(1);
+    energyThread -> start();
+
 }
 
 MainWindow::~MainWindow()

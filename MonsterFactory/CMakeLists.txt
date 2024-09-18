@@ -29,6 +29,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MonsterStructures/mounstro.h
         DataStructures/cola.h
         DataStructures/nodoCola.h
+        MonsterStructures/energythread.h MonsterStructures/energythread.cpp
+
 
     )
 # Define target properties for Android with Qt 6 as:
