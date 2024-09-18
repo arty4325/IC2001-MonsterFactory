@@ -30,6 +30,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         DataStructures/cola.h
         DataStructures/nodoCola.h
         MonsterStructures/energythread.h MonsterStructures/energythread.cpp
+        MonsterStructures/maldadthread.h MonsterStructures/maldadthread.cpp
+        MonsterStructures/materiathread.h MonsterStructures/materiathread.cpp
 
 
     )

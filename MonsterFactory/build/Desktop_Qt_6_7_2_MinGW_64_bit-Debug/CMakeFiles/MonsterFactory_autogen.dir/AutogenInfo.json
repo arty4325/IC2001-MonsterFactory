@@ -287,9 +287,21 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/maldadthread.h",
+			"MU",
+			"HWUM2FTQIN/moc_maldadthread.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/materia.h",
 			"MU",
 			"HWUM2FTQIN/moc_materia.cpp",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/materiathread.h",
+			"MU",
+			"HWUM2FTQIN/moc_materiathread.cpp",
 			null
 		],
 		[
@@ -378,6 +390,16 @@
 	[
 		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/energythread.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/maldadthread.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/materiathread.cpp",
 			"MU",
 			null
 		],
