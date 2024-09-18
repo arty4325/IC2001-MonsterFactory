@@ -4,8 +4,9 @@
 
 MateriaThread::MateriaThread() {}
 
-MateriaThread::MateriaThread(int sleepTime) {
+MateriaThread::MateriaThread(int sleepTime, Cola<Materia*>* cola) {
     this->sleepTime = sleepTime;
+    this->cola = cola;
     this->running = true;
 }
 
@@ -21,8 +22,9 @@ void MateriaThread::run()
                 continue;
             }
             QThread::sleep(1);
-            Materia* materia = new Materia();
-            qDebug() << materia -> type;
+            Materia* energia = new Materia();
+            cola ->push(energia);
+            //qDebug() << energia -> type;
         }
     }
 }

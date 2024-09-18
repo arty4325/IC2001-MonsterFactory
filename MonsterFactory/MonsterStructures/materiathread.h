@@ -5,18 +5,20 @@
 #include <QRandomGenerator>
 #include <QString>
 #include <QLabel>
-
+#include "materia.h"
+#include "../DataStructures/cola.h"
 
 class MateriaThread : public QThread
 {
 public:
     MateriaThread();
-    MateriaThread(int sleepTime);
+    MateriaThread(int sleepTime, Cola<Materia*>* cola);
 
     void run();
 private:
     bool running;
     int sleepTime;
+    Cola<Materia*>* cola;
 };
 
 #endif // MATERIATHREAD_H

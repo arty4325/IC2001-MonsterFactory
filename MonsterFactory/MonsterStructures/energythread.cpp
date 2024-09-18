@@ -1,10 +1,12 @@
 #include "energythread.h"
 #include "energia.h"
+#include "../DataStructures/cola.h"
 
 EnergyThread::EnergyThread() {}
 
-EnergyThread::EnergyThread(int sleepTime) {
+EnergyThread::EnergyThread(int sleepTime, Cola<Energia*>* cola) {
     this->sleepTime = sleepTime;
+    this->cola = cola;
     this->running = true;
 }
 
@@ -21,7 +23,8 @@ void EnergyThread::run()
             }
             QThread::sleep(1);
             Energia* energia = new Energia();
-            qDebug() << energia -> type;
+            cola ->push(energia);
+            //qDebug() << energia -> type;
         }
     }
 }

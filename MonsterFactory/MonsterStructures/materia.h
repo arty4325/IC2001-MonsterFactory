@@ -5,6 +5,7 @@
 #include<QObject>
 #include <QRandomGenerator>
 
+
 class Materia
 {
 public:

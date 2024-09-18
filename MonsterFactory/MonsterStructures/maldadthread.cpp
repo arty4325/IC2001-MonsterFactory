@@ -3,8 +3,9 @@
 
 MaldadThread::MaldadThread() {}
 
-MaldadThread::MaldadThread(int sleepTime) {
+MaldadThread::MaldadThread(int sleepTime, Cola<Maldad*>* cola) {
     this->sleepTime = sleepTime;
+    this->cola = cola;
     this->running = true;
 }
 
@@ -20,8 +21,9 @@ void MaldadThread::run()
                 continue;
             }
             QThread::sleep(1);
-            Maldad* maldad = new Maldad();
-            qDebug() << maldad -> type;
+            Maldad* energia = new Maldad();
+            cola ->push(energia);
+            //qDebug() << energia -> type;
         }
     }
 }

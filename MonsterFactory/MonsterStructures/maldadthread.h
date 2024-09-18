@@ -6,18 +6,21 @@
 #include <QRandomGenerator>
 #include <QString>
 #include <QLabel>
+#include "maldad.h"
+#include "../DataStructures/cola.h"
 
 
 class MaldadThread : public QThread
 {
 public:
     MaldadThread();
-    MaldadThread(int sleepTime);
+    MaldadThread(int sleepTime, Cola<Maldad*>* cola);
 
     void run();
 private:
     bool running;
     int sleepTime;
+    Cola<Maldad*>* cola;
 };
 
 #endif // MALDADTHREAD_H

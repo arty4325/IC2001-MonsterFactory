@@ -11,19 +11,24 @@
 #include "./ui_mainwindow.h"
 Cola<Mounstro*>* cola = new Cola<Mounstro*>();
 
+// Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
+Cola<Energia*>* colaEnergia = new Cola<Energia*>();
+Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
+Cola<Materia*>* colaMateria = new Cola<Materia*>();
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    EnergyThread* energyThread = new EnergyThread(1);
+    EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
     energyThread -> start();
 
-    MaldadThread* maldadThread = new MaldadThread(1);
+    MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
     maldadThread -> start();
 
-    MateriaThread* materiaThread = new MateriaThread(1);
+    MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
     materiaThread -> start();
 
 }
@@ -47,8 +52,10 @@ void MainWindow::on_button_test_clicked()
 
 void MainWindow::on_pushButton_clicked()
 {
-    if(!(cola -> isEmpty())){
-    qDebug() << cola -> pop() -> data -> type;
+    if(!(colaEnergia -> isEmpty() && colaMaldad -> isEmpty() && colaMateria -> isEmpty())){
+    qDebug() << colaEnergia -> pop() -> data -> type;
+    qDebug() << colaMaldad -> pop() -> data -> type;
+    qDebug() << colaMateria -> pop() -> data -> type;
     } else {
         qDebug() << "Funciono";
     }
