@@ -32,6 +32,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MonsterStructures/energythread.h MonsterStructures/energythread.cpp
         MonsterStructures/maldadthread.h MonsterStructures/maldadthread.cpp
         MonsterStructures/materiathread.h MonsterStructures/materiathread.cpp
+        Etapas/combinador.h Etapas/combinador.cpp
 
 
     )

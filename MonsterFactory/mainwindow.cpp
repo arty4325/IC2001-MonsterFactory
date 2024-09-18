@@ -8,13 +8,14 @@
 #include "MonsterStructures/energythread.h"
 #include "MonsterStructures/maldadthread.h"
 #include "MonsterStructures/materiathread.h"
+#include "Etapas/combinador.h"
 #include "./ui_mainwindow.h"
-Cola<Mounstro*>* cola = new Cola<Mounstro*>();
 
 // Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
 Cola<Energia*>* colaEnergia = new Cola<Energia*>();
 Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
 Cola<Materia*>* colaMateria = new Cola<Materia*>();
+Cola<Mounstro*>* colaMounstros = new Cola<Mounstro*>();
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -31,6 +32,8 @@ MainWindow::MainWindow(QWidget *parent)
     MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
     materiaThread -> start();
 
+    Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
+    combinador -> start();
 }
 
 MainWindow::~MainWindow()
@@ -45,7 +48,7 @@ void MainWindow::on_button_test_clicked()
     Maldad* maldad = new Maldad();
     Materia* materia = new Materia();
     Mounstro* mounstro = new Mounstro(energia -> type, materia -> type, maldad -> type);
-    cola->push(mounstro);
+    colaMounstros->push(mounstro);
     qDebug() << mounstro -> type;
 }
 
