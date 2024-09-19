@@ -15,6 +15,7 @@ class MaldadThread : public QThread
 public:
     MaldadThread();
     MaldadThread(int sleepTime, Cola<Maldad*>* cola);
+    void changeTime(int time);
 
     void run();
 private:

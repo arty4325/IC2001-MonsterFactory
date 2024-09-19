@@ -16,6 +16,10 @@ Cola<Energia*>* colaEnergia = new Cola<Energia*>();
 Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
 Cola<Materia*>* colaMateria = new Cola<Materia*>();
 Cola<Mounstro*>* colaMounstros = new Cola<Mounstro*>();
+EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
+MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
+MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
+Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -23,16 +27,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
     energyThread -> start();
-
-    MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
     maldadThread -> start();
-
-    MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
     materiaThread -> start();
-
-    Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
     combinador -> start();
 }
 
@@ -41,26 +38,25 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_button_test_clicked()
-{
 
-    Energia* energia = new Energia();
-    Maldad* maldad = new Maldad();
-    Materia* materia = new Materia();
-    Mounstro* mounstro = new Mounstro(energia -> type, materia -> type, maldad -> type);
-    colaMounstros->push(mounstro);
-    qDebug() << mounstro -> type;
+
+void MainWindow::on_maldadSpinBox_valueChanged(int arg1)
+{
+    qDebug() << arg1;
+    maldadThread -> changeTime(arg1);
 }
 
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_materiaSpinBox_valueChanged(int arg1)
 {
-    if(!(colaEnergia -> isEmpty() && colaMaldad -> isEmpty() && colaMateria -> isEmpty())){
-    qDebug() << colaEnergia -> pop() -> data -> type;
-    qDebug() << colaMaldad -> pop() -> data -> type;
-    qDebug() << colaMateria -> pop() -> data -> type;
-    } else {
-        qDebug() << "Funciono";
-    }
+    qDebug() << arg1;
+    materiaThread -> changeTime(arg1);
+}
+
+
+void MainWindow::on_energiaSpinBox_valueChanged(int arg1)
+{
+    qDebug() << arg1;
+    energyThread -> changeTime(arg1);
 }
 

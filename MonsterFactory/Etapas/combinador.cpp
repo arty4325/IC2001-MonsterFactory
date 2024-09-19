@@ -14,27 +14,33 @@ Combinador::Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros ,Cola<Energi
 
 void Combinador::run()
 {
-    this -> running = true;
-    while(true){
+    this->running = true;
+    while (true) {
         int secondsLeft = this->sleepTime;
-        while(secondsLeft > 0){
-            if(!this->running)
-            {
+
+        while (secondsLeft > 0) {
+            if (!this->running) {
                 QThread::sleep(1);
                 continue;
             }
-            QThread::sleep(1);
-            if(!(colaEnergia -> isEmpty() && colaMaldad -> isEmpty() && colaMateria -> isEmpty())){
-                QString energia = this->colaEnergia -> pop() ->data -> type;
-                QString maldad = this->colaMaldad -> pop() ->data ->type;
-                QString materia = this->colaMateria -> pop() -> data -> type;
-                Mounstro* mounstro = new Mounstro(energia, materia, maldad);
-                qDebug() << energia << " " << materia << " " << maldad;
-                qDebug() << mounstro -> type;
-            } else {
-                qDebug() << "Funciono";
-            }
 
+            QThread::sleep(1);
+            secondsLeft--;
+
+            if (!colaEnergia->isEmpty() && !colaMaldad->isEmpty() && !colaMateria->isEmpty()) {
+
+                QString energia = this->colaEnergia->pop()->data->type;
+                QString maldad = this->colaMaldad->pop()->data->type;
+                QString materia = this->colaMateria->pop()->data->type;
+
+                Mounstro* mounstro = new Mounstro(energia, materia, maldad);
+                this->colaMounstros->push(mounstro);
+
+                qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro -> type;
+            } else {
+                qDebug() << "No hay suficientes elementos en las colas para combinar.";
+            }
         }
     }
 }
+

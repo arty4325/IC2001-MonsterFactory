@@ -13,6 +13,7 @@ class EnergyThread : public QThread
 public:
     EnergyThread();
     EnergyThread(int sleepTime, Cola<Energia*>* cola);
+    void changeTime(int time);
 
     void run();
 private:

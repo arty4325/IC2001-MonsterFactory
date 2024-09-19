@@ -1,70 +1,45 @@
 # ninja log v6
-9	136	7483307877672344	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-9	136	7483307877672344	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-140	3330	7483307878982881	CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj	c24a19b1c70e7d9a
-693	2428	7482471408380018	CMakeFiles/MonsterFactory.dir/MonsterFactory_autogen/mocs_compilation.cpp.obj	c5b1fd3982902938
-9	136	7483307877672344	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-9	136	7483307877672344	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-698	2439	7482471408430751	CMakeFiles/MonsterFactory.dir/main.cpp.obj	37a5382f35c16771
-136	3326	7483307878942907	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-3368	3548	7483307911254041	MonsterFactory.exe	aa4934699a9c73ab
-143	3443	7483302207859189	CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj	85e7267b61c57d81
-143	3368	7483307879012902	CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj	2abbd8c76d57e3f4
-340	1211	7483343935404170	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-340	1211	7483343935404170	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-340	1211	7483343935404170	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-340	1211	7483343935404170	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-1213	6814	7483343944129632	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-32	151	7483345544060059	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-32	151	7483345544060059	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-32	151	7483345544060059	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-32	151	7483345544060059	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-151	2475	7483345545250089	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-31	156	7483346690834639	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-31	156	7483346690834639	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-31	156	7483346690834639	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-31	156	7483346690834639	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-157	2786	7483346692089442	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-41	165	7483348127285042	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-41	165	7483348127285042	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-41	165	7483348127285042	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-41	165	7483348127285042	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-166	3034	7483348128524874	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-31	186	7483348760365099	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-31	186	7483348760365099	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-31	186	7483348760365099	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-31	186	7483348760365099	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-196	5147	7483348762019695	CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj	c24a19b1c70e7d9a
-203	5170	7483348762089704	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
-192	5236	7483348761979701	CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj	85e7267b61c57d81
-187	5335	7483348761929733	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-199	5414	7483348762049716	CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj	2abbd8c76d57e3f4
-5414	5878	7483348814205693	MonsterFactory.exe	383455adc3b0e2ce
-26	144	7483349415457468	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-26	144	7483349415457468	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-26	144	7483349415457468	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-26	144	7483349415457468	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-148	2836	7483349416678535	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
-145	2924	7483349416648467	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-2924	3124	7483349444441832	MonsterFactory.exe	383455adc3b0e2ce
-14	136	7483350581172426	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-14	136	7483350581172426	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-14	136	7483350581172426	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-14	136	7483350581172426	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-140	2783	7483350582436608	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
-137	2904	7483350582406638	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-2904	3107	7483350610082156	MonsterFactory.exe	383455adc3b0e2ce
-38	161	7483352515280869	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-38	161	7483352515280869	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-38	161	7483352515280869	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-38	161	7483352515280869	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-164	2930	7483352516540881	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
-161	3019	7483352516510870	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-3019	3232	7483352545086702	MonsterFactory.exe	383455adc3b0e2ce
-33	152	7483353307902952	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-33	152	7483353307902952	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-33	152	7483353307902952	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
-33	152	7483353307902952	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
-153	2932	7483353309102069	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
-156	2940	7483353309132204	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
-2940	3142	7483353336972140	MonsterFactory.exe	383455adc3b0e2ce
+30	165	7484181498693876	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+30	165	7484181498693876	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+168	3249	7484181500083917	CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj	c24a19b1c70e7d9a
+22	1124	7484164119084851	CMakeFiles/MonsterFactory.dir/MonsterFactory_autogen/mocs_compilation.cpp.obj	c5b1fd3982902938
+30	165	7484181498693876	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+30	165	7484181498693876	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+548	2215	7484157703926848	CMakeFiles/MonsterFactory.dir/main.cpp.obj	37a5382f35c16771
+166	3423	7484181500053931	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
+3424	3652	7484181532639759	MonsterFactory.exe	383455adc3b0e2ce
+154	2935	7484174350813890	CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj	85e7267b61c57d81
+171	3267	7484181500113926	CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj	2abbd8c76d57e3f4
+175	3305	7484181500153917	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
+28	147	7484182674884346	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+28	147	7484182674884346	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+28	147	7484182674884346	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+28	147	7484182674884346	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+154	3237	7484182676145215	CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj	c24a19b1c70e7d9a
+157	3323	7484182676185207	CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj	2abbd8c76d57e3f4
+151	3391	7484182676115208	CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj	85e7267b61c57d81
+148	3478	7484182676095219	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
+3478	3684	7484182709394838	MonsterFactory.exe	383455adc3b0e2ce
+28	602	7484183260621482	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+28	602	7484183260621482	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+28	602	7484183260621482	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+28	602	7484183260621482	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+610	5036	7484183266443138	CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj	c24a19b1c70e7d9a
+614	5088	7484183266483125	CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj	2abbd8c76d57e3f4
+607	5302	7484183266403118	CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj	85e7267b61c57d81
+603	5438	7484183266363147	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
+5439	5648	7484183314731234	MonsterFactory.exe	383455adc3b0e2ce
+21	157	7484183620456021	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+21	157	7484183620456021	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+21	157	7484183620456021	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+21	157	7484183620456021	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+160	2914	7484183621851687	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
+158	3138	7484183621821651	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
+3138	3347	7484183651635709	MonsterFactory.exe	383455adc3b0e2ce
+34	175	7484185589482944	MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+34	175	7484185589482944	MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+34	175	7484185589482944	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/timestamp	cea9ade4b60cbc57
+34	175	7484185589482944	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/mocs_compilation.cpp	cea9ade4b60cbc57
+179	3079	7484185590927438	CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj	546db266cd0434dc
+176	3149	7484185590897427	CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj	2647df7b6b42d466
+3149	3381	7484185620621749	MonsterFactory.exe	383455adc3b0e2ce

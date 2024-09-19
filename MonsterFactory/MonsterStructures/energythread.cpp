@@ -12,21 +12,28 @@ EnergyThread::EnergyThread(int sleepTime, Cola<Energia*>* cola) {
 
 void EnergyThread::run()
 {
-    this -> running = true;
-    while(true){
+    this->running = true;
+    while(true) {
         int secondsLeft = this->sleepTime;
-        while(secondsLeft > 0){
-            if(!this->running)
-            {
+
+        while (secondsLeft > 0) {
+            if (!this->running) {
                 QThread::sleep(1);
                 continue;
             }
             QThread::sleep(1);
-            Energia* energia = new Energia();
-            cola ->push(energia);
-            //qDebug() << energia -> type;
+            secondsLeft--;
         }
+
+        Energia* energia = new Energia();
+        cola->push(energia);
+        //qDebug() << energia->type;
     }
+}
+
+
+void EnergyThread::changeTime(int time){
+    this-> sleepTime = time;
 }
 
 

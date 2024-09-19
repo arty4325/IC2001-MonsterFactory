@@ -13,6 +13,7 @@ class MateriaThread : public QThread
 public:
     MateriaThread();
     MateriaThread(int sleepTime, Cola<Materia*>* cola);
+    void changeTime(int time);
 
     void run();
 private:
