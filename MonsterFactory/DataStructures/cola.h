@@ -27,6 +27,10 @@ public:
         ultimoNodo = nullptr;
     }
 
+    int getCantItems() {
+        return cantItems;
+    }
+
     bool isEmpty() const{
         if(cantItems == 0){
             return true;

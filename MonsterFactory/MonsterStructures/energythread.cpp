@@ -15,7 +15,7 @@ void EnergyThread::run()
     this->running = true;
     while(true) {
         int secondsLeft = this->sleepTime;
-
+        qDebug() << "Cant Items Mounstro: " << cola -> getCantItems();
         while (secondsLeft > 0) {
             if (!this->running) {
                 QThread::sleep(1);

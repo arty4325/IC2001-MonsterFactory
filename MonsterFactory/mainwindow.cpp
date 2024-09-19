@@ -38,14 +38,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-
 void MainWindow::on_maldadSpinBox_valueChanged(int arg1)
 {
     qDebug() << arg1;
     maldadThread -> changeTime(arg1);
 }
-
 
 void MainWindow::on_materiaSpinBox_valueChanged(int arg1)
 {
@@ -53,13 +50,11 @@ void MainWindow::on_materiaSpinBox_valueChanged(int arg1)
     materiaThread -> changeTime(arg1);
 }
 
-
 void MainWindow::on_energiaSpinBox_valueChanged(int arg1)
 {
     qDebug() << arg1;
     energyThread -> changeTime(arg1);
 }
-
 
 void MainWindow::on_combinadorSpinBox_valueChanged(int arg1)
 {
