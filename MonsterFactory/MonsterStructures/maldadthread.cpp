@@ -26,11 +26,22 @@ void MaldadThread::run()
 
         Maldad* maldad = new Maldad();
         cola->push(maldad);
-        //qDebug() << maldad->type;
+        qDebug() << maldad->type;
     }
 }
 
 void MaldadThread::changeTime(int time){
     this-> sleepTime = time;
 }
+
+void MaldadThread::stop(int val){
+    if(val == 2){
+        qDebug() << "Tengo que parar esta vara";
+        this->running = false;
+    } else {
+        qDebug() << "La tengo que reanudar";
+        this->running = true;
+    }
+}
+
 

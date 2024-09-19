@@ -14,6 +14,7 @@ public:
     MateriaThread();
     MateriaThread(int sleepTime, Cola<Materia*>* cola);
     void changeTime(int time);
+    void stop(int val);
 
     void run();
 private:

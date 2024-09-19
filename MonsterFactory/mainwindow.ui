@@ -432,6 +432,45 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>2</number>
       </property>
      </widget>
+     <widget class="QCheckBox" name="checkBox">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>60</y>
+        <width>88</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pausa</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_2">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>120</y>
+        <width>88</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pausa</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_3">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>180</y>
+        <width>88</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pausa</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>

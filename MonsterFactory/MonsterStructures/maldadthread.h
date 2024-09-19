@@ -16,6 +16,7 @@ public:
     MaldadThread();
     MaldadThread(int sleepTime, Cola<Maldad*>* cola);
     void changeTime(int time);
+    void stop(int val);
 
     void run();
 private:

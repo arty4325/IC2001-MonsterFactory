@@ -28,11 +28,22 @@ void MateriaThread::run()
 
         Materia* materia = new Materia();
         cola->push(materia);
-        //qDebug() << materia->type;
+        qDebug() << materia->type;
     }
 }
 
 
 void MateriaThread::changeTime(int time){
     this-> sleepTime = time;
+}
+
+
+void MateriaThread::stop(int val){
+    if(val == 2){
+        qDebug() << "Tengo que parar esta vara";
+        this->running = false;
+    } else {
+        qDebug() << "La tengo que reanudar";
+        this->running = true;
+    }
 }

@@ -62,3 +62,32 @@ void MainWindow::on_combinadorSpinBox_valueChanged(int arg1)
     combinador -> changeTime(arg1);
 }
 
+
+
+
+
+void MainWindow::on_checkBox_stateChanged(int arg1)
+{
+    // Pausa Energia
+    qDebug() << arg1;
+    energyThread->stop(arg1);
+}
+
+
+void MainWindow::on_checkBox_2_stateChanged(int arg1)
+{
+    // Pausa Materia
+    qDebug() << arg1;
+    materiaThread -> stop(arg1);
+
+}
+
+
+void MainWindow::on_checkBox_3_stateChanged(int arg1)
+{
+    // Pausa Maldad
+    qDebug() << arg1;
+    maldadThread -> stop(arg1);
+
+}
+
