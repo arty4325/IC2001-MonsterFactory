@@ -21,7 +21,7 @@ EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
 MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
 Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
-LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria);
+LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros);
 
 
 
@@ -40,6 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     materiaThread -> start();
     labelThread -> setMateriaLabel(ui->materiaLabel);
     combinador -> start();
+    labelThread -> setMounstroLabel(ui->mounstrosLabel);
     labelThread -> start();
 }
 
