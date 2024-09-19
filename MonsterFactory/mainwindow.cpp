@@ -99,3 +99,29 @@ void MainWindow::on_checkBox_4_stateChanged(int arg1)
     combinador -> stop(arg1);
 }
 
+
+void MainWindow::on_spinBox_valueChanged(int arg1)
+{
+    // Cambiar el tamaño de lista Energia
+    //qDebug() << (colaEnergia->getCantItems() > arg1) << " " << colaEnergia -> getCantItems() << " " << arg1;
+    colaEnergia->changeMax(arg1);
+
+}
+
+
+void MainWindow::on_spinBox_2_valueChanged(int arg1)
+{
+    // Cambiar el tamano de la lista materia
+    //qDebug() << (colaMateria->getCantItems() > arg1) << " " << colaMateria -> getCantItems() << " " << arg1;
+    colaMateria->changeMax(arg1);
+}
+
+
+void MainWindow::on_spinBox_3_valueChanged(int arg1)
+{
+    // Cambiar el tamano de la lista maldad
+    //qDebug() << (colaMaldad->getCantItems() > arg1) << " " << colaMaldad -> getCantItems() << " " << arg1;
+    colaMaldad->changeMax(arg1);
+
+}
+

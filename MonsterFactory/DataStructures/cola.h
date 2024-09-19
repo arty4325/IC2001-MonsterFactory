@@ -19,16 +19,31 @@ template <typename T>
 class Cola {
 public:
     int cantItems = 0;
+    int maxCant;
     nodoCola<T>* primerNodo = nullptr;
     nodoCola<T>* ultimoNodo = nullptr;
     Cola(){
         cantItems = 0;
+        maxCant = 20;
         primerNodo = nullptr;
         ultimoNodo = nullptr;
     }
 
     int getCantItems() {
         return cantItems;
+    }
+
+    bool getIsFull(){
+        return(!(cantItems <= maxCant));
+    }
+
+    void changeMax(int val){
+        if(val > cantItems){
+            maxCant = val;
+            qDebug() << "Se logro cambiar";
+        } else {
+            qDebug() << "No se permite este cambio";
+        }
     }
 
     bool isEmpty() const{
@@ -44,13 +59,17 @@ public:
         nodo->data = _data;
         nodo->next = nullptr;
 
-        if (isEmpty()) {
-            primerNodo = ultimoNodo = nodo;
+        if(cantItems <= maxCant){
+            if (isEmpty()) {
+                primerNodo = ultimoNodo = nodo;
+            } else {
+                ultimoNodo->next = nodo;
+                ultimoNodo = nodo;
+            }
+            cantItems += 1;
         } else {
-            ultimoNodo->next = nodo;
-            ultimoNodo = nodo;
+            //qDebug() << "La lista esta llena";
         }
-        cantItems += 1;
     }
 
     nodoCola<T>* pop() {

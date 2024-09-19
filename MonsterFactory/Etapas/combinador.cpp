@@ -29,7 +29,7 @@ void Combinador::run()
             Mounstro* mounstro = new Mounstro(energia, materia, maldad);
             this->colaMounstros->push(mounstro);
 
-            qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro->type;
+            qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro->type << " " << colaMounstros->getIsFull();
         } else {
             qDebug() << "No hay suficientes elementos en las colas para combinar.";
         }
