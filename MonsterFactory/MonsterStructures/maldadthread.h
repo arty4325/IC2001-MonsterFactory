@@ -17,12 +17,14 @@ public:
     MaldadThread(int sleepTime, Cola<Maldad*>* cola);
     void changeTime(int time);
     void stop(int val);
+    //void setLabel(QLabel* label);
 
     void run();
 private:
     bool running;
     int sleepTime;
     Cola<Maldad*>* cola;
+    //QLabel* queueLabel;
 };
 
 #endif // MALDADTHREAD_H

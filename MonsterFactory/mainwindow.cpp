@@ -9,6 +9,7 @@
 #include "MonsterStructures/maldadthread.h"
 #include "MonsterStructures/materiathread.h"
 #include "Etapas/combinador.h"
+#include "labelthread.h"
 #include "./ui_mainwindow.h"
 
 // Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
@@ -20,6 +21,8 @@ EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
 MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
 Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
+LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria);
+
 
 
 
@@ -29,10 +32,15 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     energyThread -> start();
-    energyThread -> setLabel(ui->energyLabel);
+    //energyThread -> setLabel(ui->energyLabel);
+    labelThread -> setEmergyLabel(ui->energyLabel);
     maldadThread -> start();
+    //maldadThread -> setLabel(ui->maldadLabel);
+    labelThread -> setMaldadLabel(ui->maldadLabel);
     materiaThread -> start();
+    labelThread -> setMateriaLabel(ui->materiaLabel);
     combinador -> start();
+    labelThread -> start();
 }
 
 MainWindow::~MainWindow()

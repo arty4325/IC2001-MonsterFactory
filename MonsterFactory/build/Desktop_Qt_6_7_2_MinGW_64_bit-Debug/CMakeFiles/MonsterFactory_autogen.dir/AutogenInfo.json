@@ -317,6 +317,12 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/labelthread.h",
+			"MU",
+			"EWIEGA46WW/moc_labelthread.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -411,6 +417,11 @@
 		],
 		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/materiathread.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/labelthread.cpp",
 			"MU",
 			null
 		],
