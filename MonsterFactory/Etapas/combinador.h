@@ -17,6 +17,7 @@ class Combinador : public QThread
 public:
     Combinador();
     Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros ,Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad ,Cola<Materia*>* colaMateria);
+    void changeTime(int time);
 
     void run();
 private:

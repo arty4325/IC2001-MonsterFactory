@@ -60,3 +60,10 @@ void MainWindow::on_energiaSpinBox_valueChanged(int arg1)
     energyThread -> changeTime(arg1);
 }
 
+
+void MainWindow::on_combinadorSpinBox_valueChanged(int arg1)
+{
+    qDebug() << arg1;
+    combinador -> changeTime(arg1);
+}
+

@@ -30,6 +30,10 @@ private slots:
 
     void on_energiaSpinBox_valueChanged(int arg1);
 
+    void on_materiaSpinBox_2_valueChanged(int arg1);
+
+    void on_combinadorSpinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };
