@@ -28,7 +28,7 @@ void MateriaThread::run()
 
         Materia* materia = new Materia();
         cola->push(materia);
-        qDebug() << materia->type;
+        //qDebug() << materia->type;
     }
 }
 

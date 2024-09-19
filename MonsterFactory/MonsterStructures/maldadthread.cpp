@@ -26,7 +26,7 @@ void MaldadThread::run()
 
         Maldad* maldad = new Maldad();
         cola->push(maldad);
-        qDebug() << maldad->type;
+        //qDebug() << maldad->type;
     }
 }
 

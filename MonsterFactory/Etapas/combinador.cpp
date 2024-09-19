@@ -29,9 +29,9 @@ void Combinador::run()
             Mounstro* mounstro = new Mounstro(energia, materia, maldad);
             this->colaMounstros->push(mounstro);
 
-            //qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro->type;
+            qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro->type;
         } else {
-            //qDebug() << "No hay suficientes elementos en las colas para combinar.";
+            qDebug() << "No hay suficientes elementos en las colas para combinar.";
         }
     }
 }
@@ -41,3 +41,12 @@ void Combinador::changeTime(int time){
     this-> sleepTime = time;
 }
 
+void Combinador::stop(int val){
+    if(val == 2){
+        qDebug() << "Tengo que parar esta vara";
+        this->running = false;
+    } else {
+        qDebug() << "La tengo que reanudar";
+        this->running = true;
+    }
+}

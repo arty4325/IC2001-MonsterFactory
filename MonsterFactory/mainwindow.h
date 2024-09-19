@@ -18,19 +18,12 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_button_test_clicked();
-
-    void on_pushButton_clicked();
-
-    void on_maldadSpinBox_valueChanged(double arg1);
 
     void on_maldadSpinBox_valueChanged(int arg1);
 
     void on_materiaSpinBox_valueChanged(int arg1);
 
     void on_energiaSpinBox_valueChanged(int arg1);
-
-    void on_materiaSpinBox_2_valueChanged(int arg1);
 
     void on_combinadorSpinBox_valueChanged(int arg1);
 
@@ -39,6 +32,8 @@ private slots:
     void on_checkBox_2_stateChanged(int arg1);
 
     void on_checkBox_3_stateChanged(int arg1);
+
+    void on_checkBox_4_stateChanged(int arg1);
 
 private:
     Ui::MainWindow *ui;

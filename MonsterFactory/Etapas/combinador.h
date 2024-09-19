@@ -18,6 +18,7 @@ public:
     Combinador();
     Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros ,Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad ,Cola<Materia*>* colaMateria);
     void changeTime(int time);
+    void stop(int val);
 
     void run();
 private:

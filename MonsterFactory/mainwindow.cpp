@@ -91,3 +91,11 @@ void MainWindow::on_checkBox_3_stateChanged(int arg1)
 
 }
 
+
+void MainWindow::on_checkBox_4_stateChanged(int arg1)
+{
+    // Pausa Combinador (Generador de Mounstros)
+    qDebug() << arg1;
+    combinador -> stop(arg1);
+}
+

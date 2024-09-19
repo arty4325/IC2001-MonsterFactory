@@ -26,7 +26,7 @@ void EnergyThread::run()
 
         Energia* energia = new Energia();
         cola->push(energia);
-        qDebug() << energia->type;
+        //qDebug() << energia->type;
     }
 }
 
