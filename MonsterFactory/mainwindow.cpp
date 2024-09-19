@@ -21,13 +21,15 @@ MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
 Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
 
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     energyThread -> start();
+    energyThread -> setLabel(ui->energyLabel);
     maldadThread -> start();
     materiaThread -> start();
     combinador -> start();
@@ -124,4 +126,7 @@ void MainWindow::on_spinBox_3_valueChanged(int arg1)
     colaMaldad->changeMax(arg1);
 
 }
+
+
+
 

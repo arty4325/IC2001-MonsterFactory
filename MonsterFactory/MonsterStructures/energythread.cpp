@@ -8,6 +8,7 @@ EnergyThread::EnergyThread(int sleepTime, Cola<Energia*>* cola) {
     this->sleepTime = sleepTime;
     this->cola = cola;
     this->running = true;
+    this->queueLabel;
 }
 
 void EnergyThread::run()
@@ -26,10 +27,16 @@ void EnergyThread::run()
 
         Energia* energia = new Energia();
         cola->push(energia);
+        QString maxItems = QString::number(cola->maxCant);
+        QString cantItems = QString::number(cola->getCantItems());
+        queueLabel -> setText("Size Cola: " + maxItems + " - " + "Cant Items Cola: " + cantItems);
         //qDebug() << energia->type;
     }
 }
 
+void EnergyThread::setLabel(QLabel* label){
+    this->queueLabel = label;
+}
 
 void EnergyThread::changeTime(int time){
     this-> sleepTime = time;

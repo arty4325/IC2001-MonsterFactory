@@ -41,6 +41,7 @@ private slots:
 
     void on_spinBox_3_valueChanged(int arg1);
 
+
 private:
     Ui::MainWindow *ui;
 };

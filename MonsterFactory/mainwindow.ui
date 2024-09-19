@@ -532,6 +532,45 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <number>20</number>
       </property>
      </widget>
+     <widget class="QLabel" name="energyLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>60</y>
+        <width>251</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>energyqueue</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="materiaLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>120</y>
+        <width>251</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>materiaqueue</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="maldadLabel">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>180</y>
+        <width>251</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>maldadqueue</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
