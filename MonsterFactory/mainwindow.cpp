@@ -33,7 +33,7 @@ Cola<Mounstro*>* segundaBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* terceraBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
 
-Horno* horno = new Horno(1, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
+Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
 
 
 
@@ -189,23 +189,27 @@ void MainWindow::on_bandeja4CheckBox_stateChanged(int arg1)
 void MainWindow::on_bandeja1SpinBox_valueChanged(int arg1)
 {
     // Cant items bandeja 1
+    horno -> changeMaxPrimeraBandeja(arg1);
 }
 
 
 void MainWindow::on_bandeja2SpinBox_valueChanged(int arg1)
 {
     // Cant items bandeja 2
+    horno -> changeMaxSegundaBandeja(arg1);
 }
 
 
 void MainWindow::on_bandeja3SpinBox_valueChanged(int arg1)
 {
     // Cant items bandeja 3
+    horno -> changeMaxTerceraBandeja(arg1);
 }
 
 
 void MainWindow::on_bandeja4SpinBox_valueChanged(int arg1)
 {
     // Cant items bandeja 4
+    horno -> changeMaxCuartaBandeja(arg1);
 }
 
