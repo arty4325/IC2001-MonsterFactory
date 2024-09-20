@@ -232,6 +232,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <height>249</height>
       </rect>
      </property>
+     <widget class="QLabel" name="basureroLabel">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>251</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>basureroqueue</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QScrollArea" name="scrollArea_9">

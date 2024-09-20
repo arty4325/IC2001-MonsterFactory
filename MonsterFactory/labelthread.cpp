@@ -2,13 +2,14 @@
 
 LabelThread::LabelThread() {}
 
-LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro) {
+LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->colaEnergia = colaEnergia;
     this->colaMaldad = colaMaldad;
     this->colaMateria = colaMateria;
     this->colaMounstro = colaMounstro;
+    this->basurero=basurero;
 }
 
 
@@ -41,6 +42,9 @@ void LabelThread::run()
         QString maxItemsMounstro = QString::number(colaMounstro->maxCant);
         QString cantItemsMounstro = QString::number(colaMounstro->getCantItems());
         mounstroLabel -> setText("Size Cola: " + maxItemsMounstro + " - " + "Cant Items Cola: " + cantItemsMounstro);
+
+        QString cantItemsBasurero = QString::number(basurero->cantItems);
+        basureroLabel -> setText("Cant Items Basurero: " + cantItemsBasurero);
         //qDebug() << "Deberia de cambiar los label" << colaEnergia ->cantItems << " " << colaEnergia -> maxCant;
         //qDebug() << materia->type;
     }
@@ -60,6 +64,10 @@ void LabelThread::setMateriaLabel(QLabel* label){
 
 void LabelThread::setMounstroLabel(QLabel* label){
     this->mounstroLabel = label;
+}
+
+void LabelThread::setBasureroLabel(QLabel* label){
+    this->basureroLabel = label;
 }
 
 

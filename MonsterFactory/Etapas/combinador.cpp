@@ -3,9 +3,10 @@
 
 Combinador::Combinador() {}
 
-Combinador::Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros ,Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad ,Cola<Materia*>* colaMateria) {
+Combinador::Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros, ListaOrdenada<Mounstro*>* basurero ,Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad ,Cola<Materia*>* colaMateria) {
     this->sleepTime = sleepTime;
     this->colaMounstros = colaMounstros;
+    this->basurero = basurero;
     this->colaEnergia = colaEnergia;
     this->colaMaldad = colaMaldad;
     this->colaMateria = colaMateria;
@@ -27,7 +28,13 @@ void Combinador::run()
             QString maldad = this->colaMaldad->pop()->data->type;
             QString materia = this->colaMateria->pop()->data->type;
             Mounstro* mounstro = new Mounstro(energia, materia, maldad);
-            this->colaMounstros->push(mounstro);
+            if(mounstro->type != "Bueno"){
+                this->colaMounstros->push(mounstro);
+            } else {
+                // Va para el basurero
+                this->basurero->incert(mounstro);
+                //qDebug() << "Items en basurero: " <<basurero ->cantItems;
+            }
 
             //qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro->type << " " << colaMounstros->getIsFull();
         } else {

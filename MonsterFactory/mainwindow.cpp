@@ -5,6 +5,7 @@
 #include "MonsterStructures/materia.h"
 #include "MonsterStructures/mounstro.h"
 #include "DataStructures/cola.h"
+#include "DataStructures/listaOrdenada.h"
 #include "MonsterStructures/energythread.h"
 #include "MonsterStructures/maldadthread.h"
 #include "MonsterStructures/materiathread.h"
@@ -12,16 +13,18 @@
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
 
+
 // Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
 Cola<Energia*>* colaEnergia = new Cola<Energia*>();
 Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
 Cola<Materia*>* colaMateria = new Cola<Materia*>();
 Cola<Mounstro*>* colaMounstros = new Cola<Mounstro*>();
+ListaOrdenada<Mounstro*>* basurero = new ListaOrdenada<Mounstro*>();
 EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
 MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
-Combinador* combinador = new Combinador(1, colaMounstros, colaEnergia, colaMaldad, colaMateria);
-LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros);
+Combinador* combinador = new Combinador(1, colaMounstros, basurero, colaEnergia, colaMaldad, colaMateria);
+LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero);
 
 
 
@@ -41,6 +44,7 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> setMateriaLabel(ui->materiaLabel);
     combinador -> start();
     labelThread -> setMounstroLabel(ui->mounstrosLabel);
+    labelThread -> setBasureroLabel(ui->basureroLabel);
     labelThread -> start();
 }
 

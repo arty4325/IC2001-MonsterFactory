@@ -10,13 +10,14 @@
 #include "../MonsterStructures/maldad.h"
 #include "../MonsterStructures/materia.h"
 #include "../DataStructures/cola.h"
+#include "../DataStructures/listaOrdenada.h"
 
 
 class Combinador : public QThread
 {
 public:
     Combinador();
-    Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros ,Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad ,Cola<Materia*>* colaMateria);
+    Combinador(int sleepTime,Cola<Mounstro*>* colaMounstros, ListaOrdenada<Mounstro*>* basurero ,Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad ,Cola<Materia*>* colaMateria);
     void changeTime(int time);
     void stop(int val);
 
@@ -25,6 +26,7 @@ private:
     bool running;
     int sleepTime;
     Cola<Mounstro*>* colaMounstros;
+    ListaOrdenada<Mounstro*>* basurero;
     Cola<Energia*>* colaEnergia;
     Cola<Maldad*>* colaMaldad;
     Cola<Materia*>* colaMateria;

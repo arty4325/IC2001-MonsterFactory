@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 74,
+				"line" : 76,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 57,
+				"line" : 59,
 				"parent" : 0
 			},
 			{
@@ -368,7 +368,8 @@
 				12,
 				14,
 				16,
-				18
+				18,
+				20
 			]
 		}
 	],
@@ -495,7 +496,8 @@
 				12,
 				14,
 				16,
-				18
+				18,
+				20
 			]
 		},
 		{
@@ -513,7 +515,9 @@
 				13,
 				15,
 				17,
-				19
+				19,
+				21,
+				22
 			]
 		},
 		{
@@ -521,14 +525,14 @@
 			"sourceIndexes" : 
 			[
 				4,
-				20
+				23
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				21
+				24
 			]
 		}
 	],
@@ -636,6 +640,22 @@
 			"compileGroupIndex" : 0,
 			"path" : "Etapas/combinador.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "labelthread.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "labelthread.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "DataStructures/nodoOrdenado.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 0,

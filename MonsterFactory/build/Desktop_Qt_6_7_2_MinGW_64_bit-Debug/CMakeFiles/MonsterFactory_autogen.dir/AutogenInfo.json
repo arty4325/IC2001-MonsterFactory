@@ -263,9 +263,21 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/DataStructures/listaOrdenada.h",
+			"MU",
+			"XMZHDO24YM/moc_listaOrdenada.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/DataStructures/nodoCola.h",
 			"MU",
 			"XMZHDO24YM/moc_nodoCola.cpp",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/DataStructures/nodoOrdenado.h",
+			"MU",
+			"XMZHDO24YM/moc_nodoOrdenado.cpp",
 			null
 		],
 		[

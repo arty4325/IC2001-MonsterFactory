@@ -34,6 +34,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MonsterStructures/materiathread.h MonsterStructures/materiathread.cpp
         Etapas/combinador.h Etapas/combinador.cpp
         labelthread.h labelthread.cpp
+        DataStructures/nodoOrdenado.h
+        DataStructures/listaOrdenada.h
 
 
     )
