@@ -22,7 +22,7 @@ void Combinador::run()
             continue;
         }
         QThread::sleep(this->sleepTime);
-        if (!colaEnergia->isEmpty() && !colaMaldad->isEmpty() && !colaMateria->isEmpty()) {
+        if (!colaEnergia->isEmpty() && !colaMaldad->isEmpty() && !colaMateria->isEmpty() && !(colaMounstros->isFull())) {
             QString energia = this->colaEnergia->pop()->data->type;
             QString maldad = this->colaMaldad->pop()->data->type;
             QString materia = this->colaMateria->pop()->data->type;

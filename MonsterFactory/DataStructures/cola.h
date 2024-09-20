@@ -54,12 +54,20 @@ public:
         }
     }
 
+    bool isFull() const{
+        if(cantItems == maxCant){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     void push(T _data) {
         nodoCola<T>* nodo = new nodoCola<T>();
         nodo->data = _data;
         nodo->next = nullptr;
 
-        if(cantItems <= maxCant){
+        if(cantItems < maxCant){
             if (isEmpty()) {
                 primerNodo = ultimoNodo = nodo;
             } else {
