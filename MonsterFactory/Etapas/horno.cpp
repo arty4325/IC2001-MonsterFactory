@@ -3,9 +3,13 @@
 
 Horno::Horno() {}
 
-Horno::Horno(int sleepTime) {
+Horno::Horno(int sleepTime, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja ) {
     this->sleepTime = sleepTime;
     this->running = true;
+    this->primeraBandeja = primeraBandeja;
+    this->segundaBandeja = segundaBandeja;
+    this->terceraBandeja = terceraBandeja;
+    this->cuartaBandeja = cuartaBandeja;
     //this->queueLabel;
 }
 
@@ -23,7 +27,7 @@ void Horno::run()
             secondsLeft--;
         }
 
-        qDebug() << "Hornea";
+        //qDebug() << "Hornea";
     }
 }
 

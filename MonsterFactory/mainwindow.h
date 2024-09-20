@@ -44,6 +44,22 @@ private slots:
 
     void on_hornoSpinBox_valueChanged(int arg1);
 
+    void on_bandeja1CheckBox_stateChanged(int arg1);
+
+    void on_bandeja2CheckBox_stateChanged(int arg1);
+
+    void on_bandeja3CheckBox_stateChanged(int arg1);
+
+    void on_bandeja4CheckBox_stateChanged(int arg1);
+
+    void on_bandeja1SpinBox_valueChanged(int arg1);
+
+    void on_bandeja2SpinBox_valueChanged(int arg1);
+
+    void on_bandeja3SpinBox_valueChanged(int arg1);
+
+    void on_bandeja4SpinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

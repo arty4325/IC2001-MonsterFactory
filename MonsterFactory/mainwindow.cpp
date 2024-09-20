@@ -26,7 +26,14 @@ MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
 Combinador* combinador = new Combinador(1, colaMounstros, basurero, colaEnergia, colaMaldad, colaMateria);
 LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero);
-Horno* horno = new Horno(1);
+
+// Creacion de bandejas
+Cola<Mounstro*>* primeraBandeja = new Cola<Mounstro*>();
+Cola<Mounstro*>* segundaBandeja = new Cola<Mounstro*>();
+Cola<Mounstro*>* terceraBandeja = new Cola<Mounstro*>();
+Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
+
+Horno* horno = new Horno(1, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
 
 
 
@@ -152,5 +159,53 @@ void MainWindow::on_hornoSpinBox_valueChanged(int arg1)
 {
     // Aqui se cambia el tiempo del horno
     horno -> changeTime(arg1);
+}
+
+
+void MainWindow::on_bandeja1CheckBox_stateChanged(int arg1)
+{
+    // Parar o reanudar bandeja 1
+}
+
+
+void MainWindow::on_bandeja2CheckBox_stateChanged(int arg1)
+{
+    // Parar o reanudar bandeja 2
+}
+
+
+void MainWindow::on_bandeja3CheckBox_stateChanged(int arg1)
+{
+    // Parar o reanudar bandeja 3
+}
+
+
+void MainWindow::on_bandeja4CheckBox_stateChanged(int arg1)
+{
+    // Parar o reanudar bandeja 4
+}
+
+
+void MainWindow::on_bandeja1SpinBox_valueChanged(int arg1)
+{
+    // Cant items bandeja 1
+}
+
+
+void MainWindow::on_bandeja2SpinBox_valueChanged(int arg1)
+{
+    // Cant items bandeja 2
+}
+
+
+void MainWindow::on_bandeja3SpinBox_valueChanged(int arg1)
+{
+    // Cant items bandeja 3
+}
+
+
+void MainWindow::on_bandeja4SpinBox_valueChanged(int arg1)
+{
+    // Cant items bandeja 4
 }
 
