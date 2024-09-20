@@ -10,6 +10,7 @@
 #include "MonsterStructures/maldadthread.h"
 #include "MonsterStructures/materiathread.h"
 #include "Etapas/combinador.h"
+#include "Etapas/horno.h"
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
 
@@ -25,6 +26,8 @@ MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
 Combinador* combinador = new Combinador(1, colaMounstros, basurero, colaEnergia, colaMaldad, colaMateria);
 LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero);
+Horno* horno = new Horno(1);
+
 
 
 
@@ -46,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> setMounstroLabel(ui->mounstrosLabel);
     labelThread -> setBasureroLabel(ui->basureroLabel);
     labelThread -> start();
+    horno->start();
 }
 
 MainWindow::~MainWindow()
@@ -142,4 +146,11 @@ void MainWindow::on_spinBox_3_valueChanged(int arg1)
 
 
 
+
+
+void MainWindow::on_hornoSpinBox_valueChanged(int arg1)
+{
+    // Aqui se cambia el tiempo del horno
+    horno -> changeTime(arg1);
+}
 

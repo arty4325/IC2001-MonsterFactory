@@ -36,6 +36,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         labelthread.h labelthread.cpp
         DataStructures/nodoOrdenado.h
         DataStructures/listaOrdenada.h
+        Etapas/horno.h Etapas/horno.cpp
 
 
     )

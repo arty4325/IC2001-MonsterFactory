@@ -42,6 +42,8 @@ private slots:
     void on_spinBox_3_valueChanged(int arg1);
 
 
+    void on_hornoSpinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

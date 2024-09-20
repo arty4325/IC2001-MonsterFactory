@@ -12,11 +12,13 @@ public:
     QString energia;
     QString material;
     QString maldad;
+    bool isCooked;
     Mounstro(){
         type = "";
         energia = "";
         material = "";
         maldad = "";
+        isCooked = false;
     }
     Mounstro(QString _energia, QString _material, QString _maldad){
         energia = _energia;
