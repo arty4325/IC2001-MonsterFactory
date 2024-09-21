@@ -13,12 +13,16 @@ class Horno : public QThread
 {
 public:
     Horno();
-    Horno(int sleepTime,Cola<Mounstro*>* colaMounstro ,Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja );
+    Horno(int sleepTime,Cola<Mounstro*>* colaMounstro ,Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad );
     void changeTime(int time);
     void changeMaxPrimeraBandeja(int time);
     void changeMaxSegundaBandeja(int time);
     void changeMaxTerceraBandeja(int time);
     void changeMaxCuartaBandeja(int time);
+    void changeFirstBlocked(int val);
+    void changeSecondBlocked(int val);
+    void changeThirdBlocked(int val);
+    void changeFourthBlocked(int val);
     void run();
 private:
     bool running;
@@ -28,5 +32,10 @@ private:
     Cola<Mounstro*>* terceraBandeja;
     Cola<Mounstro*>* cuartaBandeja;
     Cola<Mounstro*>* colaMounstro;
+    Cola<Mounstro*>* colaCalidad;
+    bool isFirstBlocked;
+    bool isSecondBlocked;
+    bool isThirdBlocked;
+    bool isFourthBlocked;
 };
 #endif // HORNO_H

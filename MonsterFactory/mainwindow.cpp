@@ -20,12 +20,12 @@ Cola<Energia*>* colaEnergia = new Cola<Energia*>();
 Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
 Cola<Materia*>* colaMateria = new Cola<Materia*>();
 Cola<Mounstro*>* colaMounstros = new Cola<Mounstro*>();
+Cola<Mounstro*>* colaCalidad = new Cola<Mounstro*>();
 ListaOrdenada<Mounstro*>* basurero = new ListaOrdenada<Mounstro*>();
 EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
 MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
 Combinador* combinador = new Combinador(1, colaMounstros, basurero, colaEnergia, colaMaldad, colaMateria);
-LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero);
 
 // Creacion de bandejas
 Cola<Mounstro*>* primeraBandeja = new Cola<Mounstro*>();
@@ -33,7 +33,8 @@ Cola<Mounstro*>* segundaBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* terceraBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
 
-Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
+Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
+LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
 
 
@@ -55,6 +56,13 @@ MainWindow::MainWindow(QWidget *parent)
     combinador -> start();
     labelThread -> setMounstroLabel(ui->mounstrosLabel);
     labelThread -> setBasureroLabel(ui->basureroLabel);
+    // Label de horno
+    labelThread -> setHorno1Label(ui->bandeja1Label);
+    labelThread -> setHorno2Label(ui->bandeja2Label);
+    labelThread -> setHorno3Label(ui->bandeja3Label);
+    labelThread -> setHorno4Label(ui->bandeja4Label);
+    labelThread -> setCalidadLabel(ui->calidadLabel);
+
     labelThread -> start();
     horno->start();
 }
@@ -165,24 +173,28 @@ void MainWindow::on_hornoSpinBox_valueChanged(int arg1)
 void MainWindow::on_bandeja1CheckBox_stateChanged(int arg1)
 {
     // Parar o reanudar bandeja 1
+    horno ->changeFirstBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja2CheckBox_stateChanged(int arg1)
 {
     // Parar o reanudar bandeja 2
+    horno ->changeSecondBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja3CheckBox_stateChanged(int arg1)
 {
     // Parar o reanudar bandeja 3
+    horno ->changeThirdBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja4CheckBox_stateChanged(int arg1)
 {
     // Parar o reanudar bandeja 4
+    horno ->changeFourthBlocked(arg1);
 }
 
 
@@ -211,5 +223,11 @@ void MainWindow::on_bandeja4SpinBox_valueChanged(int arg1)
 {
     // Cant items bandeja 4
     horno -> changeMaxCuartaBandeja(arg1);
+}
+
+
+void MainWindow::on_calidadSpinBox_valueChanged(int arg1)
+{
+    colaCalidad ->changeMax(arg1);
 }
 

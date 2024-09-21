@@ -2,14 +2,19 @@
 
 LabelThread::LabelThread() {}
 
-LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero) {
+LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->colaEnergia = colaEnergia;
     this->colaMaldad = colaMaldad;
     this->colaMateria = colaMateria;
     this->colaMounstro = colaMounstro;
+    this->colaCalidad = colaCalidad;
     this->basurero=basurero;
+    this->primeraBandeja = primeraBandeja;
+    this->segundaBandeja = segundaBandeja;
+    this->terceraBandeja = terceraBandeja;
+    this->cuartaBandeja = cuartaBandeja;
 }
 
 
@@ -45,6 +50,29 @@ void LabelThread::run()
 
         QString cantItemsBasurero = QString::number(basurero->cantItems);
         basureroLabel -> setText("Cant Items Basurero: " + cantItemsBasurero);
+
+
+        QString maxItemsHorno1 = QString::number(primeraBandeja->maxCant);
+        QString cantItemsHorno1 = QString::number(primeraBandeja->getCantItems());
+        horno1Label -> setText("Size Cola: " + maxItemsHorno1 + " - " + "Cant Items Cola: " + cantItemsHorno1);
+
+        QString maxItemsHorno2 = QString::number(segundaBandeja->maxCant);
+        QString cantItemsHorno2 = QString::number(segundaBandeja->getCantItems());
+        horno2Label -> setText("Size Cola: " + maxItemsHorno2 + " - " + "Cant Items Cola: " + cantItemsHorno2);
+
+        QString maxItemsHorno3 = QString::number(terceraBandeja->maxCant);
+        QString cantItemsHorno3 = QString::number(terceraBandeja->getCantItems());
+        horno3Label -> setText("Size Cola: " + maxItemsHorno3 + " - " + "Cant Items Cola: " + cantItemsHorno3);
+
+        QString maxItemsHorno4 = QString::number(cuartaBandeja->maxCant);
+        QString cantItemsHorno4 = QString::number(cuartaBandeja->getCantItems());
+        horno4Label -> setText("Size Cola: " + maxItemsHorno4 + " - " + "Cant Items Cola: " + cantItemsHorno4);
+
+
+        QString maxItemsCalidad = QString::number(colaCalidad->maxCant);
+        QString cantItemsCalidad = QString::number(colaCalidad->getCantItems());
+        calidadLabel -> setText("Size Cola: " + maxItemsCalidad + " - " + "Cant Items Cola: " + cantItemsCalidad);
+
         //qDebug() << "Deberia de cambiar los label" << colaEnergia ->cantItems << " " << colaEnergia -> maxCant;
         //qDebug() << materia->type;
     }
@@ -69,6 +97,24 @@ void LabelThread::setMounstroLabel(QLabel* label){
 void LabelThread::setBasureroLabel(QLabel* label){
     this->basureroLabel = label;
 }
+
+void LabelThread::setHorno1Label(QLabel* label){
+    this->horno1Label = label;
+}
+void LabelThread::setHorno2Label(QLabel* label){
+    this->horno2Label = label;
+}
+void LabelThread::setHorno3Label(QLabel* label){
+    this->horno3Label = label;
+}
+void LabelThread::setHorno4Label(QLabel* label){
+    this->horno4Label = label;
+}
+
+void LabelThread::setCalidadLabel(QLabel* label){
+    this->calidadLabel = label;
+}
+
 
 
 

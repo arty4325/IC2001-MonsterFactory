@@ -60,6 +60,8 @@ private slots:
 
     void on_bandeja4SpinBox_valueChanged(int arg1);
 
+    void on_calidadSpinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };
