@@ -2,11 +2,13 @@
 
 Calidad::Calidad() {}
 
-Calidad::Calidad(int sleepTime) {
+Calidad::Calidad(int sleepTime, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* basurero) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->probsPrimerInspector = 20;
     this->probsSegundoInspector = 20;
+    this->colaCalidad = colaCalidad;
+    this->basurero = basurero;
     //this->queueLabel;
 }
 
@@ -31,14 +33,25 @@ void Calidad::run()
 
             if(randomVal1 <= probsPrimerInspector ){
                 qDebug() << "Bota el mounstro";
+                if(!(colaCalidad ->isEmpty())) {
+                    Mounstro* mounstro = colaCalidad -> pop() -> data;
+                    basurero -> incert(mounstro);
+                }
+
             } else {
-                qDebug() << "Me quedo el mostro";
+                qDebug() << "MOSTRO VA PARA SEGUNDO INSPECTOR";
             }
 
-            if(randomVal2 <= probsSegundoInspector){
-                qDebug() << "bota el mostro segundo inspector";
-            } else {
-                qDebug() << "me quedo el mostro segundo inspector";
+            if(!(randomVal1 <= probsPrimerInspector)) {
+                if(randomVal2 <= probsSegundoInspector){
+                    qDebug() << "bota el mostro segundo inspector";
+                    if(!(colaCalidad ->isEmpty())) {
+                        Mounstro* mounstro = colaCalidad -> pop() -> data;
+                        basurero -> incert(mounstro);
+                    }
+                } else {
+                    qDebug() << "ME QUEDO DEFINITIVAMENTE CON EL MOUNSTRO";
+                }
             }
         }
 

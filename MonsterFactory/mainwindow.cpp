@@ -40,7 +40,7 @@ LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMater
 
 // Calidad lets go
 
-Calidad* calidad = new Calidad(1);
+Calidad* calidad = new Calidad(1, colaCalidad, basurero);
 
 
 
