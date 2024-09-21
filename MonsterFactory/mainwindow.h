@@ -64,6 +64,10 @@ private slots:
 
     void on_bandeja2CheckBox_2_stateChanged(int arg1);
 
+    void on_inspector1SpinBox_valueChanged(int arg1);
+
+    void on_inspector2SpinBox_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
 };

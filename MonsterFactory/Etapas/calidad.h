@@ -13,10 +13,14 @@ public:
     Calidad();
     Calidad(int sleepTime);
     void stop(int val);
+    void changeSecondProbability(int val);
+    void changeFirstProbability(int val);
     void run();
 private:
     bool running;
     int sleepTime;
+    int probsPrimerInspector;
+    int probsSegundoInspector;
 };
 
 #endif // CALIDAD_H

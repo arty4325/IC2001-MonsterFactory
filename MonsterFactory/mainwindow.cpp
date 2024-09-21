@@ -246,3 +246,17 @@ void MainWindow::on_bandeja2CheckBox_2_stateChanged(int arg1)
     calidad ->stop(arg1);
 }
 
+
+void MainWindow::on_inspector1SpinBox_valueChanged(int arg1)
+{
+    // Cambiar primera probabilidad
+    calidad ->changeFirstProbability(arg1);
+}
+
+
+void MainWindow::on_inspector2SpinBox_valueChanged(int arg1)
+{
+    // Cambiar segunda probabilidad
+    calidad -> changeSecondProbability(arg1);
+}
+
