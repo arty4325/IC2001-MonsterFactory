@@ -40,9 +40,9 @@ public:
     void changeMax(int val){
         if(val > cantItems){
             maxCant = val;
-            qDebug() << "Se logro cambiar";
+            //qDebug() << "Se logro cambiar";
         } else {
-            qDebug() << "No se permite este cambio";
+            //qDebug() << "No se permite este cambio";
         }
     }
 

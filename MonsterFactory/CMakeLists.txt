@@ -37,6 +37,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         DataStructures/nodoOrdenado.h
         DataStructures/listaOrdenada.h
         Etapas/horno.h Etapas/horno.cpp
+        Etapas/calidad.h Etapas/calidad.cpp
 
 
     )

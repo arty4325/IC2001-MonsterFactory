@@ -62,34 +62,34 @@ void Horno::run()
             }
 
             if ((primeraBandeja -> isFull() && segundaBandeja -> isFull() && terceraBandeja -> isFull() && cuartaBandeja -> isFull())){
-                qDebug() << "Horneo lets fucking go";
-                qDebug() << "info" << primeraBandeja -> isFull() << segundaBandeja -> isFull() << terceraBandeja -> isFull() << cuartaBandeja -> isFull() << colaCalidad -> isFull();
+                //qDebug() << "Horneo lets fucking go";
+                //qDebug() << "info" << primeraBandeja -> isFull() << segundaBandeja -> isFull() << terceraBandeja -> isFull() << cuartaBandeja -> isFull() << colaCalidad -> isFull();
                 // Tengo que hornear solo los que no esta bloqueado PARA CUANDO LLEGA A ESTE PUNTO
                 // Puedo hacer una estructura bastante similar a la que tenia cuando estaba armando las colas
                 if(!(colaCalidad -> isFull())){
                     while(!(primeraBandeja -> isEmpty()) && !isFirstBlocked){
-                        qDebug() << "Quita primero";
+                        //qDebug() << "Quita primero";
                         Mounstro* mounstro = primeraBandeja -> pop() -> data;
                         mounstro -> isCooked = true;
                         colaCalidad -> push(mounstro);
                     }
 
                     while(!(segundaBandeja -> isEmpty()) && !isSecondBlocked){
-                        qDebug() << "Quita segundo";
+                        //qDebug() << "Quita segundo";
                         Mounstro* mounstro = segundaBandeja -> pop() -> data;
                         mounstro -> isCooked = true;
                         colaCalidad -> push(mounstro);
                     }
 
                     while(!(terceraBandeja -> isEmpty()) && !isThirdBlocked && !(colaCalidad->getIsFull())){
-                        qDebug() << "Quita tercero";
+                        //qDebug() << "Quita tercero";
                         Mounstro* mounstro = terceraBandeja -> pop() -> data;
                         mounstro -> isCooked = true;
                         colaCalidad -> push(mounstro);
                     }
 
                     while(!(cuartaBandeja -> isEmpty()) && !isFourthBlocked){
-                        qDebug() << "Quita cuarto";
+                        //qDebug() << "Quita cuarto";
                         Mounstro* mounstro = cuartaBandeja -> pop() -> data;
                         mounstro -> isCooked = true;
                         colaCalidad -> push(mounstro);

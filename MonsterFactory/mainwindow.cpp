@@ -11,6 +11,7 @@
 #include "MonsterStructures/materiathread.h"
 #include "Etapas/combinador.h"
 #include "Etapas/horno.h"
+#include "Etapas/calidad.h"
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
 
@@ -35,6 +36,11 @@ Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
 
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
+
+
+// Calidad lets go
+
+Calidad* calidad = new Calidad(1);
 
 
 
@@ -65,6 +71,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     labelThread -> start();
     horno->start();
+
+    calidad -> start();
 }
 
 MainWindow::~MainWindow()
@@ -229,5 +237,12 @@ void MainWindow::on_bandeja4SpinBox_valueChanged(int arg1)
 void MainWindow::on_calidadSpinBox_valueChanged(int arg1)
 {
     colaCalidad ->changeMax(arg1);
+}
+
+
+void MainWindow::on_bandeja2CheckBox_2_stateChanged(int arg1)
+{
+    // Se pausa o reanuda calidad
+    calidad ->stop(arg1);
 }
 
