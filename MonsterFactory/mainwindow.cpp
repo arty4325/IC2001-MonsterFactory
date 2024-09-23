@@ -12,6 +12,7 @@
 #include "Etapas/combinador.h"
 #include "Etapas/horno.h"
 #include "Etapas/calidad.h"
+#include "Etapas/almacen.h"
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
 
@@ -34,14 +35,27 @@ Cola<Mounstro*>* segundaBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* terceraBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
 
+// Creacion de almacen
+ListaOrdenada<Mounstro*>* listaAlmacen = new ListaOrdenada<Mounstro*>();
+Cola<Mounstro*>* colaEntregados = new Cola<Mounstro*>();
+Cola<Mounstro*>* colaAlmacen = new Cola<Mounstro*>();
+
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
-LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
+
+
+// Almacen
+
+Almacen* almacen = new Almacen(listaAlmacen, colaEntregados, colaAlmacen);
+
+
+LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad, listaAlmacen);
+
+
 
 
 // Calidad lets go
 
-Calidad* calidad = new Calidad(1, colaCalidad, basurero);
-
+Calidad* calidad = new Calidad(1, colaCalidad, basurero, almacen);
 
 
 
@@ -68,6 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> setHorno3Label(ui->bandeja3Label);
     labelThread -> setHorno4Label(ui->bandeja4Label);
     labelThread -> setCalidadLabel(ui->calidadLabel);
+    labelThread -> setAlmacenLabel(ui->almacenLabel);
 
     labelThread -> start();
     horno->start();
