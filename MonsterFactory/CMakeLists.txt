@@ -39,6 +39,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Etapas/horno.h Etapas/horno.cpp
         Etapas/calidad.h Etapas/calidad.cpp
         Etapas/almacen.h Etapas/almacen.cpp
+        ReadingStructures/readtextfiles.h ReadingStructures/readtextfiles.cpp
 
 
     )

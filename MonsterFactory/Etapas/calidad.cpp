@@ -25,7 +25,7 @@ void Calidad::run()
             }
             QThread::sleep(1);
             secondsLeft--;
-            qDebug() << "Debo de ver calidad";
+            //() << "Debo de ver calidad";
             int randomVal1;
             int randomVal2;
             randomVal1 =  QRandomGenerator::global()->bounded(1, 100);
@@ -34,25 +34,25 @@ void Calidad::run()
             if(!(colaCalidad ->isEmpty())){
 
                 if(randomVal1 <= probsPrimerInspector ){
-                    qDebug() << "Bota el mounstro";
+                    //qDebug() << "Bota el mounstro";
                     if(!(colaCalidad ->isEmpty())) {
                         Mounstro* mounstro = colaCalidad -> pop() -> data;
                         basurero -> incert(mounstro);
                     }
 
                 } else {
-                    qDebug() << "MOSTRO VA PARA SEGUNDO INSPECTOR";
+                    //qDebug() << "MOSTRO VA PARA SEGUNDO INSPECTOR";
                 }
 
                 if(!(randomVal1 <= probsPrimerInspector)) {
                     if(randomVal2 <= probsSegundoInspector){
-                        qDebug() << "bota el mostro segundo inspector";
+                        //qDebug() << "bota el mostro segundo inspector";
                         if(!(colaCalidad ->isEmpty())) {
                             Mounstro* mounstro = colaCalidad -> pop() -> data;
                             basurero -> incert(mounstro);
                         }
                     } else {
-                        qDebug() << "ME QUEDO DEFINITIVAMENTE CON EL MOUNSTRO";
+                        //qDebug() << "ME QUEDO DEFINITIVAMENTE CON EL MOUNSTRO";
                         almacen -> incertAlmacen(colaCalidad -> pop() -> data);
                     }
                 }
@@ -72,10 +72,10 @@ void Calidad::changeSecondProbability(int val){
 
 void Calidad::stop(int val){
     if(val == 2){
-        qDebug() << "Tengo que parar esta vara";
+        //qDebug() << "Tengo que parar esta vara";
         this->running = false;
     } else {
-        qDebug() << "La tengo que reanudar";
+        //qDebug() << "La tengo que reanudar";
         this->running = true;
     }
 }

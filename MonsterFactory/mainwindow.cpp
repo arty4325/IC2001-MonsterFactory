@@ -15,6 +15,8 @@
 #include "Etapas/almacen.h"
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
+#include "ReadingStructures/readtextfiles.h"
+
 
 
 // Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
@@ -34,6 +36,7 @@ Cola<Mounstro*>* primeraBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* segundaBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* terceraBandeja = new Cola<Mounstro*>();
 Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
+
 
 // Creacion de almacen
 ListaOrdenada<Mounstro*>* listaAlmacen = new ListaOrdenada<Mounstro*>();
@@ -90,7 +93,6 @@ MainWindow::MainWindow(QWidget *parent)
 
     labelThread -> start();
     horno->start();
-
     calidad -> start();
 }
 
