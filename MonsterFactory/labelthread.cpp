@@ -2,7 +2,10 @@
 
 LabelThread::LabelThread() {}
 
-LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen) {
+LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria,
+                         Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja,
+                         Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja,
+                         Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados, ListaOrdenada<Mounstro*>* colaAlmacen) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->colaEnergia = colaEnergia;
@@ -16,6 +19,8 @@ LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad
     this->terceraBandeja = terceraBandeja;
     this->cuartaBandeja = cuartaBandeja;
     this -> listaAlmacen = listaAlmacen;
+    this -> colaEntregados = colaEntregados;
+    this -> colaAlmacen = colaAlmacen;
 }
 
 
@@ -77,6 +82,12 @@ void LabelThread::run()
         QString cantItemsAlmacen = QString::number(listaAlmacen->cantItems);
         almacenLabel -> setText("Cant Items Almacen: " + cantItemsAlmacen);
 
+        QString cantItemsAlmacenEntregados = QString::number(colaEntregados->cantItems);
+        entregadosLabel -> setText("Cant Items Entregados: " + cantItemsAlmacenEntregados);
+
+        QString cantItemsAlmacenNoEntregados = QString::number(colaAlmacen->cantItems);
+        noEntregadosLabel -> setText("Cant Items En Almacen: " + cantItemsAlmacenNoEntregados);
+
         //qDebug() << "Deberia de cambiar los label" << colaEnergia ->cantItems << " " << colaEnergia -> maxCant;
         //qDebug() << materia->type;
     }
@@ -122,6 +133,16 @@ void LabelThread::setCalidadLabel(QLabel* label){
 void LabelThread::setAlmacenLabel(QLabel* label){
     this->almacenLabel = label;
 }
+
+void LabelThread::setEntregadosLabel(QLabel* label){
+    this->entregadosLabel = label;
+}
+
+
+void LabelThread::setNoEntregadosLabel(QLabel* label){
+    this->noEntregadosLabel = label;
+}
+
 
 
 

@@ -37,8 +37,8 @@ Cola<Mounstro*>* cuartaBandeja = new Cola<Mounstro*>();
 
 // Creacion de almacen
 ListaOrdenada<Mounstro*>* listaAlmacen = new ListaOrdenada<Mounstro*>();
-Cola<Mounstro*>* colaEntregados = new Cola<Mounstro*>();
-Cola<Mounstro*>* colaAlmacen = new Cola<Mounstro*>();
+ListaOrdenada<Mounstro*>* colaEntregados = new ListaOrdenada<Mounstro*>();
+ListaOrdenada<Mounstro*>* colaAlmacen = new ListaOrdenada<Mounstro*>();
 
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
@@ -48,7 +48,9 @@ Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terce
 Almacen* almacen = new Almacen(listaAlmacen, colaEntregados, colaAlmacen);
 
 
-LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad, listaAlmacen);
+LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero,
+                                           primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja,
+                                           colaCalidad, listaAlmacen, colaEntregados, colaAlmacen);
 
 
 
@@ -83,6 +85,8 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> setHorno4Label(ui->bandeja4Label);
     labelThread -> setCalidadLabel(ui->calidadLabel);
     labelThread -> setAlmacenLabel(ui->almacenLabel);
+    labelThread -> setEntregadosLabel(ui->almacenEntregadosLabel);
+    labelThread -> setNoEntregadosLabel(ui->almacenPorEntregarLabel);
 
     labelThread -> start();
     horno->start();

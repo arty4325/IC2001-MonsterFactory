@@ -15,11 +15,11 @@ class Almacen
 {
 public:
     Almacen();
-    Almacen(ListaOrdenada<Mounstro*>* listaAlmacen, Cola<Mounstro*>* colaEntregados, Cola<Mounstro*>* colaAlmacen );
+    Almacen(ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados, ListaOrdenada<Mounstro*>* colaAlmacen );
     void incertAlmacen(Mounstro* mounstro);
 private:
-    Cola<Mounstro*>* colaEntregados;
-    Cola<Mounstro*>* colaAlmacen;
+    ListaOrdenada<Mounstro*>* colaEntregados;
+    ListaOrdenada<Mounstro*>* colaAlmacen;
     ListaOrdenada<Mounstro*>* listaAlmacen;
 };
 

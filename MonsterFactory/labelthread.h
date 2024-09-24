@@ -17,7 +17,9 @@ class LabelThread: public QThread
 {
 public:
     LabelThread();
-    LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen);
+    LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro,
+                ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja,
+                Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados, ListaOrdenada<Mounstro*>* colaAlmacen);
     void run();
     void setEmergyLabel(QLabel* label);
     void setMaldadLabel(QLabel* label);
@@ -30,6 +32,8 @@ public:
     void setHorno4Label(QLabel* label);
     void setCalidadLabel(QLabel* label);
     void setAlmacenLabel(QLabel* label);
+    void setEntregadosLabel(QLabel* label);
+    void setNoEntregadosLabel(QLabel* label);
 private:
     bool running;
     int sleepTime;
@@ -44,6 +48,8 @@ private:
     Cola<Mounstro*>* terceraBandeja;
     Cola<Mounstro*>* cuartaBandeja;
     ListaOrdenada<Mounstro*>* listaAlmacen;
+    ListaOrdenada<Mounstro*>* colaEntregados;
+    ListaOrdenada<Mounstro*>* colaAlmacen;
     QLabel* energyLabel;
     QLabel* maldadLabel;
     QLabel* materiaLabel;
@@ -55,6 +61,8 @@ private:
     QLabel* horno4Label;
     QLabel* calidadLabel;
     QLabel* almacenLabel;
+    QLabel* entregadosLabel;
+    QLabel* noEntregadosLabel;
 };
 
 #endif // LABELTHREAD_H

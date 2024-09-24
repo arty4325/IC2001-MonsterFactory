@@ -2,7 +2,7 @@
 
 Almacen::Almacen() {}
 
-Almacen::Almacen(ListaOrdenada<Mounstro*>* listaAlmacen, Cola<Mounstro*>* colaEntregados, Cola<Mounstro*>* colaAlmacen ){
+Almacen::Almacen(ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados, ListaOrdenada<Mounstro*>* colaAlmacen ){
     this-> listaAlmacen = listaAlmacen;
     this-> colaEntregados = colaEntregados;
     this-> colaAlmacen = colaAlmacen;
@@ -10,4 +10,5 @@ Almacen::Almacen(ListaOrdenada<Mounstro*>* listaAlmacen, Cola<Mounstro*>* colaEn
 
 void Almacen::incertAlmacen(Mounstro* mounstro){
     listaAlmacen -> incert(mounstro);
+    colaAlmacen -> incert(mounstro);
 }
