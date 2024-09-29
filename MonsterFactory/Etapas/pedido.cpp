@@ -1,3 +1,7 @@
 #include "pedido.h"
 
-pedido::pedido() {}
+Pedido::Pedido() {}
+
+Pedido::Pedido(QString inputString){
+    this->inputString = inputString;
+}

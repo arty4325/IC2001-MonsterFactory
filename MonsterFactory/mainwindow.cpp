@@ -16,6 +16,7 @@
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
 #include "Etapas/pedidomanager.h"
+#include "Etapas/pedido.h"
 
 
 
@@ -43,9 +44,14 @@ ListaOrdenada<Mounstro*>* listaAlmacen = new ListaOrdenada<Mounstro*>();
 ListaOrdenada<Mounstro*>* colaEntregados = new ListaOrdenada<Mounstro*>();
 ListaOrdenada<Mounstro*>* colaAlmacen = new ListaOrdenada<Mounstro*>();
 
+
+// Creacion de pedidos
+Cola<Pedido*>* colaPedidos = new Cola<Pedido*>();
+Cola<Pedido*>* colaPedidosPrioridad = new Cola<Pedido*>();
+
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
-PedidoManager* pedidoManager = new PedidoManager(1);
+PedidoManager* pedidoManager = new PedidoManager(1, colaPedidos, colaPedidosPrioridad);
 
 // Almacen
 
