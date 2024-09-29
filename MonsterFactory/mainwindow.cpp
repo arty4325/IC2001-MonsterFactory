@@ -15,7 +15,7 @@
 #include "Etapas/almacen.h"
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
-#include "ReadingStructures/readtextfiles.h"
+#include "Etapas/pedidomanager.h"
 
 
 
@@ -45,6 +45,7 @@ ListaOrdenada<Mounstro*>* colaAlmacen = new ListaOrdenada<Mounstro*>();
 
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
+PedidoManager* pedidoManager = new PedidoManager(1);
 
 // Almacen
 
@@ -94,6 +95,7 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> start();
     horno->start();
     calidad -> start();
+    pedidoManager -> start();
 }
 
 MainWindow::~MainWindow()
@@ -134,6 +136,7 @@ void MainWindow::on_checkBox_stateChanged(int arg1)
     // Pausa Energia
     qDebug() << arg1;
     energyThread->stop(arg1);
+
 }
 
 

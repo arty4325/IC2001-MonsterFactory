@@ -40,6 +40,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Etapas/calidad.h Etapas/calidad.cpp
         Etapas/almacen.h Etapas/almacen.cpp
         ReadingStructures/readtextfiles.h ReadingStructures/readtextfiles.cpp
+        Etapas/pedido.h Etapas/pedido.cpp
+        Etapas/pedidomanager.h Etapas/pedidomanager.cpp
 
 
     )

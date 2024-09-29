@@ -7,10 +7,11 @@
 
 readTextFiles::readTextFiles() {}
 
-void readTextFiles::readTextFilesInFolder() {
+QString readTextFiles::readTextFilesInFolder() {
     QString folderPath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/ReadingStructures/ClientFiles";
     QDir directory(folderPath);
     QStringList filters;
+    QString retVar = "";
     filters << "*.txt";
     QStringList txtFiles = directory.entryList(filters, QDir::Files);
     for (const QString& fileName : txtFiles) {
@@ -18,11 +19,14 @@ void readTextFiles::readTextFilesInFolder() {
         QFile file(filePath);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             QTextStream in(&file);
-            qDebug() << "Contenido del archivo:" << fileName;
-            qDebug() << in.readAll();
+            //qDebug() << "Contenido del archivo:" << fileName;
+            //qDebug() << in.readAll();
+            //return in.readAll();
+            retVar += in.readAll() += "t=";
             file.close();
         } else {
-            qDebug() << "No se pudo abrir el archivo:" << fileName;
+            //qDebug() << "No se pudo abrir el archivo:" << fileName;
         }
     }
+    return retVar;
 }

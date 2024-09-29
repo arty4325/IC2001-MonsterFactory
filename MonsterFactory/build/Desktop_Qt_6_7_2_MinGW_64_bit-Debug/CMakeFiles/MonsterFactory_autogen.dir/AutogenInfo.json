@@ -305,6 +305,18 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/pedido.h",
+			"MU",
+			"LGLKB2QAZ6/moc_pedido.cpp",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/pedidomanager.h",
+			"MU",
+			"LGLKB2QAZ6/moc_pedidomanager.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/energia.h",
 			"MU",
 			"HWUM2FTQIN/moc_energia.cpp",
@@ -453,6 +465,16 @@
 		],
 		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/horno.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/pedido.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/pedidomanager.cpp",
 			"MU",
 			null
 		],

@@ -7,7 +7,7 @@ class readTextFiles
 {
 public:
     readTextFiles();
-    void readTextFilesInFolder();
+    QString readTextFilesInFolder();
 };
 
 #endif // READTEXTFILES_H
