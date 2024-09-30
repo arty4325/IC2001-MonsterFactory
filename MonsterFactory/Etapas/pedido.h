@@ -4,6 +4,8 @@
 #include <QDebug>
 #include<QObject>
 #include <QRandomGenerator>
+#include "../DataStructures/cola.h"
+#include "../MonsterStructures/mounstro.h"
 
 
 class Pedido
@@ -14,6 +16,7 @@ public:
     bool Contiene(QString searchString);
 private:
     QString inputString;
+    Cola<Mounstro*>* mounstrosPedido = new Cola<Mounstro*>();
     int cantItems;
 };
 

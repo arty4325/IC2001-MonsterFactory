@@ -9,11 +9,11 @@
 
 PedidoManager::PedidoManager() {}
 
-PedidoManager::PedidoManager(int sleepTime, Cola<Pedido*>* colaPedidos,  Cola<Pedido*>* colaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen) {
+PedidoManager::PedidoManager(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen) {
     this->sleepTime = sleepTime;
     this->running = true;
-    this->colaPedidos = colaPedidos;
-    this->colaPedidosPrioridad = colaPedidosPrioridad;
+    this->listaPedidos = listaPedidos;
+    this->listaPedidosPrioridad = listaPedidosPrioridad;
     this->listaAlmacen = listaAlmacen;
 }
 
@@ -48,15 +48,15 @@ void PedidoManager::run()
                 //qDebug() << instanceString << instanceString.length();
                 if(partesPedido.size() > 1){
                     if(partesPedido[1] == "1ST PROGRA"){
-                        qDebug() << "Primera P " << instanceString << partesPedido.size() - 3;
+                        qDebug() << "Primera P " << instanceString << partesPedido.size() - 4;
                         // Instancio Pedido
-                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 3);
-                        colaPedidosPrioridad -> push(pedido);
+                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 4);
+                        listaPedidosPrioridad->incert(pedido);
 
-                    } else {
-                        qDebug() << "Segunda P" << instanceString << partesPedido.size() - 3;
-                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 3);
-                        colaPedidos -> push(pedido);
+                    } else if (partesPedido[1] != "1ST PROGRA") {
+                        qDebug() << "Segunda P" << instanceString << partesPedido.size() - 4;
+                        Pedido* pedidoNotPriority = new Pedido(instanceString, partesPedido.size() - 4);
+                        listaPedidos -> incert(pedidoNotPriority);
                     }
                 }
             }

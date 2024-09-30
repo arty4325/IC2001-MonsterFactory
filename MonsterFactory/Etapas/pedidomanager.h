@@ -15,13 +15,13 @@ class PedidoManager : public QThread
 {
 public:
     PedidoManager();
-    PedidoManager(int sleepTime, Cola<Pedido*>* colaPedidos,  Cola<Pedido*>* colaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen);
+    PedidoManager(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen);
     void run();
 private:
     bool running;
     int sleepTime;
-    Cola<Pedido*>* colaPedidos;
-    Cola<Pedido*>* colaPedidosPrioridad;
+    ListaOrdenada<Pedido*>* listaPedidos;
+    ListaOrdenada<Pedido*>* listaPedidosPrioridad;
     ListaOrdenada<Mounstro*>* listaAlmacen;
 
 };
