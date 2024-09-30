@@ -1,4 +1,5 @@
 #include "pedidomanager.h"
+#include "pedido.h"
 #include "../ReadingStructures/readtextfiles.h"
 #include <QRegularExpression>
 #include <QString>
@@ -33,22 +34,30 @@ void PedidoManager::run()
                 QString instanceString = "";
                 QStringList partesPedido = parte.split(QRegularExpression("\n"));
 
-                // Verifica que haya al menos dos elementos en partesPedido antes de acceder a partesPedido[1]
-                if (partesPedido.size() > 1) {
-                    instanceString += partesPedido[1] + "=";
-
-                    // Empieza desde el índice 3 para concatenar el resto de elementos
-                    for (int i = 3; i < partesPedido.size(); ++i) {
-                        instanceString += partesPedido[i] + "=";
-                    }
-
-                    // Quita el último '=' si lo deseas
-                    if (!instanceString.isEmpty() && instanceString.endsWith("=")) {
-                        instanceString.chop(1); // Elimina el último caracter '='
-                    }
-
-                    qDebug() << instanceString;
+                // Empieza desde el índice 3 para concatenar el resto de elementos
+                for (int i = 3; i < partesPedido.size(); ++i) {
+                    instanceString += partesPedido[i] + "=";
                 }
+
+                // Quita el último '=' si lo deseas
+                if (!instanceString.isEmpty() && instanceString.endsWith("=")) {
+                   instanceString.chop(1); // Elimina el último caracter '='
+                }
+                //qDebug() << instanceString << instanceString.length();
+                if(partesPedido.size() > 1){
+                    if(partesPedido[1] == "1ST PROGRA"){
+                        qDebug() << "Primera P " << instanceString;
+                        // Instancio Pedido
+                        Pedido* pedido = new Pedido(instanceString);
+                        colaPedidosPrioridad -> push(pedido);
+
+                    } else {
+                        qDebug() << "Segunda P" << instanceString;
+                        Pedido* pedido = new Pedido(instanceString);
+                        colaPedidos -> push(pedido);
+                    }
+                }
+
             }
 
         } catch (...) {

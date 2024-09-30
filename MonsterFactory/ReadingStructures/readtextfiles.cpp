@@ -28,12 +28,14 @@ QString readTextFiles::readTextFilesInFolder() {
         // Abre el archivo y lo lee
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
             QTextStream in(&file);
-            retVar += in.readAll() + "t=";
+            retVar += in.readAll() +"\n" + fileName + "t=";
             file.close();  // Cierra el archivo después de leerlo
 
-            // Renombra el archivo
-            QString newFileName = fileName + "=read";  // Aquí cambias el nombre del archivo
+            // Renombra el archivo: insertamos '=read' antes de la extensión .txt
+            QString baseName = fileName.left(fileName.lastIndexOf('.'));  // Obtener el nombre sin la extensión
+            QString newFileName = baseName + "=read.txt";  // Agregar '=read' antes de la extensión
             QString newFilePath = directory.absoluteFilePath(newFileName);
+
             if (!file.rename(newFilePath)) {
                 qDebug() << "No se pudo renombrar el archivo:" << fileName;
             } else {
