@@ -10,9 +10,11 @@ class Pedido
 {
 public:
     Pedido();
-    Pedido(QString inputString);
+    Pedido(QString inputString, int cantItems);
+    bool Contiene(QString searchString);
 private:
     QString inputString;
+    int cantItems;
 };
 
 #endif // PEDIDO_H

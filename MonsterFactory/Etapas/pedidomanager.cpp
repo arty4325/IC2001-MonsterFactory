@@ -1,5 +1,6 @@
 #include "pedidomanager.h"
 #include "pedido.h"
+#include "../MonsterStructures/mounstro.h"
 #include "../ReadingStructures/readtextfiles.h"
 #include <QRegularExpression>
 #include <QString>
@@ -8,11 +9,12 @@
 
 PedidoManager::PedidoManager() {}
 
-PedidoManager::PedidoManager(int sleepTime, Cola<Pedido*>* colaPedidos,  Cola<Pedido*>* colaPedidosPrioridad) {
+PedidoManager::PedidoManager(int sleepTime, Cola<Pedido*>* colaPedidos,  Cola<Pedido*>* colaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->colaPedidos = colaPedidos;
     this->colaPedidosPrioridad = colaPedidosPrioridad;
+    this->listaAlmacen = listaAlmacen;
 }
 
 void PedidoManager::run()
@@ -46,23 +48,24 @@ void PedidoManager::run()
                 //qDebug() << instanceString << instanceString.length();
                 if(partesPedido.size() > 1){
                     if(partesPedido[1] == "1ST PROGRA"){
-                        qDebug() << "Primera P " << instanceString;
+                        qDebug() << "Primera P " << instanceString << partesPedido.size() - 3;
                         // Instancio Pedido
-                        Pedido* pedido = new Pedido(instanceString);
+                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 3);
                         colaPedidosPrioridad -> push(pedido);
 
                     } else {
-                        qDebug() << "Segunda P" << instanceString;
-                        Pedido* pedido = new Pedido(instanceString);
+                        qDebug() << "Segunda P" << instanceString << partesPedido.size() - 3;
+                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 3);
                         colaPedidos -> push(pedido);
                     }
                 }
-
             }
-
         } catch (...) {
             qDebug() << "An error occurred.";
         }
+
+        // Ya aqui se terminaron de procesar las solicitudes, tengo que comenzar a procesar los pedidos
+
 
 
         //qDebug() << read ->readTextFilesInFolder();

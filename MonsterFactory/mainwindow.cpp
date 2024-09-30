@@ -51,7 +51,7 @@ Cola<Pedido*>* colaPedidosPrioridad = new Cola<Pedido*>();
 
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
-PedidoManager* pedidoManager = new PedidoManager(1, colaPedidos, colaPedidosPrioridad);
+PedidoManager* pedidoManager = new PedidoManager(1, colaPedidos, colaPedidosPrioridad, listaAlmacen);
 
 // Almacen
 
