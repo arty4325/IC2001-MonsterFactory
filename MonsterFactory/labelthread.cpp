@@ -5,7 +5,8 @@ LabelThread::LabelThread() {}
 LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria,
                          Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja,
                          Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja,
-                         Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados, ListaOrdenada<Mounstro*>* colaAlmacen) {
+                         Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados,
+                         ListaOrdenada<Mounstro*>* colaAlmacen,  ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->colaEnergia = colaEnergia;
@@ -21,6 +22,8 @@ LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad
     this -> listaAlmacen = listaAlmacen;
     this -> colaEntregados = colaEntregados;
     this -> colaAlmacen = colaAlmacen;
+    this -> listaPedidos = listaPedidos;
+    this -> listaPedidosPrioridad = listaPedidosPrioridad;
 }
 
 
@@ -88,6 +91,11 @@ void LabelThread::run()
         QString cantItemsAlmacenNoEntregados = QString::number(colaAlmacen->cantItems);
         noEntregadosLabel -> setText("Cant Items En Almacen: " + cantItemsAlmacenNoEntregados);
 
+        QString cantItemsEntregaPrioridad = QString::number(listaPedidos->cantItems);
+        entregaPrioridadLabel -> setText("Cant Items por Entregar Prioridad: " + cantItemsEntregaPrioridad);
+
+        QString cantItemsEntrega = QString::number(listaPedidosPrioridad->cantItems);
+        entregaLabel -> setText("Cant Items por entregar: " + cantItemsEntrega);
         //qDebug() << "Deberia de cambiar los label" << colaEnergia ->cantItems << " " << colaEnergia -> maxCant;
         //qDebug() << materia->type;
     }
@@ -141,6 +149,14 @@ void LabelThread::setEntregadosLabel(QLabel* label){
 
 void LabelThread::setNoEntregadosLabel(QLabel* label){
     this->noEntregadosLabel = label;
+}
+
+void LabelThread::setEntregaPrioridadLabel(QLabel* label){
+    this->entregaPrioridadLabel = label;
+}
+
+void LabelThread::setEntregaLabel(QLabel* label){
+    this->entregaLabel = label;
 }
 
 

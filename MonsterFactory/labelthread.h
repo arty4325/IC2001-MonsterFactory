@@ -11,7 +11,7 @@
 #include "MonsterStructures/mounstro.h"
 #include "DataStructures/cola.h"
 #include "DataStructures/listaOrdenada.h"
-
+#include "Etapas/pedido.h"
 
 class LabelThread: public QThread
 {
@@ -19,7 +19,8 @@ public:
     LabelThread();
     LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad*>* colaMaldad, Cola<Materia*>* colaMateria, Cola<Mounstro*>* colaMounstro,
                 ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja,
-                Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados, ListaOrdenada<Mounstro*>* colaAlmacen);
+                Cola<Mounstro*>* cuartaBandeja, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados,
+                ListaOrdenada<Mounstro*>* colaAlmacen,  ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad);
     void run();
     void setEmergyLabel(QLabel* label);
     void setMaldadLabel(QLabel* label);
@@ -34,6 +35,8 @@ public:
     void setAlmacenLabel(QLabel* label);
     void setEntregadosLabel(QLabel* label);
     void setNoEntregadosLabel(QLabel* label);
+    void setEntregaPrioridadLabel(QLabel* label);
+    void setEntregaLabel(QLabel* label);
 private:
     bool running;
     int sleepTime;
@@ -50,6 +53,8 @@ private:
     ListaOrdenada<Mounstro*>* listaAlmacen;
     ListaOrdenada<Mounstro*>* colaEntregados;
     ListaOrdenada<Mounstro*>* colaAlmacen;
+    ListaOrdenada<Pedido*>* listaPedidos;
+    ListaOrdenada<Pedido*>* listaPedidosPrioridad;
     QLabel* energyLabel;
     QLabel* maldadLabel;
     QLabel* materiaLabel;
@@ -63,6 +68,8 @@ private:
     QLabel* almacenLabel;
     QLabel* entregadosLabel;
     QLabel* noEntregadosLabel;
+    QLabel* entregaPrioridadLabel;
+    QLabel* entregaLabel;
 };
 
 #endif // LABELTHREAD_H

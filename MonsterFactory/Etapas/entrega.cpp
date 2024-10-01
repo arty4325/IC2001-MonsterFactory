@@ -28,7 +28,7 @@ void Entrega::run()
             QThread::sleep(1);
             continue;
         }
-        qDebug() << "Se tramitan las entregas";
+        //qDebug() << "Se tramitan las entregas";
         for(int i = 0; i < listaAlmacen->size(); i++){
             for(int k = 0; k < listaPedidosPrioridad->size(); k++){
                 if(listaPedidosPrioridad->ver(k)->Contiene(listaAlmacen->ver(i)->type)){
@@ -37,6 +37,8 @@ void Entrega::run()
                 }
             }
         }
+        // Aqui se vieron los de prioridad, ahora se ven los normales
+
 
 
 

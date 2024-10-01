@@ -54,7 +54,7 @@ Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terce
 
 PedidoManager* pedidoManager = new PedidoManager(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
 
-Entrega* entrega = new Entrega(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
+Entrega* entrega = new Entrega(1, listaPedidosPrioridad, listaPedidosPrioridad, listaAlmacen);
 
 
 // Almacen
@@ -64,7 +64,7 @@ Almacen* almacen = new Almacen(listaAlmacen, colaEntregados, colaAlmacen);
 
 LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero,
                                            primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja,
-                                           colaCalidad, listaAlmacen, colaEntregados, colaAlmacen);
+                                           colaCalidad, listaAlmacen, colaEntregados, colaAlmacen, listaPedidosPrioridad, listaPedidos);
 
 
 
@@ -101,6 +101,8 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> setAlmacenLabel(ui->almacenLabel);
     labelThread -> setEntregadosLabel(ui->almacenEntregadosLabel);
     labelThread -> setNoEntregadosLabel(ui->almacenPorEntregarLabel);
+    labelThread -> setEntregaPrioridadLabel(ui->entregaPrioridadLabel);
+    labelThread -> setEntregaLabel(ui -> entregaLabel);
 
     labelThread -> start();
     horno->start();
