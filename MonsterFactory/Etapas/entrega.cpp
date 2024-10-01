@@ -11,11 +11,12 @@ Entrega::Entrega() {}
 #include <QDebug>
 
 
-Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidosPrioridad,ListaOrdenada<Pedido*>* listaPedidos) {
+Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidosPrioridad,ListaOrdenada<Pedido*>* listaPedidos, ListaOrdenada<Mounstro*>* listaAlmacen) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->listaPedidosPrioridad = listaPedidosPrioridad;
     this->listaPedidos = listaPedidos;
+    this->listaAlmacen = listaAlmacen;
 }
 
 void Entrega::run()
@@ -28,6 +29,17 @@ void Entrega::run()
             continue;
         }
         qDebug() << "Se tramitan las entregas";
+        for(int i = 0; i < listaAlmacen->size(); i++){
+            for(int k = 0; k < listaPedidosPrioridad->size(); k++){
+                if(listaPedidosPrioridad->ver(k)->Contiene(listaAlmacen->ver(i)->type)){
+                    listaPedidosPrioridad ->ver(k) -> ContieneYRemueve(listaAlmacen->ver(i)->type);
+                    listaPedidosPrioridad->ver(k)->IncertMonster(listaAlmacen->borrar(i));
+                }
+            }
+        }
+
+
+
         QThread::sleep(this->sleepTime);
     }
 }

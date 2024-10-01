@@ -51,11 +51,13 @@ void PedidoManager::run()
                         //qDebug() << "Primera P " << instanceString << partesPedido.size() - 4;
                         // Instancio Pedido
                         Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 4);
+                        pedido->ChangeMax(partesPedido.size() - 4);
                         listaPedidosPrioridad->incert(pedido);
 
                     } else if (partesPedido[1] != "1ST PROGRA") {
                         //qDebug() << "Segunda P" << instanceString << partesPedido.size() - 4;
                         Pedido* pedidoNotPriority = new Pedido(instanceString, partesPedido.size() - 4);
+                        pedidoNotPriority->ChangeMax(partesPedido.size() - 4);
                         listaPedidos -> incert(pedidoNotPriority);
                     }
                 }
