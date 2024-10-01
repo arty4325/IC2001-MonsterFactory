@@ -212,6 +212,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>calidadqueue</string>
       </property>
      </widget>
+     <widget class="QLabel" name="pedidosEntregadosLabel">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>201</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>calidadqueue</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QScrollArea" name="scrollArea_5">

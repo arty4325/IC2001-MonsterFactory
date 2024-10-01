@@ -65,7 +65,8 @@ Almacen* almacen = new Almacen(listaAlmacen, colaEntregados, colaAlmacen);
 
 LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMateria, colaMounstros, basurero,
                                            primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja,
-                                           colaCalidad, listaAlmacen, colaEntregados, colaAlmacen, listaPedidosPrioridad, listaPedidos);
+                                           colaCalidad, listaAlmacen, colaEntregados, colaAlmacen, listaPedidosPrioridad,
+                                           listaPedidos, listaPedidosEntregados);
 
 
 
@@ -104,6 +105,7 @@ MainWindow::MainWindow(QWidget *parent)
     labelThread -> setNoEntregadosLabel(ui->almacenPorEntregarLabel);
     labelThread -> setEntregaPrioridadLabel(ui->entregaPrioridadLabel);
     labelThread -> setEntregaLabel(ui -> entregaLabel);
+    labelThread -> setPedidosEntregados(ui ->pedidosEntregadosLabel);
 
     labelThread -> start();
     horno->start();

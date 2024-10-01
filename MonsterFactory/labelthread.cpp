@@ -6,7 +6,8 @@ LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad
                          Cola<Mounstro*>* colaMounstro, ListaOrdenada<Mounstro*>* basurero, Cola<Mounstro*>* primeraBandeja,
                          Cola<Mounstro*>* segundaBandeja, Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja,
                          Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Mounstro*>* colaEntregados,
-                         ListaOrdenada<Mounstro*>* colaAlmacen,  ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad) {
+                         ListaOrdenada<Mounstro*>* colaAlmacen,  ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad,
+                         ListaOrdenada<Pedido*>* listaPedidosEntregados) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->colaEnergia = colaEnergia;
@@ -24,6 +25,7 @@ LabelThread::LabelThread(int sleepTime, Cola<Energia*>* colaEnergia, Cola<Maldad
     this -> colaAlmacen = colaAlmacen;
     this -> listaPedidos = listaPedidos;
     this -> listaPedidosPrioridad = listaPedidosPrioridad;
+    this -> listaPedidosEntregados = listaPedidosEntregados;
 }
 
 
@@ -96,6 +98,9 @@ void LabelThread::run()
 
         QString cantItemsEntrega = QString::number(listaPedidosPrioridad->cantItems);
         entregaLabel -> setText("Cant Items por entregar: " + cantItemsEntrega);
+
+        QString cantPedidosEntregados = QString::number(listaPedidosEntregados->cantItems);
+        pedidosEntregadosLabel -> setText("Cant Items Entregados: " + cantPedidosEntregados);
         //qDebug() << "Deberia de cambiar los label" << colaEnergia ->cantItems << " " << colaEnergia -> maxCant;
         //qDebug() << materia->type;
     }
@@ -157,6 +162,10 @@ void LabelThread::setEntregaPrioridadLabel(QLabel* label){
 
 void LabelThread::setEntregaLabel(QLabel* label){
     this->entregaLabel = label;
+}
+
+void LabelThread::setPedidosEntregados(QLabel* label){
+    this->pedidosEntregadosLabel = label;
 }
 
 
