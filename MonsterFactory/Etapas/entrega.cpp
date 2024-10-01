@@ -11,7 +11,7 @@ Entrega::Entrega() {}
 #include <QDebug>
 
 
-Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidosPrioridad,ListaOrdenada<Pedido*>* listaPedidos, ListaOrdenada<Mounstro*>* listaAlmacen) {
+Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->listaPedidosPrioridad = listaPedidosPrioridad;
@@ -28,21 +28,46 @@ void Entrega::run()
             QThread::sleep(1);
             continue;
         }
-        //qDebug() << "Se tramitan las entregas";
-        for(int i = 0; i < listaAlmacen->size(); i++){
-            for(int k = 0; k < listaPedidosPrioridad->size(); k++){
-                if(listaPedidosPrioridad->ver(k)->Contiene(listaAlmacen->ver(i)->type)){
-                    listaPedidosPrioridad ->ver(k) -> ContieneYRemueve(listaAlmacen->ver(i)->type);
-                    listaPedidosPrioridad->ver(k)->IncertMonster(listaAlmacen->borrar(i));
+
+        // Usar una ListaOrdenada<int> para almacenar los índices de los elementos a eliminar
+        ListaOrdenada<int> indicesAEliminar;
+
+        // Procesar primero los pedidos prioritarios
+        for (int i = 0; i < listaAlmacen->size(); ++i) {
+            bool procesado = false;
+
+            // Verificar en la lista de pedidos prioritarios
+            for (int k = 0; k < listaPedidosPrioridad->size(); ++k) {
+                if (listaPedidosPrioridad->ver(k)->Contiene(listaAlmacen->ver(i)->type)) {
+                    listaPedidosPrioridad->ver(k)->ContieneYRemueve(listaAlmacen->ver(i)->type);
+                    listaPedidosPrioridad->ver(k)->IncertMonster(listaAlmacen->ver(i));
+                    indicesAEliminar.incert(i);  // Marcar el índice para eliminar
+                    procesado = true;
+                    break;  // Si el monstruo ha sido procesado, no buscar en más pedidos
+                }
+            }
+
+            // Si no fue procesado en la lista de prioridad, verificar en la lista normal
+            if (!procesado) {
+                for (int w = 0; w < listaPedidos->size(); ++w) {
+                    if (listaPedidos->ver(w)->Contiene(listaAlmacen->ver(i)->type)) {
+                        listaPedidos->ver(w)->ContieneYRemueve(listaAlmacen->ver(i)->type);
+                        listaPedidos->ver(w)->IncertMonster(listaAlmacen->ver(i));
+                        indicesAEliminar.incert(i);  // Marcar el índice para eliminar
+                        break;  // Una vez procesado, no buscar en más pedidos
+                    }
                 }
             }
         }
-        // Aqui se vieron los de prioridad, ahora se ven los normales
 
-
-
+        // Eliminar los elementos de listaAlmacen que han sido procesados, desde el último al primero
+        for (int j = indicesAEliminar.size() - 1; j >= 0; --j) {
+            listaAlmacen->borrar(indicesAEliminar.ver(j));  // Eliminar desde el final
+        }
 
         QThread::sleep(this->sleepTime);
     }
 }
+
+
 

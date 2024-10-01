@@ -54,7 +54,7 @@ Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terce
 
 PedidoManager* pedidoManager = new PedidoManager(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
 
-Entrega* entrega = new Entrega(1, listaPedidosPrioridad, listaPedidosPrioridad, listaAlmacen);
+Entrega* entrega = new Entrega(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
 
 
 // Almacen
