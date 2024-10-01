@@ -29,37 +29,71 @@ public:
         cantItems += 1;
     }
 
-    // Método para borrar un nodo en un índice específico y devolver el item eliminado
-    T borrar(int indice){
-        if(indice < 0 || indice >= cantItems){
-            qDebug() << "Índice fuera de rango";
+    T borrar(int indice) {
+        // Verificar si el índice está dentro del rango
+        if (indice < 0 || indice >= cantItems) {
+            qDebug() << "Índice fuera de rango: " << indice;
             return T();  // Devuelve un objeto por defecto si el índice es inválido
         }
 
+        // Caso especial: si la lista tiene un solo elemento
+        if (cantItems == 1) {
+            nodoOrdenado<T>* nodoAEliminar = primerNodo;  // El único nodo
+
+            // Actualizar primerNodo y ultimoNodo a nullptr ya que estamos eliminando el único nodo
+            primerNodo = nullptr;
+            ultimoNodo = nullptr;
+
+            T dataEliminada = nodoAEliminar->data;
+            delete nodoAEliminar;  // Liberar memoria
+            cantItems = 0;  // La lista ahora está vacía
+
+            return dataEliminada;  // Retorna el dato eliminado
+        }
+
+        // Caso especial: eliminar el primer nodo (índice 0)
+        if (indice == 0) {
+            nodoOrdenado<T>* nodoAEliminar = primerNodo;
+            T dataEliminada = nodoAEliminar->data;
+
+            primerNodo = nodoAEliminar->next;  // Actualizar el primer nodo
+
+            if (primerNodo != nullptr) {
+                primerNodo->previous = nullptr;  // Si hay un nuevo primer nodo, no tiene anterior
+            }
+
+            delete nodoAEliminar;  // Liberar la memoria del nodo eliminado
+            cantItems -= 1;
+            return dataEliminada;  // Retornar el dato eliminado
+        }
+
+        // Caso general: eliminar un nodo que no es el primero
         nodoOrdenado<T>* nodoActual = primerNodo;
-        for(int i = 0; i < indice; i++){
+
+        // Avanza hasta el nodo a eliminar
+        for (int i = 0; i < indice; i++) {
             nodoActual = nodoActual->next;
         }
 
-        // Desconectar el nodo a eliminar de la lista
-        if(nodoActual->previous != nullptr){
+        // Eliminar el nodo actual (que no es el primero)
+        if (nodoActual->previous != nullptr) {
             nodoActual->previous->next = nodoActual->next;
-        } else {
-            primerNodo = nodoActual->next;  // Si es el primer nodo
         }
 
-        if(nodoActual->next != nullptr){
+        if (nodoActual->next != nullptr) {
             nodoActual->next->previous = nodoActual->previous;
         } else {
-            ultimoNodo = nodoActual->previous;  // Si es el último nodo
+            // Si es el último nodo, actualizar el último puntero
+            ultimoNodo = nodoActual->previous;
         }
 
         T dataEliminada = nodoActual->data;
-        delete nodoActual;
+        delete nodoActual;  // Liberar la memoria del nodo
         cantItems -= 1;
 
-        return dataEliminada;  // Retorna el dato eliminado
+        return dataEliminada;  // Retornar el dato eliminado
     }
+
 
     // Método para ver el valor de un nodo en un índice específico
     T ver(int indice) const {

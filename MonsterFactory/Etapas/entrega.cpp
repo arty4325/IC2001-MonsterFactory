@@ -63,11 +63,10 @@ void Entrega::run()
 
         // Eliminar los elementos de listaAlmacen que han sido procesados, desde el último al primero
         for (int j = indicesAEliminar.size() - 1; j >= 0; --j) {
+            qDebug() << "Lo que se esta borrando (A ver a donde putas se cae" << indicesAEliminar.ver(j);
             listaAlmacen->borrar(indicesAEliminar.ver(j));  // Eliminar desde el final
         }
 
         QThread::sleep(this->sleepTime);
     }
 }
-
-

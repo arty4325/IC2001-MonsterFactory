@@ -31,7 +31,7 @@ ListaOrdenada<Mounstro*>* basurero = new ListaOrdenada<Mounstro*>();
 EnergyThread* energyThread = new EnergyThread(1, colaEnergia);
 MaldadThread* maldadThread = new MaldadThread(1, colaMaldad);
 MateriaThread* materiaThread = new MateriaThread(1, colaMateria);
-Combinador* combinador = new Combinador(1, colaMounstros, basurero, colaEnergia, colaMaldad, colaMateria);
+Combinador* combinador = new Combinador(2, colaMounstros, basurero, colaEnergia, colaMaldad, colaMateria);
 
 // Creacion de bandejas
 Cola<Mounstro*>* primeraBandeja = new Cola<Mounstro*>();
@@ -51,11 +51,11 @@ ListaOrdenada<Pedido*>* listaPedidos = new ListaOrdenada<Pedido*>();
 ListaOrdenada<Pedido*>* listaPedidosPrioridad = new ListaOrdenada<Pedido*>();
 ListaOrdenada<Pedido*>* listaPedidosEntregados = new ListaOrdenada<Pedido*>();
 
-Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
+Horno* horno = new Horno(2, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
-PedidoManager* pedidoManager = new PedidoManager(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
+PedidoManager* pedidoManager = new PedidoManager(3, listaPedidos, listaPedidosPrioridad, listaAlmacen);
 
-Entrega* entrega = new Entrega(1, listaPedidos, listaPedidosPrioridad, listaAlmacen, listaPedidosEntregados);
+Entrega* entrega = new Entrega(3, listaPedidos, listaPedidosPrioridad, listaAlmacen, listaPedidosEntregados);
 
 
 // Almacen
