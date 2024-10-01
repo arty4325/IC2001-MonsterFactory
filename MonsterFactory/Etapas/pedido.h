@@ -17,6 +17,7 @@ public:
     void ChangeMax(int val);
     void IncertMonster(Mounstro* mousntro);
     bool ContieneYRemueve(QString searchString);
+    bool isPedidoFull();
 private:
     QString inputString;
     Cola<Mounstro*>* mounstrosPedido = new Cola<Mounstro*>();

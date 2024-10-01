@@ -49,12 +49,13 @@ ListaOrdenada<Mounstro*>* colaAlmacen = new ListaOrdenada<Mounstro*>();
 // Creacion de pedidos
 ListaOrdenada<Pedido*>* listaPedidos = new ListaOrdenada<Pedido*>();
 ListaOrdenada<Pedido*>* listaPedidosPrioridad = new ListaOrdenada<Pedido*>();
+ListaOrdenada<Pedido*>* listaPedidosEntregados = new ListaOrdenada<Pedido*>();
 
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
 PedidoManager* pedidoManager = new PedidoManager(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
 
-Entrega* entrega = new Entrega(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
+Entrega* entrega = new Entrega(1, listaPedidos, listaPedidosPrioridad, listaAlmacen, listaPedidosEntregados);
 
 
 // Almacen

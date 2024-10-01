@@ -15,7 +15,7 @@ class Entrega : public QThread
 {
 public:
     Entrega();
-    Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen);
+    Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Pedido*>* listaPedidosEntregados);
     void run();
 private:
     bool running;
@@ -23,6 +23,7 @@ private:
     ListaOrdenada<Pedido*>* listaPedidos;
     ListaOrdenada<Pedido*>* listaPedidosPrioridad;
     ListaOrdenada<Mounstro*>* listaAlmacen;
+    ListaOrdenada<Pedido*>* listaPedidosEntregados;
 
 };
 

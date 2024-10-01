@@ -31,3 +31,7 @@ void Pedido::ChangeMax(int val){
 void Pedido::IncertMonster(Mounstro* mounstro){
     mounstrosPedido->push(mounstro);
 }
+
+bool Pedido::isPedidoFull(){
+    return mounstrosPedido->isFull();
+}

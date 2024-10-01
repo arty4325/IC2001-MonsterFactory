@@ -11,12 +11,13 @@ Entrega::Entrega() {}
 #include <QDebug>
 
 
-Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen) {
+Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Pedido*>* listaPedidosEntregados) {
     this->sleepTime = sleepTime;
     this->running = true;
     this->listaPedidosPrioridad = listaPedidosPrioridad;
     this->listaPedidos = listaPedidos;
     this->listaAlmacen = listaAlmacen;
+    this->listaPedidosEntregados = listaPedidosEntregados;
 }
 
 void Entrega::run()
@@ -68,6 +69,5 @@ void Entrega::run()
         QThread::sleep(this->sleepTime);
     }
 }
-
 
 
