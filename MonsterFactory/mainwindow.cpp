@@ -16,6 +16,7 @@
 #include "labelthread.h"
 #include "./ui_mainwindow.h"
 #include "Etapas/pedidomanager.h"
+#include "Etapas/entrega.h"
 #include "Etapas/pedido.h"
 
 
@@ -52,6 +53,9 @@ ListaOrdenada<Pedido*>* listaPedidosPrioridad = new ListaOrdenada<Pedido*>();
 Horno* horno = new Horno(1, colaMounstros, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja, colaCalidad);
 
 PedidoManager* pedidoManager = new PedidoManager(1, listaPedidos, listaPedidosPrioridad, listaAlmacen);
+
+Entrega* entrega = new Entrega(1, listaPedidos, listaPedidosPrioridad);
+
 
 // Almacen
 
@@ -102,6 +106,7 @@ MainWindow::MainWindow(QWidget *parent)
     horno->start();
     calidad -> start();
     pedidoManager -> start();
+    entrega -> start();
 }
 
 MainWindow::~MainWindow()

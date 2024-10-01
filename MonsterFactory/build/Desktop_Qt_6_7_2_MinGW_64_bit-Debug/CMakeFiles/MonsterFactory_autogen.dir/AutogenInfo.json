@@ -299,6 +299,12 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/entrega.h",
+			"MU",
+			"LGLKB2QAZ6/moc_entrega.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/horno.h",
 			"MU",
 			"LGLKB2QAZ6/moc_horno.cpp",
@@ -460,6 +466,11 @@
 		],
 		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/combinador.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/entrega.cpp",
 			"MU",
 			null
 		],

@@ -18,7 +18,7 @@ QString readTextFiles::readTextFilesInFolder() {
     for (const QString& fileName : txtFiles) {
         // Verificar si el archivo ya fue renombrado con '=read'
         if (fileName.endsWith("=read.txt")) {
-            qDebug() << "Saltando archivo ya leído:" << fileName;
+            //qDebug() << "Saltando archivo ya leído:" << fileName;
             continue;  // Saltar el archivo si ya fue leído
         }
 
@@ -37,12 +37,12 @@ QString readTextFiles::readTextFilesInFolder() {
             QString newFilePath = directory.absoluteFilePath(newFileName);
 
             if (!file.rename(newFilePath)) {
-                qDebug() << "No se pudo renombrar el archivo:" << fileName;
+                //qDebug() << "No se pudo renombrar el archivo:" << fileName;
             } else {
                 qDebug() << "Archivo renombrado a:" << newFileName;
             }
         } else {
-            qDebug() << "No se pudo abrir el archivo:" << fileName;
+            //qDebug() << "No se pudo abrir el archivo:" << fileName;
         }
     }
 

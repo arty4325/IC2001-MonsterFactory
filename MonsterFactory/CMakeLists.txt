@@ -42,6 +42,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ReadingStructures/readtextfiles.h ReadingStructures/readtextfiles.cpp
         Etapas/pedido.h Etapas/pedido.cpp
         Etapas/pedidomanager.h Etapas/pedidomanager.cpp
+        Etapas/entrega.h Etapas/entrega.cpp
 
 
     )

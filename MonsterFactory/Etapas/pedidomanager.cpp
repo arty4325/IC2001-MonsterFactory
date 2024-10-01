@@ -48,20 +48,20 @@ void PedidoManager::run()
                 //qDebug() << instanceString << instanceString.length();
                 if(partesPedido.size() > 1){
                     if(partesPedido[1] == "1ST PROGRA"){
-                        qDebug() << "Primera P " << instanceString << partesPedido.size() - 4;
+                        //qDebug() << "Primera P " << instanceString << partesPedido.size() - 4;
                         // Instancio Pedido
                         Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 4);
                         listaPedidosPrioridad->incert(pedido);
 
                     } else if (partesPedido[1] != "1ST PROGRA") {
-                        qDebug() << "Segunda P" << instanceString << partesPedido.size() - 4;
+                        //qDebug() << "Segunda P" << instanceString << partesPedido.size() - 4;
                         Pedido* pedidoNotPriority = new Pedido(instanceString, partesPedido.size() - 4);
                         listaPedidos -> incert(pedidoNotPriority);
                     }
                 }
             }
         } catch (...) {
-            qDebug() << "An error occurred.";
+            //qDebug() << "An error occurred.";
         }
 
         // Ya aqui se terminaron de procesar las solicitudes, tengo que comenzar a procesar los pedidos

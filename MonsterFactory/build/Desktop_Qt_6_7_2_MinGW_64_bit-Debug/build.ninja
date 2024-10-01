@@ -161,6 +161,14 @@ build CMakeFiles/MonsterFactory.dir/Etapas/pedidomanager.cpp.obj: CXX_COMPILER__
   OBJECT_DIR = CMakeFiles\MonsterFactory.dir
   OBJECT_FILE_DIR = CMakeFiles\MonsterFactory.dir\Etapas
 
+build CMakeFiles/MonsterFactory.dir/Etapas/entrega.cpp.obj: CXX_COMPILER__MonsterFactory_unscanned_Debug C$:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras$ de$ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Etapas/entrega.cpp || cmake_object_order_depends_target_MonsterFactory
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\MonsterFactory.dir\Etapas\entrega.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include" -isystem C:/Qt/6.7.2/mingw_64/include/QtCore -isystem C:/Qt/6.7.2/mingw_64/include -isystem C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\MonsterFactory.dir
+  OBJECT_FILE_DIR = CMakeFiles\MonsterFactory.dir\Etapas
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MonsterFactory
@@ -169,7 +177,7 @@ build CMakeFiles/MonsterFactory.dir/Etapas/pedidomanager.cpp.obj: CXX_COMPILER__
 #############################################
 # Link the executable MonsterFactory.exe
 
-build MonsterFactory.exe: CXX_EXECUTABLE_LINKER__MonsterFactory_Debug CMakeFiles/MonsterFactory.dir/MonsterFactory_autogen/mocs_compilation.cpp.obj CMakeFiles/MonsterFactory.dir/main.cpp.obj CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj CMakeFiles/MonsterFactory.dir/labelthread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/horno.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/calidad.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/almacen.cpp.obj CMakeFiles/MonsterFactory.dir/ReadingStructures/readtextfiles.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedido.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedidomanager.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || MonsterFactory_autogen MonsterFactory_autogen_timestamp_deps
+build MonsterFactory.exe: CXX_EXECUTABLE_LINKER__MonsterFactory_Debug CMakeFiles/MonsterFactory.dir/MonsterFactory_autogen/mocs_compilation.cpp.obj CMakeFiles/MonsterFactory.dir/main.cpp.obj CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj CMakeFiles/MonsterFactory.dir/labelthread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/horno.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/calidad.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/almacen.cpp.obj CMakeFiles/MonsterFactory.dir/ReadingStructures/readtextfiles.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedido.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedidomanager.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/entrega.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || MonsterFactory_autogen MonsterFactory_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
