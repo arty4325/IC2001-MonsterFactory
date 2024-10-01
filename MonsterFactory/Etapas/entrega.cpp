@@ -42,6 +42,10 @@ void Entrega::run()
                 if (listaPedidosPrioridad->ver(k)->Contiene(listaAlmacen->ver(i)->type)) {
                     listaPedidosPrioridad->ver(k)->ContieneYRemueve(listaAlmacen->ver(i)->type);
                     listaPedidosPrioridad->ver(k)->IncertMonster(listaAlmacen->ver(i));
+                    if(listaPedidosPrioridad->ver(k)->isPedidoFull()){
+                        qDebug() << "Hola mina xd 1";
+                        listaPedidosEntregados->incert(listaPedidosPrioridad->borrar(k));
+                    }
                     indicesAEliminar.incert(i);  // Marcar el índice para eliminar
                     procesado = true;
                     break;  // Si el monstruo ha sido procesado, no buscar en más pedidos
@@ -54,6 +58,10 @@ void Entrega::run()
                     if (listaPedidos->ver(w)->Contiene(listaAlmacen->ver(i)->type)) {
                         listaPedidos->ver(w)->ContieneYRemueve(listaAlmacen->ver(i)->type);
                         listaPedidos->ver(w)->IncertMonster(listaAlmacen->ver(i));
+                        if(listaPedidos->ver(w)->isPedidoFull()){
+                            qDebug() << "Hola mina xd 2";
+                            listaPedidosEntregados->incert(listaPedidos->borrar(w));
+                        }
                         indicesAEliminar.incert(i);  // Marcar el índice para eliminar
                         break;  // Una vez procesado, no buscar en más pedidos
                     }
