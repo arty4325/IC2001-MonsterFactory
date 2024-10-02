@@ -35,3 +35,16 @@ void Pedido::IncertMonster(Mounstro* mounstro){
 bool Pedido::isPedidoFull(){
     return mounstrosPedido->isFull();
 }
+
+QString Pedido::getName() {
+    // Separar el string en partes usando '=' como delimitador
+    QStringList parts = this->inputString.split("=");
+
+    // Retornar el último elemento, que debería ser el nombre (después de los "=")
+    if (!parts.isEmpty()) {
+        QString name = parts.last().trimmed(); // Trim para eliminar espacios en blanco
+        return name;
+    }
+
+    return ""; // Si no se encuentra, retornamos un string vacío
+}

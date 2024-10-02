@@ -1,5 +1,6 @@
 #include "horno.h"
-
+#include <QDateTime>
+#include <QDebug>
 
 Horno::Horno() {}
 
@@ -61,42 +62,65 @@ void Horno::run()
                 }
             }
 
-            if ((primeraBandeja -> isFull() && segundaBandeja -> isFull() && terceraBandeja -> isFull() && cuartaBandeja -> isFull())){
-                //qDebug() << "Horneo lets fucking go";
-                //qDebug() << "info" << primeraBandeja -> isFull() << segundaBandeja -> isFull() << terceraBandeja -> isFull() << cuartaBandeja -> isFull() << colaCalidad -> isFull();
-                // Tengo que hornear solo los que no esta bloqueado PARA CUANDO LLEGA A ESTE PUNTO
-                // Puedo hacer una estructura bastante similar a la que tenia cuando estaba armando las colas
-                if(!(colaCalidad -> isFull())){
-                    while(!(primeraBandeja -> isEmpty()) && !isFirstBlocked){
+            if ((primeraBandeja -> isFull() && segundaBandeja -> isFull() && terceraBandeja -> isFull() && cuartaBandeja -> isFull())) {
+                // Imprime mensaje cuando comienza el horneado
+                qDebug() << "Horneado iniciado. Esperando" << this->sleepTime << "segundos.";
+
+                // Pausa para simular el tiempo de horneado
+                QThread::sleep(this->sleepTime);  // Espera this->sleepTime antes de empezar a mover mounstros a la colaCalidad
+
+                // Imprime mensaje cuando termina el horneado
+                //qDebug() << "Horneado terminado.";
+
+                // Tengo que hornear solo los que no están bloqueados
+                if(!(colaCalidad -> isFull())) {
+                    while(!(primeraBandeja -> isEmpty()) && !isFirstBlocked) {
                         //qDebug() << "Quita primero";
                         Mounstro* mounstro = primeraBandeja -> pop() -> data;
+                        mounstro -> bandejaHorneo = 1;
+                        QDateTime currentDateTime = QDateTime::currentDateTime();
+                        QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
+                        mounstro ->finalHorneado = currentDateTime;
+                        mounstro->inicioHorneado = beganOven;
                         mounstro -> isCooked = true;
                         colaCalidad -> push(mounstro);
                     }
 
-                    while(!(segundaBandeja -> isEmpty()) && !isSecondBlocked){
+                    while(!(segundaBandeja -> isEmpty()) && !isSecondBlocked) {
                         //qDebug() << "Quita segundo";
                         Mounstro* mounstro = segundaBandeja -> pop() -> data;
-                        mounstro -> isCooked = true;
+                        mounstro -> bandejaHorneo = 2;
+                        QDateTime currentDateTime = QDateTime::currentDateTime();
+                        QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
+                        mounstro ->finalHorneado = currentDateTime;
+                        mounstro->inicioHorneado = beganOven;
                         colaCalidad -> push(mounstro);
                     }
 
-                    while(!(terceraBandeja -> isEmpty()) && !isThirdBlocked && !(colaCalidad->getIsFull())){
+                    while(!(terceraBandeja -> isEmpty()) && !isThirdBlocked && !(colaCalidad->getIsFull())) {
                         //qDebug() << "Quita tercero";
                         Mounstro* mounstro = terceraBandeja -> pop() -> data;
-                        mounstro -> isCooked = true;
+                        mounstro -> bandejaHorneo = 3;
+                        QDateTime currentDateTime = QDateTime::currentDateTime();
+                        QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
+                        mounstro ->finalHorneado = currentDateTime;
+                        mounstro->inicioHorneado = beganOven;
                         colaCalidad -> push(mounstro);
                     }
 
-                    while(!(cuartaBandeja -> isEmpty()) && !isFourthBlocked){
+                    while(!(cuartaBandeja -> isEmpty()) && !isFourthBlocked) {
                         //qDebug() << "Quita cuarto";
                         Mounstro* mounstro = cuartaBandeja -> pop() -> data;
-                        mounstro -> isCooked = true;
+                        mounstro -> bandejaHorneo = 4;
+                        QDateTime currentDateTime = QDateTime::currentDateTime();
+                        QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
+                        mounstro -> finalHorneado = currentDateTime;
+                        mounstro -> inicioHorneado = beganOven;
                         colaCalidad -> push(mounstro);
                     }
                 }
-
             }
+
         }
 
         //qDebug() << "Hornea";

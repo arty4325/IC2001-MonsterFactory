@@ -44,6 +44,11 @@ void Entrega::run()
                     listaPedidosPrioridad->ver(k)->IncertMonster(listaAlmacen->ver(i));
                     if(listaPedidosPrioridad->ver(k)->isPedidoFull()){
                         qDebug() << "Hola mina xd 1";
+                        listaAlmacen ->ver(i) -> enAlmacen = false;
+                        // A que pedido y cuando
+                        listaAlmacen -> ver(i) -> tiempoEntrega = QDateTime::currentDateTime();
+                        //qDebug() << listaPedidosPrioridad->ver(k)->getName();
+                        listaAlmacen -> ver(i)->pedido = listaPedidosPrioridad->ver(k)->getName();
                         listaPedidosEntregados->incert(listaPedidosPrioridad->borrar(k));
                     }
                     indicesAEliminar.incert(i);  // Marcar el índice para eliminar
@@ -60,6 +65,10 @@ void Entrega::run()
                         listaPedidos->ver(w)->IncertMonster(listaAlmacen->ver(i));
                         if(listaPedidos->ver(w)->isPedidoFull()){
                             qDebug() << "Hola mina xd 2";
+                            listaAlmacen ->ver(i) -> enAlmacen = false;
+                            // A que pedido y cuando
+                            listaAlmacen -> ver(i) -> tiempoEntrega = QDateTime::currentDateTime();
+                            listaAlmacen -> ver(i)->pedido = listaPedidosPrioridad->ver(w)->getName();
                             listaPedidosEntregados->incert(listaPedidos->borrar(w));
                         }
                         indicesAEliminar.incert(i);  // Marcar el índice para eliminar

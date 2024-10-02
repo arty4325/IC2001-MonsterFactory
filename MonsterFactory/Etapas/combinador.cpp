@@ -22,12 +22,15 @@ void Combinador::run()
             QThread::sleep(1);
             continue;
         }
+        _Consecutivo += 1;
         QThread::sleep(this->sleepTime);
         if (!colaEnergia->isEmpty() && !colaMaldad->isEmpty() && !colaMateria->isEmpty() && !(colaMounstros->isFull())) {
             QString energia = this->colaEnergia->pop()->data->type;
             QString maldad = this->colaMaldad->pop()->data->type;
             QString materia = this->colaMateria->pop()->data->type;
             Mounstro* mounstro = new Mounstro(energia, materia, maldad);
+            //qDebug() << Consecutivo;
+            mounstro->Consecutivo = _Consecutivo;
             if(mounstro->type != "Bueno"){
                 this->colaMounstros->push(mounstro);
             } else {

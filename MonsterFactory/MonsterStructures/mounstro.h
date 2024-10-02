@@ -4,6 +4,8 @@
 #include <QDebug>
 #include<QObject>
 #include <QRandomGenerator>
+#include <QDateTime>
+#include <QDebug>
 
 class Mounstro
 {
@@ -13,12 +15,35 @@ public:
     QString material;
     QString maldad;
     bool isCooked;
+    int Consecutivo;
+    QDateTime Creacion;
+    QDateTime inicioHorneado;
+    QDateTime finalHorneado;
+    int bandejaHorneo;
+    int inspectorRevisor;
+    bool fueRechazado;
+    bool enAlmacen;
+    QString cliente;
+    QDateTime tiempoEntrega;
+    QString pedido;
+
     Mounstro(){
         type = "";
         energia = "";
         material = "";
         maldad = "";
         isCooked = false;
+        Consecutivo = 0;
+        inicioHorneado = QDateTime();
+        finalHorneado = QDateTime();
+        Creacion = QDateTime::currentDateTime();
+        bandejaHorneo = -1;
+        inspectorRevisor = -1;
+        fueRechazado = false;
+        enAlmacen = false;
+        cliente = "";
+        tiempoEntrega = QDateTime();
+
     }
     Mounstro(QString _energia, QString _material, QString _maldad){
         energia = _energia;

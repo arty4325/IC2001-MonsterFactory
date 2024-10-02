@@ -103,6 +103,7 @@ void LabelThread::run()
         pedidosEntregadosLabel -> setText("Cant Items Entregados: " + cantPedidosEntregados);
         //qDebug() << "Deberia de cambiar los label" << colaEnergia ->cantItems << " " << colaEnergia -> maxCant;
         //qDebug() << materia->type;
+
     }
 }
 
@@ -167,6 +168,7 @@ void LabelThread::setEntregaLabel(QLabel* label){
 void LabelThread::setPedidosEntregados(QLabel* label){
     this->pedidosEntregadosLabel = label;
 }
+
 
 
 

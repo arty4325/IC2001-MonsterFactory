@@ -18,7 +18,7 @@
 #include "Etapas/pedidomanager.h"
 #include "Etapas/entrega.h"
 #include "Etapas/pedido.h"
-
+#include "colamounstros.h"
 
 
 // Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
@@ -82,6 +82,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    _colaMounstros = new ColaMounstros(this, colaMounstros);
     ui->setupUi(this);
     energyThread -> start();
     //energyThread -> setLabel(ui->energyLabel);
@@ -298,5 +299,26 @@ void MainWindow::on_inspector2SpinBox_valueChanged(int arg1)
 {
     // Cambiar segunda probabilidad
     calidad -> changeSecondProbability(arg1);
+}
+
+
+#include <QTimer>
+
+// Suponiendo que _colaMounstros es un puntero a un objeto ColaMounstros
+void MainWindow::on_pushButton_clicked()
+{
+    // Mostrar la ventana modal de ColaMounstros
+    _colaMounstros->show();
+
+    // Crear un temporizador
+    QTimer* timer = new QTimer(this);
+
+    // Conectar el temporizador para que ejecute el método `printColaMounstros` cada vez que el temporizador emita la señal
+    connect(timer, &QTimer::timeout, [=]() {
+        _colaMounstros->printColaMounstros();
+    });
+
+    // Establecer que el temporizador se dispare cada 1000 milisegundos (1 segundo)
+    timer->start(1000);
 }
 

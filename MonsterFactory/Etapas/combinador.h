@@ -23,6 +23,7 @@ public:
     void run();
 private:
     bool running;
+    int _Consecutivo = 0;
     int sleepTime;
     Cola<Mounstro*>* colaMounstros;
     ListaOrdenada<Mounstro*>* basurero;

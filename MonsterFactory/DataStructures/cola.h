@@ -103,6 +103,24 @@ public:
         }
         return primerNodo;
     }
+
+    T getElementoEnIndice(int indice) const {
+        if (indice < 0 || indice >= cantItems) {
+            throw std::out_of_range("Índice fuera de rango");  // Manejo de error si el índice no es válido
+        }
+
+        nodoCola<T>* current = primerNodo;  // Comienza desde el primer nodo
+        int contador = 0;
+
+        // Recorre la cola hasta llegar al índice deseado
+        while (current != nullptr && contador < indice) {
+            current = current->next;
+            contador++;
+        }
+
+        return current->data;  // Devuelve el dato del nodo en el índice especificado
+    }
+
 };
 
 

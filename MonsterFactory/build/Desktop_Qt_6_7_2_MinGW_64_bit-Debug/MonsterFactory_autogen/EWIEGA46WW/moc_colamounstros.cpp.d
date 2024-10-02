@@ -1,4 +1,4 @@
-C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/EWIEGA46WW/moc_mainwindow.cpp: C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/mainwindow.h \
+C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/EWIEGA46WW/moc_colamounstros.cpp: C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/colamounstros.h \
   C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/moc_predefs.h \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.7.2/mingw_64/include/QtCore/QDeadlineTimer \
@@ -306,15 +306,12 @@ C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos
   C:/Qt/6.7.2/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/QTextEdit \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qsizepolicy.h \
-  C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtextedit.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgets-config.h \
   C:/Qt/6.7.2/mingw_64/include/QtWidgets/qtwidgetsexports.h \
@@ -653,5 +650,4 @@ C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos
   C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/maldad.h \
   C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/materia.h \
   C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/MonsterStructures/mounstro.h \
-  C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/colamounstros.h \
   C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/labelthread.h

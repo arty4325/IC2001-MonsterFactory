@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "colamounstros.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -68,7 +69,10 @@ private slots:
 
     void on_inspector2SpinBox_valueChanged(int arg1);
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+    ColaMounstros* _colaMounstros;
 };
 #endif // MAINWINDOW_H

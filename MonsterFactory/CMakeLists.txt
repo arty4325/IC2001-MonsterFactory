@@ -43,6 +43,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Etapas/pedido.h Etapas/pedido.cpp
         Etapas/pedidomanager.h Etapas/pedidomanager.cpp
         Etapas/entrega.h Etapas/entrega.cpp
+        colamounstros.h colamounstros.cpp colamounstros.ui
+
 
 
     )

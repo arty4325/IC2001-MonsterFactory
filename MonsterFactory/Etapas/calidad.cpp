@@ -37,6 +37,8 @@ void Calidad::run()
                     //qDebug() << "Bota el mounstro";
                     if(!(colaCalidad ->isEmpty())) {
                         Mounstro* mounstro = colaCalidad -> pop() -> data;
+                        mounstro -> inspectorRevisor = 1;
+                        mounstro -> fueRechazado = true;
                         basurero -> incert(mounstro);
                     }
 
@@ -49,6 +51,8 @@ void Calidad::run()
                         //qDebug() << "bota el mostro segundo inspector";
                         if(!(colaCalidad ->isEmpty())) {
                             Mounstro* mounstro = colaCalidad -> pop() -> data;
+                            mounstro -> inspectorRevisor = 2;
+                            mounstro -> fueRechazado = true;
                             basurero -> incert(mounstro);
                         }
                     } else {

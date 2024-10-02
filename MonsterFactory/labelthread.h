@@ -12,6 +12,7 @@
 #include "DataStructures/cola.h"
 #include "DataStructures/listaOrdenada.h"
 #include "Etapas/pedido.h"
+#include <QTextEdit>
 
 class LabelThread: public QThread
 {

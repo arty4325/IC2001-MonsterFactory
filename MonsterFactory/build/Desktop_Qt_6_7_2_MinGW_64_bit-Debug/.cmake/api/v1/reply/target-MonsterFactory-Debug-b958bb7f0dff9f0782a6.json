@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 84,
+				"line" : 86,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 67,
+				"line" : 69,
 				"parent" : 0
 			},
 			{
@@ -376,7 +376,8 @@
 				30,
 				32,
 				34,
-				36
+				36,
+				38
 			]
 		}
 	],
@@ -511,7 +512,8 @@
 				30,
 				32,
 				34,
-				36
+				36,
+				38
 			]
 		},
 		{
@@ -539,7 +541,9 @@
 				31,
 				33,
 				35,
-				37
+				37,
+				40,
+				41
 			]
 		},
 		{
@@ -547,14 +551,15 @@
 			"sourceIndexes" : 
 			[
 				4,
-				38
+				39,
+				42
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				39
+				43
 			]
 		}
 	],
@@ -762,9 +767,31 @@
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 4,
+			"path" : "colamounstros.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "colamounstros.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "colamounstros.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_colamounstros.h",
 			"sourceGroupIndex" : 1
 		},
 		{
