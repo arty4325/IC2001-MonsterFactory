@@ -1,4 +1,5 @@
 #include "calidad.h"
+#include "../ReadingStructures/readtextfiles.h"
 
 Calidad::Calidad() {}
 
@@ -30,7 +31,7 @@ void Calidad::run()
             int randomVal2;
             randomVal1 =  QRandomGenerator::global()->bounded(1, 100);
             randomVal2 =  QRandomGenerator::global()->bounded(1, 100);
-
+            readTextFiles* readingStructures = new readTextFiles();
             if(!(colaCalidad ->isEmpty())){
 
                 if(randomVal1 <= probsPrimerInspector ){
@@ -39,11 +40,20 @@ void Calidad::run()
                         Mounstro* mounstro = colaCalidad -> pop() -> data;
                         mounstro -> inspectorRevisor = 1;
                         mounstro -> fueRechazado = true;
+                        readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt",
+                                                            mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
                         basurero -> incert(mounstro);
                     }
 
                 } else {
                     //qDebug() << "MOSTRO VA PARA SEGUNDO INSPECTOR";
+                    // AQUI GUARDAR INFO PRIMER INSPECTOR PARA CUANDO SE APROBO MOSTRO
+                    if(!(colaCalidad->isEmpty())){
+                        Mounstro* mounstro = colaCalidad -> peck() -> data;
+                        readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt",
+                                                            mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
+                    }
+
                 }
 
                 if(!(randomVal1 <= probsPrimerInspector)) {
@@ -53,10 +63,17 @@ void Calidad::run()
                             Mounstro* mounstro = colaCalidad -> pop() -> data;
                             mounstro -> inspectorRevisor = 2;
                             mounstro -> fueRechazado = true;
+                            readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt",
+                                                                mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
                             basurero -> incert(mounstro);
                         }
                     } else {
                         //qDebug() << "ME QUEDO DEFINITIVAMENTE CON EL MOUNSTRO";
+                        if(!(colaCalidad->isEmpty())){
+                            Mounstro* mounstro = colaCalidad -> peck() -> data;
+                            readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt",
+                                                                mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
+                        }
                         almacen -> incertAlmacen(colaCalidad -> pop() -> data);
                     }
                 }

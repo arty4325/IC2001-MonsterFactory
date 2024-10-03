@@ -71,6 +71,7 @@ public:
             type = "Bueno";
         }
     }
+
 };
 
 #endif // MONSTER_H

@@ -1,0 +1,16 @@
+Locura Consecutivo: 1 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 1 
+Inteligencia Consecutivo: 3 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 1 
+Veneno Consecutivo: 7 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 2 
+Inteligencia Consecutivo: 9 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 2 
+Destruccion Consecutivo: 10 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 1 
+Maldad Consecutivo: 11 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 1 
+Velocidad Consecutivo: 15 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 1 
+Veneno Consecutivo: 16 Inicio: 2024-10-03 14:17:54 Fin: 2024-10-03 14:17:52 Bandeja 1 
+Tecnologia Consecutivo: 17 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 1 
+Locura Consecutivo: 19 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 1 
+Regeneracion Consecutivo: 23 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 2 
+Velocidad Consecutivo: 25 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 2 
+Veneno Consecutivo: 26 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 1 
+Fuerza Consecutivo: 27 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 1 
+Locura Consecutivo: 28 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 1 
+Maldad Consecutivo: 42 Inicio: 2024-10-03 14:18:48 Fin: 2024-10-03 14:18:46 Bandeja 1 

@@ -1,6 +1,7 @@
 #include "horno.h"
 #include <QDateTime>
 #include <QDebug>
+#include "../ReadingStructures/readtextfiles.h"
 
 Horno::Horno() {}
 
@@ -73,6 +74,7 @@ void Horno::run()
                 //qDebug() << "Horneado terminado.";
 
                 // Tengo que hornear solo los que no están bloqueados
+                readTextFiles* readingStructures = new readTextFiles();
                 if(!(colaCalidad -> isFull())) {
                     while(!(primeraBandeja -> isEmpty()) && !isFirstBlocked) {
                         //qDebug() << "Quita primero";
@@ -83,6 +85,17 @@ void Horno::run()
                         mounstro ->finalHorneado = currentDateTime;
                         mounstro->inicioHorneado = beganOven;
                         mounstro -> isCooked = true;
+                        mounstro->isCooked = true;
+
+                        readingStructures->appendTextToFile(
+                            "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/hornoBitacora.txt",
+                            mounstro->type +
+                                " Consecutivo: " + QString::number(mounstro->Consecutivo) +
+                                " Inicio: " + beganOven.toString("yyyy-MM-dd hh:mm:ss")  +
+                                " Fin: " + currentDateTime.toString("yyyy-MM-dd hh:mm:ss") +
+                                " Bandeja 1 "
+                            );
+
                         colaCalidad -> push(mounstro);
                     }
 
@@ -94,6 +107,17 @@ void Horno::run()
                         QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
                         mounstro ->finalHorneado = currentDateTime;
                         mounstro->inicioHorneado = beganOven;
+
+                        readingStructures->appendTextToFile(
+                            "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/hornoBitacora.txt",
+                            mounstro->type +
+                                " Consecutivo: " + QString::number(mounstro->Consecutivo) +
+                                " Inicio: " + beganOven.toString("yyyy-MM-dd hh:mm:ss")  +
+                                " Fin: " + currentDateTime.toString("yyyy-MM-dd hh:mm:ss") +
+                                " Bandeja 2 "
+                            );
+
+
                         colaCalidad -> push(mounstro);
                     }
 
@@ -105,6 +129,17 @@ void Horno::run()
                         QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
                         mounstro ->finalHorneado = currentDateTime;
                         mounstro->inicioHorneado = beganOven;
+
+                        readingStructures->appendTextToFile(
+                            "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/hornoBitacora.txt",
+                            mounstro->type +
+                                " Consecutivo: " + QString::number(mounstro->Consecutivo) +
+                                " Inicio: " + beganOven.toString("yyyy-MM-dd hh:mm:ss")  +
+                                " Fin: " + currentDateTime.toString("yyyy-MM-dd hh:mm:ss") +
+                                " Bandeja 1 "
+                            );
+
+
                         colaCalidad -> push(mounstro);
                     }
 
@@ -116,6 +151,17 @@ void Horno::run()
                         QDateTime beganOven = currentDateTime.addSecs(this->sleepTime);
                         mounstro -> finalHorneado = currentDateTime;
                         mounstro -> inicioHorneado = beganOven;
+
+                        readingStructures->appendTextToFile(
+                            "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/hornoBitacora.txt",
+                            mounstro->type +
+                                " Consecutivo: " + QString::number(mounstro->Consecutivo) +
+                                " Inicio: " + beganOven.toString("yyyy-MM-dd hh:mm:ss")  +
+                                " Fin: " + currentDateTime.toString("yyyy-MM-dd hh:mm:ss") +
+                                " Bandeja 1 "
+                            );
+
+
                         colaCalidad -> push(mounstro);
                     }
                 }

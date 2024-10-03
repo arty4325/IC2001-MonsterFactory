@@ -35,7 +35,9 @@ void Combinador::run()
             if(mounstro->type != "Bueno"){
                 this->colaMounstros->push(mounstro);
                 readTextFiles* readingStructures = new readTextFiles();
-                readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt", mounstro->type);
+                readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt",
+                                                    mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Capacidad: " + QString::number(colaMounstros->maxCant)
+                                                        + " Cantidad " + QString::number(colaMounstros ->cantItems));
             } else {
                 // Va para el basurero
                 this->basurero->incert(mounstro);
