@@ -1,4 +1,5 @@
 #include "combinador.h"
+#include "../ReadingStructures/readtextfiles.h"
 
 
 Combinador::Combinador() {}
@@ -33,9 +34,14 @@ void Combinador::run()
             mounstro->Consecutivo = _Consecutivo;
             if(mounstro->type != "Bueno"){
                 this->colaMounstros->push(mounstro);
+                readTextFiles* readingStructures = new readTextFiles();
+                readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt", mounstro->type);
             } else {
                 // Va para el basurero
                 this->basurero->incert(mounstro);
+                //readTextFiles* readingStructures = new readTextFiles();
+                //readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt", mounstro->type);
+
                 //qDebug() << "Items en basurero: " <<basurero ->cantItems;
             }
 
