@@ -84,6 +84,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     _colaMounstros = new ColaMounstros(this, colaMounstros);
     itinerarioHorno = new ItinerarioHorno(this, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
+    verAlmacen = new VerAlmacen(this, listaAlmacen);
     ui->setupUi(this);
     energyThread -> start();
     //energyThread -> setLabel(ui->energyLabel);
@@ -331,6 +332,20 @@ void MainWindow::on_itinerarioHorno_clicked()
 
     connect(timer, &QTimer::timeout, [=](){
         itinerarioHorno->printHorno();
+    });
+    timer->start(1000);
+}
+
+
+
+
+void MainWindow::on_verAlmacen_clicked()
+{
+    verAlmacen -> show();
+    QTimer* timer = new QTimer(this);
+
+    connect(timer, &QTimer::timeout, [=](){
+        verAlmacen->printAlmacen();
     });
     timer->start(1000);
 }

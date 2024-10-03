@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 86,
+				"line" : 88,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 69,
+				"line" : 71,
 				"parent" : 0
 			},
 			{
@@ -377,7 +377,9 @@
 				32,
 				34,
 				36,
-				38
+				38,
+				41,
+				44
 			]
 		}
 	],
@@ -513,7 +515,9 @@
 				32,
 				34,
 				36,
-				38
+				38,
+				41,
+				44
 			]
 		},
 		{
@@ -543,7 +547,11 @@
 				35,
 				37,
 				40,
-				41
+				43,
+				46,
+				47,
+				48,
+				49
 			]
 		},
 		{
@@ -552,14 +560,16 @@
 			[
 				4,
 				39,
-				42
+				42,
+				45,
+				50
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				43
+				51
 			]
 		}
 	],
@@ -783,6 +793,38 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "itinerariohorno.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "itinerariohorno.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "itinerariohorno.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "veralmacen.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "veralmacen.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "veralmacen.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_mainwindow.h",
@@ -792,6 +834,18 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_colamounstros.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_itinerariohorno.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_veralmacen.h",
 			"sourceGroupIndex" : 1
 		},
 		{

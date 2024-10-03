@@ -45,6 +45,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Etapas/entrega.h Etapas/entrega.cpp
         colamounstros.h colamounstros.cpp colamounstros.ui
         itinerariohorno.h itinerariohorno.cpp itinerariohorno.ui
+        veralmacen.h veralmacen.cpp veralmacen.ui
 
 
 
