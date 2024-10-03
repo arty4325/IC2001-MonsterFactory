@@ -46,6 +46,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         colamounstros.h colamounstros.cpp colamounstros.ui
         itinerariohorno.h itinerariohorno.cpp itinerariohorno.ui
         veralmacen.h veralmacen.cpp veralmacen.ui
+        verpedidosentregados.h verpedidosentregados.cpp verpedidosentregados.ui
+        pedidosprioridad.h pedidosprioridad.cpp pedidosprioridad.ui
+        pedidoslabel.h pedidoslabel.cpp pedidoslabel.ui
 
 
 

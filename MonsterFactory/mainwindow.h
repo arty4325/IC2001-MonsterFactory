@@ -5,6 +5,9 @@
 #include "colamounstros.h"
 #include "itinerariohorno.h"
 #include "veralmacen.h"
+#include "verpedidosentregados.h"
+#include "pedidosprioridad.h"
+#include "pedidoslabel.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -77,10 +80,19 @@ private slots:
 
     void on_verAlmacen_clicked();
 
+    void on_pedidosEntregados_clicked();
+
+    void on_pedidosPrioridad_clicked();
+
+    void on_pedidos_clicked();
+
 private:
     Ui::MainWindow *ui;
     ColaMounstros* _colaMounstros;
     ItinerarioHorno* itinerarioHorno;
     VerAlmacen* verAlmacen;
+    VerPedidosEntregados* verPedidosEntregados;
+    PedidosPrioridad* verPedidosPrioridad;
+    PedidosLabel* verPedidosLabel;
 };
 #endif // MAINWINDOW_H

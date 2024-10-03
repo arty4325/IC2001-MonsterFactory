@@ -85,6 +85,9 @@ MainWindow::MainWindow(QWidget *parent)
     _colaMounstros = new ColaMounstros(this, colaMounstros);
     itinerarioHorno = new ItinerarioHorno(this, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
     verAlmacen = new VerAlmacen(this, listaAlmacen);
+    verPedidosEntregados = new VerPedidosEntregados(this, listaPedidosEntregados);
+    verPedidosPrioridad = new PedidosPrioridad(this, listaPedidosPrioridad);
+    verPedidosLabel = new PedidosLabel(this, listaPedidos);
     ui->setupUi(this);
     energyThread -> start();
     //energyThread -> setLabel(ui->energyLabel);
@@ -346,6 +349,39 @@ void MainWindow::on_verAlmacen_clicked()
 
     connect(timer, &QTimer::timeout, [=](){
         verAlmacen->printAlmacen();
+    });
+    timer->start(1000);
+}
+
+
+void MainWindow::on_pedidosEntregados_clicked()
+{
+    verPedidosEntregados->show();
+    QTimer* timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, [=](){
+        verPedidosEntregados->printPedidos();
+    });
+    timer->start(1000);
+}
+
+
+void MainWindow::on_pedidosPrioridad_clicked()
+{
+    verPedidosPrioridad -> show();
+    QTimer* timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, [=](){
+        verPedidosPrioridad->printPedidosPrioridad();
+    });
+    timer->start(1000);
+}
+
+
+void MainWindow::on_pedidos_clicked()
+{
+    verPedidosLabel -> show();
+    QTimer* timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, [=](){
+        verPedidosLabel ->PrintPedidos();
     });
     timer->start(1000);
 }

@@ -193,6 +193,30 @@ build CMakeFiles/MonsterFactory.dir/veralmacen.cpp.obj: CXX_COMPILER__MonsterFac
   OBJECT_DIR = CMakeFiles\MonsterFactory.dir
   OBJECT_FILE_DIR = CMakeFiles\MonsterFactory.dir
 
+build CMakeFiles/MonsterFactory.dir/verpedidosentregados.cpp.obj: CXX_COMPILER__MonsterFactory_unscanned_Debug C$:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras$ de$ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/verpedidosentregados.cpp || cmake_object_order_depends_target_MonsterFactory
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\MonsterFactory.dir\verpedidosentregados.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include" -isystem C:/Qt/6.7.2/mingw_64/include/QtCore -isystem C:/Qt/6.7.2/mingw_64/include -isystem C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\MonsterFactory.dir
+  OBJECT_FILE_DIR = CMakeFiles\MonsterFactory.dir
+
+build CMakeFiles/MonsterFactory.dir/pedidosprioridad.cpp.obj: CXX_COMPILER__MonsterFactory_unscanned_Debug C$:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras$ de$ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidosprioridad.cpp || cmake_object_order_depends_target_MonsterFactory
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\MonsterFactory.dir\pedidosprioridad.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include" -isystem C:/Qt/6.7.2/mingw_64/include/QtCore -isystem C:/Qt/6.7.2/mingw_64/include -isystem C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\MonsterFactory.dir
+  OBJECT_FILE_DIR = CMakeFiles\MonsterFactory.dir
+
+build CMakeFiles/MonsterFactory.dir/pedidoslabel.cpp.obj: CXX_COMPILER__MonsterFactory_unscanned_Debug C$:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras$ de$ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidoslabel.cpp || cmake_object_order_depends_target_MonsterFactory
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\MonsterFactory.dir\pedidoslabel.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include" -isystem C:/Qt/6.7.2/mingw_64/include/QtCore -isystem C:/Qt/6.7.2/mingw_64/include -isystem C:/Qt/6.7.2/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.2/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.2/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\MonsterFactory.dir
+  OBJECT_FILE_DIR = CMakeFiles\MonsterFactory.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target MonsterFactory
@@ -201,7 +225,7 @@ build CMakeFiles/MonsterFactory.dir/veralmacen.cpp.obj: CXX_COMPILER__MonsterFac
 #############################################
 # Link the executable MonsterFactory.exe
 
-build MonsterFactory.exe: CXX_EXECUTABLE_LINKER__MonsterFactory_Debug CMakeFiles/MonsterFactory.dir/MonsterFactory_autogen/mocs_compilation.cpp.obj CMakeFiles/MonsterFactory.dir/main.cpp.obj CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj CMakeFiles/MonsterFactory.dir/labelthread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/horno.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/calidad.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/almacen.cpp.obj CMakeFiles/MonsterFactory.dir/ReadingStructures/readtextfiles.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedido.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedidomanager.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/entrega.cpp.obj CMakeFiles/MonsterFactory.dir/colamounstros.cpp.obj CMakeFiles/MonsterFactory.dir/itinerariohorno.cpp.obj CMakeFiles/MonsterFactory.dir/veralmacen.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || MonsterFactory_autogen MonsterFactory_autogen_timestamp_deps
+build MonsterFactory.exe: CXX_EXECUTABLE_LINKER__MonsterFactory_Debug CMakeFiles/MonsterFactory.dir/MonsterFactory_autogen/mocs_compilation.cpp.obj CMakeFiles/MonsterFactory.dir/main.cpp.obj CMakeFiles/MonsterFactory.dir/mainwindow.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/energythread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/maldadthread.cpp.obj CMakeFiles/MonsterFactory.dir/MonsterStructures/materiathread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/combinador.cpp.obj CMakeFiles/MonsterFactory.dir/labelthread.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/horno.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/calidad.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/almacen.cpp.obj CMakeFiles/MonsterFactory.dir/ReadingStructures/readtextfiles.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedido.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/pedidomanager.cpp.obj CMakeFiles/MonsterFactory.dir/Etapas/entrega.cpp.obj CMakeFiles/MonsterFactory.dir/colamounstros.cpp.obj CMakeFiles/MonsterFactory.dir/itinerariohorno.cpp.obj CMakeFiles/MonsterFactory.dir/veralmacen.cpp.obj CMakeFiles/MonsterFactory.dir/verpedidosentregados.cpp.obj CMakeFiles/MonsterFactory.dir/pedidosprioridad.cpp.obj CMakeFiles/MonsterFactory.dir/pedidoslabel.cpp.obj | C$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a || MonsterFactory_autogen MonsterFactory_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.2/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.2/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -288,7 +312,7 @@ build MonsterFactory_autogen_timestamp_deps: phony
 #############################################
 # Utility command for MonsterFactory_autogen
 
-build MonsterFactory_autogen: phony CMakeFiles/MonsterFactory_autogen MonsterFactory_autogen/include/ui_mainwindow.h MonsterFactory_autogen/include/ui_colamounstros.h MonsterFactory_autogen/include/ui_itinerariohorno.h MonsterFactory_autogen/include/ui_veralmacen.h MonsterFactory_autogen/timestamp MonsterFactory_autogen/mocs_compilation.cpp MonsterFactory_autogen_timestamp_deps
+build MonsterFactory_autogen: phony CMakeFiles/MonsterFactory_autogen MonsterFactory_autogen/include/ui_mainwindow.h MonsterFactory_autogen/include/ui_colamounstros.h MonsterFactory_autogen/include/ui_itinerariohorno.h MonsterFactory_autogen/include/ui_veralmacen.h MonsterFactory_autogen/include/ui_verpedidosentregados.h MonsterFactory_autogen/include/ui_pedidosprioridad.h MonsterFactory_autogen/include/ui_pedidoslabel.h MonsterFactory_autogen/timestamp MonsterFactory_autogen/mocs_compilation.cpp MonsterFactory_autogen_timestamp_deps
 
 
 #############################################
@@ -305,7 +329,7 @@ build MonsterFactory_autogen/timestamp MonsterFactory_autogen/mocs_compilation.c
 #############################################
 # Phony custom command for CMakeFiles\MonsterFactory_autogen
 
-build CMakeFiles/MonsterFactory_autogen MonsterFactory_autogen/include/ui_mainwindow.h MonsterFactory_autogen/include/ui_colamounstros.h MonsterFactory_autogen/include/ui_itinerariohorno.h MonsterFactory_autogen/include/ui_veralmacen.h | ${cmake_ninja_workdir}CMakeFiles/MonsterFactory_autogen ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_colamounstros.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_itinerariohorno.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_veralmacen.h: phony MonsterFactory_autogen/timestamp || MonsterFactory_autogen_timestamp_deps
+build CMakeFiles/MonsterFactory_autogen MonsterFactory_autogen/include/ui_mainwindow.h MonsterFactory_autogen/include/ui_colamounstros.h MonsterFactory_autogen/include/ui_itinerariohorno.h MonsterFactory_autogen/include/ui_veralmacen.h MonsterFactory_autogen/include/ui_verpedidosentregados.h MonsterFactory_autogen/include/ui_pedidosprioridad.h MonsterFactory_autogen/include/ui_pedidoslabel.h | ${cmake_ninja_workdir}CMakeFiles/MonsterFactory_autogen ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_colamounstros.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_itinerariohorno.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_veralmacen.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_verpedidosentregados.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_pedidosprioridad.h ${cmake_ninja_workdir}MonsterFactory_autogen/include/ui_pedidoslabel.h: phony MonsterFactory_autogen/timestamp || MonsterFactory_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

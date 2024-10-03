@@ -2,4 +2,7 @@
 #include "EWIEGA46WW/moc_colamounstros.cpp"
 #include "EWIEGA46WW/moc_itinerariohorno.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_pedidoslabel.cpp"
+#include "EWIEGA46WW/moc_pedidosprioridad.cpp"
 #include "EWIEGA46WW/moc_veralmacen.cpp"
+#include "EWIEGA46WW/moc_verpedidosentregados.cpp"
