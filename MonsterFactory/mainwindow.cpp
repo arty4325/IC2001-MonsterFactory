@@ -83,6 +83,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     _colaMounstros = new ColaMounstros(this, colaMounstros);
+    itinerarioHorno = new ItinerarioHorno(this, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
     ui->setupUi(this);
     energyThread -> start();
     //energyThread -> setLabel(ui->energyLabel);
@@ -319,6 +320,18 @@ void MainWindow::on_pushButton_clicked()
     });
 
     // Establecer que el temporizador se dispare cada 1000 milisegundos (1 segundo)
+    timer->start(1000);
+}
+
+
+void MainWindow::on_itinerarioHorno_clicked()
+{
+    itinerarioHorno -> show();
+    QTimer* timer = new QTimer(this);
+
+    connect(timer, &QTimer::timeout, [=](){
+        itinerarioHorno->printHorno();
+    });
     timer->start(1000);
 }
 

@@ -377,6 +377,12 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/itinerariohorno.h",
+			"MU",
+			"EWIEGA46WW/moc_itinerariohorno.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/labelthread.h",
 			"MU",
 			"EWIEGA46WW/moc_labelthread.cpp",
@@ -517,6 +523,11 @@
 		],
 		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/colamounstros.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/itinerariohorno.cpp",
 			"MU",
 			null
 		],

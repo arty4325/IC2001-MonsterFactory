@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 86,
+				"line" : 87,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 69,
+				"line" : 70,
 				"parent" : 0
 			},
 			{
@@ -545,8 +545,9 @@
 				35,
 				37,
 				40,
-				42,
-				43
+				43,
+				44,
+				45
 			]
 		},
 		{
@@ -555,14 +556,15 @@
 			[
 				4,
 				39,
-				44
+				42,
+				46
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				45
+				47
 			]
 		}
 	],
@@ -787,14 +789,19 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "WidgetsLabels/mounstroswidgetlabel.h",
+			"path" : "itinerariohorno.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "WidgetsLabels/mounstroswidgetlabel.cpp",
+			"path" : "itinerariohorno.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "itinerariohorno.ui",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
@@ -806,6 +813,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_colamounstros.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/MonsterFactory_autogen/include/ui_itinerariohorno.h",
 			"sourceGroupIndex" : 1
 		},
 		{

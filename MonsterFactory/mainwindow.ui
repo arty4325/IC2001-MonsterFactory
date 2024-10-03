@@ -525,6 +525,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>maldadqueue</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="itinerarioHorno">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>10</y>
+        <width>93</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Info</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QScrollArea" name="scrollArea_8">

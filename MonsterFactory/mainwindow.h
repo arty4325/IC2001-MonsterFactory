@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "colamounstros.h"
+#include "itinerariohorno.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -71,8 +72,11 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_itinerarioHorno_clicked();
+
 private:
     Ui::MainWindow *ui;
     ColaMounstros* _colaMounstros;
+    ItinerarioHorno* itinerarioHorno;
 };
 #endif // MAINWINDOW_H

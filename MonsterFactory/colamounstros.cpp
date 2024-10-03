@@ -21,7 +21,7 @@ ColaMounstros::~ColaMounstros()
 void ColaMounstros::printColaMounstros(){
     QString var = "";
     for(int i = 0; i < colaMounstros->getCantItems(); i++ ){
-        var += colaMounstros->getElementoEnIndice(i)->type + " ";
+        var += colaMounstros->getElementoEnIndice(i)->type + "\n";
     }
     ui->infoColaMounstros->setText(var);
 }

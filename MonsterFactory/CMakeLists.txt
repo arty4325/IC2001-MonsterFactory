@@ -44,6 +44,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         Etapas/pedidomanager.h Etapas/pedidomanager.cpp
         Etapas/entrega.h Etapas/entrega.cpp
         colamounstros.h colamounstros.cpp colamounstros.ui
+        itinerariohorno.h itinerariohorno.cpp itinerariohorno.ui
 
 
 
