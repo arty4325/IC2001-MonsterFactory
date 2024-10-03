@@ -48,3 +48,26 @@ QString readTextFiles::readTextFilesInFolder() {
 
     return retVar;
 }
+
+void readTextFiles::appendTextToFile(const QString& filePath, const QString& textToAdd) {
+    QFile file(filePath);
+    QDir dir = QFileInfo(filePath).absoluteDir();
+
+    // Crear directorios si no existen
+    if (!dir.exists()) {
+        if (!dir.mkpath(".")) {
+            qDebug() << "No se pudieron crear los directorios:" << dir.path();
+            return;
+        }
+    }
+
+    // Abrir el archivo en modo de escritura (WriteOnly) y añadir al final (Append)
+    if (file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
+        QTextStream out(&file);
+        out << textToAdd << "\n";  // Escribe el texto en el archivo y añade un salto de línea
+        file.close();
+        qDebug() << "Texto añadido correctamente a:" << filePath;
+    } else {
+        qDebug() << "No se pudo abrir el archivo para escribir:" << filePath;
+    }
+}
