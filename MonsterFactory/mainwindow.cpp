@@ -474,3 +474,16 @@ void MainWindow::on_historialPedidos_clicked()
     verShowHistory->printData(data);
 }
 
+
+void MainWindow::on_pausarTodo_stateChanged(int arg1)
+{
+    energyThread -> stop(arg1);
+    maldadThread -> stop(arg1);
+    materiaThread -> stop(arg1);
+    combinador -> stop(arg1);
+    horno -> stop(arg1);
+    pedidoManager -> stop(arg1);
+    entrega -> stop(arg1);
+    calidad -> stop(arg1);
+}
+

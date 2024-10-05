@@ -65,3 +65,11 @@ Locura Consecutivo: 227 Aceptado
 Destruccion Consecutivo: 228 Rechazado 
 Fuerza Consecutivo: 229 Aceptado 
 Destruccion Consecutivo: 231 Aceptado 
+Veneno Consecutivo: 3 Aceptado 
+Tecnologia Consecutivo: 5 Aceptado 
+Maldad Consecutivo: 6 Rechazado 
+Fuerza Consecutivo: 10 Aceptado 
+Inteligencia Consecutivo: 11 Aceptado 
+Maldad Consecutivo: 15 Aceptado 
+Velocidad Consecutivo: 17 Aceptado 
+Regeneracion Consecutivo: 20 Aceptado 

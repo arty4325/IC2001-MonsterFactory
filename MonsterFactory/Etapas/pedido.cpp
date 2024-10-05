@@ -48,3 +48,5 @@ QString Pedido::getName() {
 
     return ""; // Si no se encuentra, retornamos un string vacío
 }
+
+

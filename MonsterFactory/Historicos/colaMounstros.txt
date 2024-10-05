@@ -70,3 +70,17 @@ Velocidad Consecutivo: 234 Capacidad: 20 Cantidad 1
 Tecnologia Consecutivo: 236 Capacidad: 20 Cantidad 1
 Regeneracion Consecutivo: 237 Capacidad: 20 Cantidad 1
 Fuerza Consecutivo: 241 Capacidad: 20 Cantidad 1
+Regeneracion Consecutivo: 5 Capacidad: 20 Cantidad 1
+Veneno Consecutivo: 3 Capacidad: 20 Cantidad 1
+Tecnologia Consecutivo: 5 Capacidad: 20 Cantidad 1
+Maldad Consecutivo: 6 Capacidad: 20 Cantidad 1
+Fuerza Consecutivo: 10 Capacidad: 20 Cantidad 1
+Inteligencia Consecutivo: 11 Capacidad: 20 Cantidad 1
+Maldad Consecutivo: 15 Capacidad: 20 Cantidad 1
+Velocidad Consecutivo: 17 Capacidad: 20 Cantidad 1
+Regeneracion Consecutivo: 20 Capacidad: 20 Cantidad 1
+Regeneracion Consecutivo: 21 Capacidad: 20 Cantidad 1
+Veneno Consecutivo: 22 Capacidad: 20 Cantidad 2
+Veneno Consecutivo: 26 Capacidad: 20 Cantidad 1
+Regeneracion Consecutivo: 32 Capacidad: 20 Cantidad 1
+Inteligencia Consecutivo: 34 Capacidad: 20 Cantidad 1

@@ -16,6 +16,7 @@ class PedidoManager : public QThread
 public:
     PedidoManager();
     PedidoManager(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,  ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen);
+    void stop(int val);
     void run();
 private:
     bool running;

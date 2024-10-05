@@ -22,7 +22,6 @@ Horno::Horno(int sleepTime, Cola<Mounstro*>* colaMounstro , Cola<Mounstro*>* pri
     this->isSecondBlocked = false;
     this->isThirdBlocked = false;
     this->isFourthBlocked = false;
-    //this->queueLabel;
 }
 
 void Horno::run()
@@ -222,6 +221,16 @@ void Horno::changeFourthBlocked(int val){
         this->isFourthBlocked = false;
     } else {
         this->isFourthBlocked = true;
+    }
+}
+
+void Horno::stop(int val){ // Esto permite parar la aplicacion
+    if(val == 2){
+        // Se tiene que parar el combinador
+        this->running = false;
+    } else {
+        // Se reanuda el combinador
+        this->running = true;
     }
 }
 

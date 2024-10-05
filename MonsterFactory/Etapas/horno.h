@@ -23,6 +23,7 @@ public:
     void changeSecondBlocked(int val);
     void changeThirdBlocked(int val);
     void changeFourthBlocked(int val);
+    void stop(int val);
     void run();
 private:
     bool running;

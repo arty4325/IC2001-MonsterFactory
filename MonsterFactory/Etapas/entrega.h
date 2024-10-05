@@ -17,6 +17,7 @@ public:
     Entrega();
     Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Pedido*>* listaPedidosEntregados);
     void run();
+    void stop(int val);
 private:
     bool running;
     int sleepTime;

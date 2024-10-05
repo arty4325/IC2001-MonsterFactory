@@ -708,6 +708,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <height>169</height>
       </rect>
      </property>
+     <widget class="QCheckBox" name="pausarTodo">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>88</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Pausa</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QScrollArea" name="scrollArea_10">

@@ -82,3 +82,14 @@ void PedidoManager::run()
     }
 }
 
+
+void PedidoManager::stop(int val){ // Esto permite parar la aplicacion
+    if(val == 2){
+        // Se tiene que parar el combinador
+        this->running = false;
+    } else {
+        // Se reanuda el combinador
+        this->running = true;
+    }
+}
+

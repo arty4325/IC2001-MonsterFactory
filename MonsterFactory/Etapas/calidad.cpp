@@ -4,7 +4,7 @@
 Calidad::Calidad() {}
 
 Calidad::Calidad(int sleepTime, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Mounstro*>* basurero, Almacen* almacen) {
-    this->sleepTime = sleepTime;
+    this->sleepTime = sleepTime; // Constructor de calidad
     this->running = true;
     this->probsPrimerInspector = 20;
     this->probsSegundoInspector = 20;
@@ -16,7 +16,7 @@ Calidad::Calidad(int sleepTime, Cola<Mounstro*>* colaCalidad, ListaOrdenada<Moun
 
 void Calidad::run()
 {
-    this->running = true;
+    this->running = true; // Variable que permite que calidad este corriendo o no
     while(true) {
         int secondsLeft = this->sleepTime;
         while (secondsLeft > 0) {
@@ -26,58 +26,55 @@ void Calidad::run()
             }
             QThread::sleep(1);
             secondsLeft--;
-            //() << "Debo de ver calidad";
-            int randomVal1;
+            int randomVal1; // Se declaran dos variables que son las que van a tomar valores arbitrarios
             int randomVal2;
-            randomVal1 =  QRandomGenerator::global()->bounded(1, 100);
+            randomVal1 =  QRandomGenerator::global()->bounded(1, 100); // Se utiliza la funcion QRandomGenerator para poder darle valores a esas funciones
             randomVal2 =  QRandomGenerator::global()->bounded(1, 100);
-            readTextFiles* readingStructures = new readTextFiles();
-            if(!(colaCalidad ->isEmpty())){
-
-                if(randomVal1 <= probsPrimerInspector ){
-                    //qDebug() << "Bota el mounstro";
+            readTextFiles* readingStructures = new readTextFiles(); // Se instancia el administrador de archivos por que se quiere posteriormente guardar la informacion de los inspectores
+            if(!(colaCalidad ->isEmpty())){ // Solamente si hay elementos en la cola de calidad
+                if(randomVal1 <= probsPrimerInspector ){ // Se ve si el valor arbitrario es menor al valor del inspector
                     if(!(colaCalidad ->isEmpty())) {
-                        Mounstro* mounstro = colaCalidad -> pop() -> data;
-                        mounstro -> inspectorRevisor = 1;
-                        mounstro -> fueRechazado = true;
+                        Mounstro* mounstro = colaCalidad -> pop() -> data;// Se obtiene el primer mounstro que esta en la cola de calidad
+                        mounstro -> inspectorRevisor = 1; // Se le dice a este mounstro que esta siendo revisado por el primer inspector
+                        mounstro -> fueRechazado = true; // Y como en este caso fue rechazado, se indica en la variable
                         readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt",
                                                             mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
-                        basurero -> incert(mounstro);
+                        // En el administrador de textos se guarda la informacion del itinerario de este inspector
+                        basurero -> incert(mounstro); // Y este mounstro se va para el basurero ya que fue rechazado por este inspector
                     }
 
                 } else {
-                    //qDebug() << "MOSTRO VA PARA SEGUNDO INSPECTOR";
-                    // AQUI GUARDAR INFO PRIMER INSPECTOR PARA CUANDO SE APROBO MOSTRO
+                    // Si llega a este punto es que el mounstro fue aceptado por el primer inspector, y debe de ir al segundo
                     if(!(colaCalidad->isEmpty())){
                         Mounstro* mounstro = colaCalidad -> peck() -> data;
                         readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt",
                                                             mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
                     }
+                    // Lo mencionado anteriormente debe de ser guardado en el archivo de itinerario
 
                 }
 
                 if(!(randomVal1 <= probsPrimerInspector)) {
                     if(randomVal2 <= probsSegundoInspector){
-                        //qDebug() << "bota el mostro segundo inspector";
-                        if(!(colaCalidad ->isEmpty())) {
-                            Mounstro* mounstro = colaCalidad -> pop() -> data;
-                            mounstro -> inspectorRevisor = 2;
-                            mounstro -> fueRechazado = true;
+                        // Si se llega aqui quiere decir que el segundo inspector rechazo el pedido
+                        if(!(colaCalidad ->isEmpty())) { // Si hay elementos en la cola de calidad
+                            Mounstro* mounstro = colaCalidad -> pop() -> data; // Se obtiene el mounstro que esta encolado
+                            mounstro -> inspectorRevisor = 2; // Se le indica al sistema que el segundo inspector reviso a este mounstro
+                            mounstro -> fueRechazado = true; // Y se indica que este mounstro fue rechazado
                             readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt",
                                                                 mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
-                            basurero -> incert(mounstro);
+                            // El evento tiene que ser guardado en el itinerario
+                            basurero -> incert(mounstro); // En el basurero se guarda el mounstro
                         }
                     } else {
-                        //qDebug() << "ME QUEDO DEFINITIVAMENTE CON EL MOUNSTRO";
+                        // Si se llega a este punto quiere decir que me quede definitivamente con el mounstro y este continua el proceso de fabricacion
                         if(!(colaCalidad->isEmpty())){
-                            Mounstro* mounstro = colaCalidad -> peck() -> data;
+                            Mounstro* mounstro = colaCalidad -> peck() -> data; // Se saca de la cola
                             readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt",
                                                                 mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
                         }
-                        almacen -> incertAlmacen(colaCalidad -> pop() -> data);
-
-                        // Como para el almacen, en tiempo real la aplicacion tiene que mostrar si esta en el almacen o no
-                        // Vamos a... hacer el archivo de almacen cuando se toca el boton.
+                        // Se escribe este evento en el archivo de itinerario
+                        almacen -> incertAlmacen(colaCalidad -> pop() -> data); // Y este mounstro tiene que ir ahora al almacen
 
                     }
                 }
@@ -87,20 +84,20 @@ void Calidad::run()
     }
 }
 
-void Calidad::changeFirstProbability(int val){
+void Calidad::changeFirstProbability(int val){ // Esto permite cambiar en tiempo real la probabilidad de rechazo del primer inspector
     this->probsPrimerInspector = val;
 }
 
-void Calidad::changeSecondProbability(int val){
+void Calidad::changeSecondProbability(int val){ // Permite cambiar en tiempo real la probabilidad de rechazo del segundo inspector
     this->probsSegundoInspector = val;
 }
 
 void Calidad::stop(int val){
     if(val == 2){
-        //qDebug() << "Tengo que parar esta vara";
+        // Se para el programa
         this->running = false;
     } else {
-        //qDebug() << "La tengo que reanudar";
+        // Se reanunda el programa
         this->running = true;
     }
 }

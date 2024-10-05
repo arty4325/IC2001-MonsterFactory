@@ -23,49 +23,46 @@ void Combinador::run()
             QThread::sleep(1);
             continue;
         }
-        _Consecutivo += 1;
+        _Consecutivo += 1; // Se tiene una variable acumulada que funge como el consecutivo del mounstro
         QThread::sleep(this->sleepTime);
         if (!colaEnergia->isEmpty() && !colaMaldad->isEmpty() && !colaMateria->isEmpty() && !(colaMounstros->isFull())) {
-            QString energia = this->colaEnergia->pop()->data->type;
-            QString maldad = this->colaMaldad->pop()->data->type;
-            QString materia = this->colaMateria->pop()->data->type;
-            Mounstro* mounstro = new Mounstro(energia, materia, maldad);
-            mounstro -> Creacion =  QDateTime::currentDateTime();
-            //qDebug() << Consecutivo;
-            mounstro->Consecutivo = _Consecutivo;
-            if(mounstro->type != "Bueno"){
-                this->colaMounstros->push(mounstro);
-                readTextFiles* readingStructures = new readTextFiles();
+            // En el caso de que haya elementos de energia, maldad, materia y que haya espacio para poner mas mounstros
+            QString energia = this->colaEnergia->pop()->data->type; // Se toma el primer elemento en la cola de energia
+            QString maldad = this->colaMaldad->pop()->data->type; // Se toma el primer elemento en la cola de maldad
+            QString materia = this->colaMateria->pop()->data->type; // Se toma el primer elemento en la cola de materia
+            Mounstro* mounstro = new Mounstro(energia, materia, maldad); // Y se le pasan como parametro al mounstro para poder crearlo
+            mounstro -> Creacion =  QDateTime::currentDateTime(); // Para efectos de bitacora se toma el tiempo del sistema
+            mounstro->Consecutivo = _Consecutivo; // Se le asigna el valor acumulado mencionado anteriormente al mounstro
+            if(mounstro->type != "Bueno"){ // Si el mounstro no es bueno (Osea que debe de tramitarse)
+                this->colaMounstros->push(mounstro); // Se coloca en una cola llamada cola mounstros
+                readTextFiles* readingStructures = new readTextFiles(); // Se instancia el manejador de archivos para procesar esto
                 readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt",
                                                     mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Capacidad: " + QString::number(colaMounstros->maxCant)
                                                         + " Cantidad " + QString::number(colaMounstros ->cantItems));
+                // Se guarda la informacion pertinente a este mounstro
             } else {
-                // Va para el basurero
+                // Si se llega a este punto va para el basurero
                 this->basurero->incert(mounstro);
-                //readTextFiles* readingStructures = new readTextFiles();
-                //readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt", mounstro->type);
-
-                //qDebug() << "Items en basurero: " <<basurero ->cantItems;
+                // Hay una lista basurero en la que todos estos elementos son incertados
             }
 
-            //qDebug() << "Combinado: " << energia << " " << materia << " " << maldad << " " << mounstro->type << " " << colaMounstros->getIsFull();
         } else {
-            //qDebug() << "No hay suficientes elementos en las colas para combinar.";
+            // Cuando no hay suficientes elementos para poder generar un munstro, no se hace nada
         }
     }
 }
 
 
-void Combinador::changeTime(int time){
+void Combinador::changeTime(int time){ // Esto permite cambiar la cantidad de tiempo que toma generar cada mounstro
     this-> sleepTime = time;
 }
 
-void Combinador::stop(int val){
+void Combinador::stop(int val){ // Esto permite parar la aplicacion
     if(val == 2){
-        qDebug() << "Tengo que parar esta vara";
+        // Se tiene que parar el combinador
         this->running = false;
     } else {
-        qDebug() << "La tengo que reanudar";
+        // Se reanuda el combinador
         this->running = true;
     }
 }

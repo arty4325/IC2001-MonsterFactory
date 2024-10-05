@@ -101,6 +101,8 @@ private slots:
 
     void on_historialPedidos_clicked();
 
+    void on_pausarTodo_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     ColaMounstros* _colaMounstros;

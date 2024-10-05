@@ -70,3 +70,11 @@ Velocidad Consecutivo: 234 Inicio: 2024-10-05 10:58:08 Fin: 2024-10-05 10:58:06 
 Tecnologia Consecutivo: 236 Inicio: 2024-10-05 10:58:08 Fin: 2024-10-05 10:58:06 Bandeja 3 
 Regeneracion Consecutivo: 237 Inicio: 2024-10-05 10:58:08 Fin: 2024-10-05 10:58:06 Bandeja 4 
 Fuerza Consecutivo: 241 Inicio: 2024-10-05 10:58:08 Fin: 2024-10-05 10:58:06 Bandeja 4 
+Veneno Consecutivo: 3 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 1 
+Tecnologia Consecutivo: 5 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 1 
+Maldad Consecutivo: 6 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 2 
+Fuerza Consecutivo: 10 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 2 
+Inteligencia Consecutivo: 11 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 3 
+Maldad Consecutivo: 15 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 3 
+Velocidad Consecutivo: 17 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 4 
+Regeneracion Consecutivo: 20 Inicio: 2024-10-05 17:58:21 Fin: 2024-10-05 17:58:19 Bandeja 4 
