@@ -49,6 +49,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         verpedidosentregados.h verpedidosentregados.cpp verpedidosentregados.ui
         pedidosprioridad.h pedidosprioridad.cpp pedidosprioridad.ui
         pedidoslabel.h pedidoslabel.cpp pedidoslabel.ui
+        showhistory.h showhistory.cpp showhistory.ui
 
 
 

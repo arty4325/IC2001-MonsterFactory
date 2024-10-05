@@ -8,6 +8,7 @@
 #include "verpedidosentregados.h"
 #include "pedidosprioridad.h"
 #include "pedidoslabel.h"
+#include "showhistory.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -86,6 +87,16 @@ private slots:
 
     void on_pedidos_clicked();
 
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_historialPrimerInspector_clicked();
+
+    void on_historialSegundoInspector_clicked();
+
+    void on_historialEntregados_clicked();
+
 private:
     Ui::MainWindow *ui;
     ColaMounstros* _colaMounstros;
@@ -94,5 +105,6 @@ private:
     VerPedidosEntregados* verPedidosEntregados;
     PedidosPrioridad* verPedidosPrioridad;
     PedidosLabel* verPedidosLabel;
+    ShowHistory* verShowHistory;
 };
 #endif // MAINWINDOW_H

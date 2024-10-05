@@ -19,8 +19,10 @@
 #include "Etapas/entrega.h"
 #include "Etapas/pedido.h"
 #include "colamounstros.h"
+#include "ReadingStructures/readtextfiles.h"
 
 
+readTextFiles* readingStructure = new readTextFiles();
 // Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
 Cola<Energia*>* colaEnergia = new Cola<Energia*>();
 Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
@@ -88,6 +90,7 @@ MainWindow::MainWindow(QWidget *parent)
     verPedidosEntregados = new VerPedidosEntregados(this, listaPedidosEntregados);
     verPedidosPrioridad = new PedidosPrioridad(this, listaPedidosPrioridad);
     verPedidosLabel = new PedidosLabel(this, listaPedidos);
+    verShowHistory = new ShowHistory(this);
     ui->setupUi(this);
     energyThread -> start();
     //energyThread -> setLabel(ui->energyLabel);
@@ -384,5 +387,50 @@ void MainWindow::on_pedidos_clicked()
         verPedidosLabel ->PrintPedidos();
     });
     timer->start(1000);
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    // COLA MOUNSROS HISTORIAL
+    //qDebug() << readingStructure->read(1);
+    verShowHistory -> show();
+    verShowHistory ->printData(readingStructure->read(1));
+}
+
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    // HORNO HISTORIAL
+    //qDebug() << readingStructure->read(2);
+    verShowHistory -> show();
+    verShowHistory ->printData(readingStructure->read(2));
+}
+
+
+void MainWindow::on_historialPrimerInspector_clicked()
+{
+    // PRIMER INSPECTOR HISTORIAL
+    //qDebug() << readingStructure->read(3);
+    verShowHistory -> show();
+    verShowHistory ->printData(readingStructure->read(3));
+}
+
+
+void MainWindow::on_historialSegundoInspector_clicked()
+{
+    // SEGUNDO INSPECTOR HISTORIAL
+    //qDebug() << readingStructure->read(4);
+    verShowHistory -> show();
+    verShowHistory ->printData(readingStructure->read(4));
+}
+
+
+void MainWindow::on_historialEntregados_clicked()
+{
+    // ENTREGADOS HISTORIAL
+    //qDebug() << readingStructure->read(5);
+    verShowHistory -> show();
+    verShowHistory ->printData(readingStructure->read(5));
 }
 

@@ -1,12 +1,16 @@
-Locura Consecutivo: 1Aceptado Consecutivo: 1Aceptado
-Inteligencia Consecutivo: 3Aceptado Consecutivo: 3Aceptado
-Veneno Consecutivo: 7Aceptado Consecutivo: 7Aceptado
-Inteligencia Consecutivo: 9Aceptado Consecutivo: 9Aceptado
-Maldad Consecutivo: 11Aceptado Consecutivo: 11Aceptado
-Velocidad Consecutivo: 15Aceptado Consecutivo: 15Aceptado
-Veneno Consecutivo: 16Aceptado Consecutivo: 16Aceptado
-Locura Consecutivo: 19Aceptado Consecutivo: 19Aceptado
-Regeneracion Consecutivo: 23Aceptado Consecutivo: 23Rechazado
-Velocidad Consecutivo: 25Aceptado Consecutivo: 25Aceptado
-Locura Consecutivo: 28Aceptado Consecutivo: 28Aceptado
-Maldad Consecutivo: 42Aceptado Consecutivo: 42Aceptado
+Tecnologia Consecutivo: 1 Aceptado 
+Regeneracion Consecutivo: 4 Aceptado 
+Tecnologia Consecutivo: 5 Aceptado 
+Velocidad Consecutivo: 8 Aceptado 
+Veneno Consecutivo: 12 Aceptado 
+Velocidad Consecutivo: 13 Aceptado 
+Inteligencia Consecutivo: 14 Aceptado 
+Inteligencia Consecutivo: 15 Aceptado 
+Tecnologia Consecutivo: 25 Aceptado 
+Locura Consecutivo: 26 Aceptado 
+Tecnologia Consecutivo: 33 Rechazado 
+Tecnologia Consecutivo: 35 Aceptado 
+Tecnologia Consecutivo: 39 Aceptado 
+Regeneracion Consecutivo: 40 Aceptado 
+Veneno Consecutivo: 50 Rechazado 
+Inteligencia Consecutivo: 54 Aceptado 

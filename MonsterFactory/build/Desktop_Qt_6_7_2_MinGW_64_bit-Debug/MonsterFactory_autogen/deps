@@ -859,6 +859,8 @@ MonsterFactory_autogen/timestamp: \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidoslabel.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidosprioridad.cpp \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidosprioridad.h \
+	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/showhistory.cpp \
+	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/showhistory.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/veralmacen.cpp \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/veralmacen.h \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/verpedidosentregados.cpp \
@@ -868,6 +870,7 @@ MonsterFactory_autogen/timestamp: \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/mainwindow.ui \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidoslabel.ui \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidosprioridad.ui \
+	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/showhistory.ui \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/veralmacen.ui \
 	C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras\ de\ Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/verpedidosentregados.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

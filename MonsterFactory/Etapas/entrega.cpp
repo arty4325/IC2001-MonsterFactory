@@ -9,6 +9,7 @@ Entrega::Entrega() {}
 #include <QString>
 #include <QStringList>
 #include <QDebug>
+#include "../ReadingStructures/readtextfiles.h"
 
 
 Entrega::Entrega(int sleepTime, ListaOrdenada<Pedido*>* listaPedidos,ListaOrdenada<Pedido*>* listaPedidosPrioridad, ListaOrdenada<Mounstro*>* listaAlmacen, ListaOrdenada<Pedido*>* listaPedidosEntregados) {
@@ -32,13 +33,14 @@ void Entrega::run()
 
         // Usar una ListaOrdenada<int> para almacenar los índices de los elementos a eliminar
         ListaOrdenada<int> indicesAEliminar;
-
+        readTextFiles* readingStructures = new readTextFiles();
         // Procesar primero los pedidos prioritarios
         for (int i = 0; i < listaAlmacen->size(); ++i) {
             bool procesado = false;
 
             // Verificar en la lista de pedidos prioritarios
             for (int k = 0; k < listaPedidosPrioridad->size(); ++k) {
+                qDebug() << listaAlmacen -> ver(i) -> type;
                 if (listaPedidosPrioridad->ver(k)->Contiene(listaAlmacen->ver(i)->type)) {
                     listaPedidosPrioridad->ver(k)->ContieneYRemueve(listaAlmacen->ver(i)->type);
                     listaPedidosPrioridad->ver(k)->IncertMonster(listaAlmacen->ver(i));
@@ -49,7 +51,13 @@ void Entrega::run()
                         listaAlmacen -> ver(i) -> tiempoEntrega = QDateTime::currentDateTime();
                         //qDebug() << listaPedidosPrioridad->ver(k)->getName();
                         listaAlmacen -> ver(i)->pedido = listaPedidosPrioridad->ver(k)->getName();
+                        //qDebug() << listaPedidosPrioridad -> ver(k) ->getName() + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
+                        readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/historiaEntregados.txt",
+                                                            listaPedidosPrioridad -> ver(k) ->getName() + " " + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + " Prioridad");
                         listaPedidosEntregados->incert(listaPedidosPrioridad->borrar(k));
+                        // Se le agrega el PEDIDO
+
+
                     }
                     indicesAEliminar.incert(i);  // Marcar el índice para eliminar
                     procesado = true;
@@ -69,6 +77,8 @@ void Entrega::run()
                             // A que pedido y cuando
                             listaAlmacen -> ver(i) -> tiempoEntrega = QDateTime::currentDateTime();
                             listaAlmacen -> ver(i)->pedido = listaPedidosPrioridad->ver(w)->getName();
+                            readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/historiaEntregados.txt",
+                                                                listaPedidosPrioridad -> ver(i) ->getName() + " " + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + " No Prioridad");
                             listaPedidosEntregados->incert(listaPedidos->borrar(w));
                         }
                         indicesAEliminar.incert(i);  // Marcar el índice para eliminar

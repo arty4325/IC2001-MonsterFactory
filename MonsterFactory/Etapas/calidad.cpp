@@ -41,7 +41,7 @@ void Calidad::run()
                         mounstro -> inspectorRevisor = 1;
                         mounstro -> fueRechazado = true;
                         readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt",
-                                                            mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
+                                                            mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
                         basurero -> incert(mounstro);
                     }
 
@@ -51,7 +51,7 @@ void Calidad::run()
                     if(!(colaCalidad->isEmpty())){
                         Mounstro* mounstro = colaCalidad -> peck() -> data;
                         readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt",
-                                                            mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
+                                                            mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
                     }
 
                 }
@@ -64,7 +64,7 @@ void Calidad::run()
                             mounstro -> inspectorRevisor = 2;
                             mounstro -> fueRechazado = true;
                             readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt",
-                                                                mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
+                                                                mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
                             basurero -> incert(mounstro);
                         }
                     } else {
@@ -72,9 +72,13 @@ void Calidad::run()
                         if(!(colaCalidad->isEmpty())){
                             Mounstro* mounstro = colaCalidad -> peck() -> data;
                             readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt",
-                                                                mounstro->type += " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
+                                                                mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Aceptado ");
                         }
                         almacen -> incertAlmacen(colaCalidad -> pop() -> data);
+
+                        // Como para el almacen, en tiempo real la aplicacion tiene que mostrar si esta en el almacen o no
+                        // Vamos a... hacer el archivo de almacen cuando se toca el boton.
+
                     }
                 }
             }

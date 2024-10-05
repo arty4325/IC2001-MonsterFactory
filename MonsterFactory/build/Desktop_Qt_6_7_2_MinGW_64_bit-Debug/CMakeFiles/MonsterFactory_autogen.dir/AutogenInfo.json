@@ -407,6 +407,12 @@
 			null
 		],
 		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/showhistory.h",
+			"MU",
+			"EWIEGA46WW/moc_showhistory.cpp",
+			null
+		],
+		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/veralmacen.h",
 			"MU",
 			"EWIEGA46WW/moc_veralmacen.cpp",
@@ -577,6 +583,11 @@
 		],
 		[
 			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/pedidosprioridad.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/showhistory.cpp",
 			"MU",
 			null
 		],

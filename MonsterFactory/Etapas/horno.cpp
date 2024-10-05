@@ -136,7 +136,7 @@ void Horno::run()
                                 " Consecutivo: " + QString::number(mounstro->Consecutivo) +
                                 " Inicio: " + beganOven.toString("yyyy-MM-dd hh:mm:ss")  +
                                 " Fin: " + currentDateTime.toString("yyyy-MM-dd hh:mm:ss") +
-                                " Bandeja 1 "
+                                " Bandeja 3 "
                             );
 
 
@@ -158,7 +158,7 @@ void Horno::run()
                                 " Consecutivo: " + QString::number(mounstro->Consecutivo) +
                                 " Inicio: " + beganOven.toString("yyyy-MM-dd hh:mm:ss")  +
                                 " Fin: " + currentDateTime.toString("yyyy-MM-dd hh:mm:ss") +
-                                " Bandeja 1 "
+                                " Bandeja 4 "
                             );
 
 

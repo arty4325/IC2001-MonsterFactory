@@ -71,3 +71,50 @@ void readTextFiles::appendTextToFile(const QString& filePath, const QString& tex
         qDebug() << "No se pudo abrir el archivo para escribir:" << filePath;
     }
 }
+
+QString readTextFiles::read(int option) {
+    QString filePath;
+
+    // Seleccionar archivo basado en el número de opción
+    switch (option) {
+    case 1:
+        filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaMounstros.txt";
+        break;
+    case 2:
+        filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/hornoBitacora.txt";
+        break;
+    case 3:
+        filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/primerInspector.txt";
+        break;
+    case 4:
+        filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/segundoInspector.txt";
+        break;
+    case 5:
+        filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/historiaEntregados.txt";
+        break;
+    // ME FALTA ALMACEN Y COLA PEDIDOS CLIENTES
+
+    // Agrega más casos para otras opciones
+    // case 3:
+    //     filePath = "ruta/a/otroArchivo.txt";
+    //     break;
+    default:
+        qDebug() << "Opción no válida.";
+        return "";
+    }
+
+    // Intentar abrir el archivo seleccionado
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "No se pudo abrir el archivo:" << filePath;
+        return "";
+    }
+
+    // Leer el contenido del archivo
+    QTextStream in(&file);
+    QString content = in.readAll();
+    file.close();  // Cerrar el archivo
+
+    return content;
+}
+
