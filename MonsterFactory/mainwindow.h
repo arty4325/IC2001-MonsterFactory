@@ -97,6 +97,10 @@ private slots:
 
     void on_historialEntregados_clicked();
 
+    void on_historialAlmacen_clicked();
+
+    void on_historialPedidos_clicked();
+
 private:
     Ui::MainWindow *ui;
     ColaMounstros* _colaMounstros;

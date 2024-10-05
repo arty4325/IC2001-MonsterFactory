@@ -434,3 +434,43 @@ void MainWindow::on_historialEntregados_clicked()
     verShowHistory ->printData(readingStructure->read(5));
 }
 
+
+void MainWindow::on_historialAlmacen_clicked()
+{
+    QString var = "";
+    for(int i = 0; i < colaAlmacen->cantItems; i++){
+        Mounstro* mounstroAlmacen;
+        mounstroAlmacen = colaAlmacen ->ver(i);
+        var +=
+            QString::number(mounstroAlmacen -> Consecutivo)
+            += " Energia: " + mounstroAlmacen -> energia
+            += " Materia: " + mounstroAlmacen -> material
+            += " Maldad: " + mounstroAlmacen -> maldad
+            += " Creacion: " + (mounstroAlmacen ->Creacion).toString("yyyy-MM-dd hh:mm:ss")
+            += " Bandeja Horneo: " + QString::number(mounstroAlmacen ->bandejaHorneo)
+            += " Estado: " + QString(mounstroAlmacen -> enAlmacen ? "true" : "false")
+            += " Pedido: " + mounstroAlmacen ->pedido
+            += " Entrega: " + mounstroAlmacen ->tiempoEntrega.toString("yyyy-MM-dd hh:mm:ss")
+            += "\n"
+            ;
+
+    }
+    //qDebug() << var;
+    verShowHistory -> show();
+    verShowHistory -> printData(var);
+}
+
+
+void MainWindow::on_historialPedidos_clicked()
+{
+    // Leer los datos con readingStructure -> read(6)
+    QString data = readingStructure->read(6);
+
+    // Reemplazar todos los '=' por ' ' en la cadena
+    data.replace("=", " ");
+
+    // Mostrar la ventana y los datos modificados
+    verShowHistory->show();
+    verShowHistory->printData(data);
+}
+

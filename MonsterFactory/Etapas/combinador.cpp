@@ -30,6 +30,7 @@ void Combinador::run()
             QString maldad = this->colaMaldad->pop()->data->type;
             QString materia = this->colaMateria->pop()->data->type;
             Mounstro* mounstro = new Mounstro(energia, materia, maldad);
+            mounstro -> Creacion =  QDateTime::currentDateTime();
             //qDebug() << Consecutivo;
             mounstro->Consecutivo = _Consecutivo;
             if(mounstro->type != "Bueno"){

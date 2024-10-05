@@ -261,6 +261,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
        <string>Info</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="historialPedidos">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>120</y>
+        <width>93</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Historial</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QScrollArea" name="scrollArea_6">
@@ -788,6 +801,19 @@ li.checked::marker { content: &quot;\2612&quot;; }
       </property>
       <property name="text">
        <string>Info</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="historialAlmacen">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>10</y>
+        <width>93</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Historial</string>
       </property>
      </widget>
     </widget>

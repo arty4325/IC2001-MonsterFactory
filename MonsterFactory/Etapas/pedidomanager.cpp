@@ -6,6 +6,7 @@
 #include <QString>
 #include <QStringList>
 #include <QDebug>
+#include "../ReadingStructures/readtextfiles.h"
 
 PedidoManager::PedidoManager() {}
 
@@ -46,17 +47,22 @@ void PedidoManager::run()
                    instanceString.chop(1); // Elimina el último caracter '='
                 }
                 //qDebug() << instanceString << instanceString.length();
+                readTextFiles* readingStructures = new readTextFiles();
                 if(partesPedido.size() > 1){
                     if(partesPedido[1] == "1ST PROGRA"){
                         //qDebug() << "Primera P " << instanceString << partesPedido.size() - 4;
                         // Instancio Pedido
                         Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 4);
+                        readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaPedidosItinerario.txt",
+                                                            instanceString + "=Primera Prioridad" + "=" +QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
                         pedido->ChangeMax(partesPedido.size() - 4);
                         listaPedidosPrioridad->incert(pedido);
 
                     } else if (partesPedido[1] != "1ST PROGRA") {
                         //qDebug() << "Segunda P" << instanceString << partesPedido.size() - 4;
                         Pedido* pedidoNotPriority = new Pedido(instanceString, partesPedido.size() - 4);
+                        readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaPedidosItinerario.txt",
+                                                            instanceString + "=Segunda Prioridad" + "=" +QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
                         pedidoNotPriority->ChangeMax(partesPedido.size() - 4);
                         listaPedidos -> incert(pedidoNotPriority);
                     }

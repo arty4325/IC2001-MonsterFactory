@@ -76,9 +76,9 @@ void Entrega::run()
                             listaAlmacen ->ver(i) -> enAlmacen = false;
                             // A que pedido y cuando
                             listaAlmacen -> ver(i) -> tiempoEntrega = QDateTime::currentDateTime();
-                            listaAlmacen -> ver(i)->pedido = listaPedidosPrioridad->ver(w)->getName();
+                            listaAlmacen -> ver(i)->pedido = listaPedidos->ver(w)->getName();
                             readingStructures->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/historiaEntregados.txt",
-                                                                listaPedidosPrioridad -> ver(i) ->getName() + " " + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + " No Prioridad");
+                                                                listaPedidos -> ver(w) ->getName() + " " + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + " No Prioridad");
                             listaPedidosEntregados->incert(listaPedidos->borrar(w));
                         }
                         indicesAEliminar.incert(i);  // Marcar el índice para eliminar

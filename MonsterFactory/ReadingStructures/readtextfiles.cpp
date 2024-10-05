@@ -92,6 +92,9 @@ QString readTextFiles::read(int option) {
     case 5:
         filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/historiaEntregados.txt";
         break;
+    case 6:
+        filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaPedidosItinerario.txt";
+        break;
     // ME FALTA ALMACEN Y COLA PEDIDOS CLIENTES
 
     // Agrega más casos para otras opciones
