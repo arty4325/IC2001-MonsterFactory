@@ -1,7 +1,7 @@
 #include "showhistory.h"
 #include "ui_showhistory.h"
 
-ShowHistory::ShowHistory(QWidget *parent)
+ShowHistory::ShowHistory(QWidget *parent) // permite ver los hitoriales
     : QDialog(parent)
     , ui(new Ui::ShowHistory)
 {
@@ -15,16 +15,5 @@ ShowHistory::~ShowHistory()
 
 
 void ShowHistory::printData(QString var){
-    ui->historyLabel->setText(var);
+    ui->historyLabel->setText(var); // Toma un strign y lo muestra
 }
-
-
-/**
-void ColaMounstros::printColaMounstros(){
-    QString var = "";
-    for(int i = 0; i < colaMounstros->getCantItems(); i++ ){
-        var += colaMounstros->getElementoEnIndice(i)->type + "\n";
-    }
-    ui->infoColaMounstros->setText(var);
-}
-**/

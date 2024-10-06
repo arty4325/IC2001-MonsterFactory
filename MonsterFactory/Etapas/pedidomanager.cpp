@@ -28,56 +28,50 @@ void PedidoManager::run()
             continue;
         }
         try {
-            QString readString;
+            QString readString; // Se instancia el manejador de archivos para poder guardar la informacion en la bitacora
             readTextFiles* read = new readTextFiles();
             readString = read->readTextFilesInFolder();
 
-            QStringList partes = readString.split(QRegularExpression("t="));
-            for (const QString &parte : partes) {
-                QString instanceString = "";
-                QStringList partesPedido = parte.split(QRegularExpression("\n"));
+            QStringList partes = readString.split(QRegularExpression("t=")); // Se hace un split de los textos con las apariciones de t=
+            for (const QString &parte : partes) { // Se itera sobre ese string
+                QString instanceString = ""; // Se crea un string vacio en donde se almacenara lo que nos interese
+                QStringList partesPedido = parte.split(QRegularExpression("\n")); // Se hace split cuando hay un enter
 
-                // Empieza desde el índice 3 para concatenar el resto de elementos
+                // Empieza desde el índice 3 por que es donde aparecen los elementos que nos interesan
                 for (int i = 3; i < partesPedido.size(); ++i) {
-                    instanceString += partesPedido[i] + "=";
+                    instanceString += partesPedido[i] + "="; // Concatena los elementos que no sinteresan
                 }
 
-                // Quita el último '=' si lo deseas
                 if (!instanceString.isEmpty() && instanceString.endsWith("=")) {
-                   instanceString.chop(1); // Elimina el último caracter '='
+                   instanceString.chop(1);
                 }
-                //qDebug() << instanceString << instanceString.length();
+
                 readTextFiles* readingStructures = new readTextFiles();
                 if(partesPedido.size() > 1){
-                    if(partesPedido[1] == "1ST PROGRA"){
-                        //qDebug() << "Primera P " << instanceString << partesPedido.size() - 4;
-                        // Instancio Pedido
-                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 4);
+                    if(partesPedido[1] == "1ST PROGRA"){ // Como todo el archivo de texto se tiene separado se puede ver si el pedido es de prioridad
+                        // CASO para los pedidos de prioridad
+                        Pedido* pedido = new Pedido(instanceString, partesPedido.size() - 4); // Se instancia un pedido
                         readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaPedidosItinerario.txt",
                                                             instanceString + "=Primera Prioridad" + "=" +QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
-                        pedido->ChangeMax(partesPedido.size() - 4);
-                        listaPedidosPrioridad->incert(pedido);
+                        pedido->ChangeMax(partesPedido.size() - 4); // Se guarda la informacion de ese pedido en memoria
+                        listaPedidosPrioridad->incert(pedido); // Se incerta ese pedido en una lista de pedidos prioritarios para despues manejarlo
 
                     } else if (partesPedido[1] != "1ST PROGRA") {
-                        //qDebug() << "Segunda P" << instanceString << partesPedido.size() - 4;
-                        Pedido* pedidoNotPriority = new Pedido(instanceString, partesPedido.size() - 4);
+                        // En este caso el pedido no es de prioridad
+                        Pedido* pedidoNotPriority = new Pedido(instanceString, partesPedido.size() - 4); // Igualmente se instancia un pedido
                         readingStructures ->appendTextToFile("C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaPedidosItinerario.txt",
                                                             instanceString + "=Segunda Prioridad" + "=" +QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss"));
+                        // Se guarda la informacion de este pedido en memoria
                         pedidoNotPriority->ChangeMax(partesPedido.size() - 4);
                         listaPedidos -> incert(pedidoNotPriority);
                     }
                 }
             }
         } catch (...) {
-            //qDebug() << "An error occurred.";
+            ;
         }
 
-        // Ya aqui se terminaron de procesar las solicitudes, tengo que comenzar a procesar los pedidos
-
-
-
-        //qDebug() << read ->readTextFilesInFolder();
-
+        // LLegados a este punto se pararon las solicuted
         QThread::sleep(this->sleepTime);
     }
 }

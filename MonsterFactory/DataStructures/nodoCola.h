@@ -6,7 +6,7 @@ template <typename T>
 class nodoCola {
 public:
     T data;
-    nodoCola* next;
+    nodoCola* next; // Solo tiene next por su naturaleza de cola
 
     nodoCola(){
         data = 0;

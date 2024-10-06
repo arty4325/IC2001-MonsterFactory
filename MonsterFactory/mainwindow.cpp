@@ -22,8 +22,8 @@
 #include "ReadingStructures/readtextfiles.h"
 
 
+
 readTextFiles* readingStructure = new readTextFiles();
-// Esto despues se tiene que hacer mas lindo por que si no va a terminar siendo un desastre
 Cola<Energia*>* colaEnergia = new Cola<Energia*>();
 Cola<Maldad*>* colaMaldad = new Cola<Maldad*>();
 Cola<Materia*>* colaMateria = new Cola<Materia*>();
@@ -73,7 +73,7 @@ LabelThread* labelThread = new LabelThread(1, colaEnergia, colaMaldad, colaMater
 
 
 
-// Calidad lets go
+// Calidad
 
 Calidad* calidad = new Calidad(1, colaCalidad, basurero, almacen);
 
@@ -84,6 +84,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    // Esto crea las ventanas que permiten ver el setado de la fabrica en tiempo real
     _colaMounstros = new ColaMounstros(this, colaMounstros);
     itinerarioHorno = new ItinerarioHorno(this, primeraBandeja, segundaBandeja, terceraBandeja, cuartaBandeja);
     verAlmacen = new VerAlmacen(this, listaAlmacen);
@@ -93,17 +94,14 @@ MainWindow::MainWindow(QWidget *parent)
     verShowHistory = new ShowHistory(this);
     ui->setupUi(this);
     energyThread -> start();
-    //energyThread -> setLabel(ui->energyLabel);
     labelThread -> setEmergyLabel(ui->energyLabel);
-    maldadThread -> start();
-    //maldadThread -> setLabel(ui->maldadLabel);
+    maldadThread -> start();;
     labelThread -> setMaldadLabel(ui->maldadLabel);
     materiaThread -> start();
     labelThread -> setMateriaLabel(ui->materiaLabel);
     combinador -> start();
     labelThread -> setMounstroLabel(ui->mounstrosLabel);
     labelThread -> setBasureroLabel(ui->basureroLabel);
-    // Label de horno
     labelThread -> setHorno1Label(ui->bandeja1Label);
     labelThread -> setHorno2Label(ui->bandeja2Label);
     labelThread -> setHorno3Label(ui->bandeja3Label);
@@ -130,25 +128,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_maldadSpinBox_valueChanged(int arg1)
 {
-    qDebug() << arg1;
     maldadThread -> changeTime(arg1);
 }
 
 void MainWindow::on_materiaSpinBox_valueChanged(int arg1)
 {
-    qDebug() << arg1;
     materiaThread -> changeTime(arg1);
 }
 
 void MainWindow::on_energiaSpinBox_valueChanged(int arg1)
 {
-    qDebug() << arg1;
     energyThread -> changeTime(arg1);
 }
 
 void MainWindow::on_combinadorSpinBox_valueChanged(int arg1)
 {
-    qDebug() << arg1;
     combinador -> changeTime(arg1);
 }
 
@@ -158,26 +152,18 @@ void MainWindow::on_combinadorSpinBox_valueChanged(int arg1)
 
 void MainWindow::on_checkBox_stateChanged(int arg1)
 {
-    // Pausa Energia
-    qDebug() << arg1;
     energyThread->stop(arg1);
-
 }
 
 
 void MainWindow::on_checkBox_2_stateChanged(int arg1)
 {
-    // Pausa Materia
-    qDebug() << arg1;
     materiaThread -> stop(arg1);
-
 }
 
 
 void MainWindow::on_checkBox_3_stateChanged(int arg1)
 {
-    // Pausa Maldad
-    qDebug() << arg1;
     maldadThread -> stop(arg1);
 
 }
@@ -185,16 +171,12 @@ void MainWindow::on_checkBox_3_stateChanged(int arg1)
 
 void MainWindow::on_checkBox_4_stateChanged(int arg1)
 {
-    // Pausa Combinador (Generador de Mounstros)
-    qDebug() << arg1;
     combinador -> stop(arg1);
 }
 
 
 void MainWindow::on_spinBox_valueChanged(int arg1)
 {
-    // Cambiar el tamaño de lista Energia
-    //qDebug() << (colaEnergia->getCantItems() > arg1) << " " << colaEnergia -> getCantItems() << " " << arg1;
     colaEnergia->changeMax(arg1);
 
 }
@@ -202,16 +184,12 @@ void MainWindow::on_spinBox_valueChanged(int arg1)
 
 void MainWindow::on_spinBox_2_valueChanged(int arg1)
 {
-    // Cambiar el tamano de la lista materia
-    //qDebug() << (colaMateria->getCantItems() > arg1) << " " << colaMateria -> getCantItems() << " " << arg1;
     colaMateria->changeMax(arg1);
 }
 
 
 void MainWindow::on_spinBox_3_valueChanged(int arg1)
 {
-    // Cambiar el tamano de la lista maldad
-    //qDebug() << (colaMaldad->getCantItems() > arg1) << " " << colaMaldad -> getCantItems() << " " << arg1;
     colaMaldad->changeMax(arg1);
 
 }
@@ -222,63 +200,54 @@ void MainWindow::on_spinBox_3_valueChanged(int arg1)
 
 void MainWindow::on_hornoSpinBox_valueChanged(int arg1)
 {
-    // Aqui se cambia el tiempo del horno
     horno -> changeTime(arg1);
 }
 
 
 void MainWindow::on_bandeja1CheckBox_stateChanged(int arg1)
 {
-    // Parar o reanudar bandeja 1
     horno ->changeFirstBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja2CheckBox_stateChanged(int arg1)
 {
-    // Parar o reanudar bandeja 2
     horno ->changeSecondBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja3CheckBox_stateChanged(int arg1)
 {
-    // Parar o reanudar bandeja 3
     horno ->changeThirdBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja4CheckBox_stateChanged(int arg1)
 {
-    // Parar o reanudar bandeja 4
     horno ->changeFourthBlocked(arg1);
 }
 
 
 void MainWindow::on_bandeja1SpinBox_valueChanged(int arg1)
 {
-    // Cant items bandeja 1
     horno -> changeMaxPrimeraBandeja(arg1);
 }
 
 
 void MainWindow::on_bandeja2SpinBox_valueChanged(int arg1)
 {
-    // Cant items bandeja 2
     horno -> changeMaxSegundaBandeja(arg1);
 }
 
 
 void MainWindow::on_bandeja3SpinBox_valueChanged(int arg1)
 {
-    // Cant items bandeja 3
     horno -> changeMaxTerceraBandeja(arg1);
 }
 
 
 void MainWindow::on_bandeja4SpinBox_valueChanged(int arg1)
 {
-    // Cant items bandeja 4
     horno -> changeMaxCuartaBandeja(arg1);
 }
 
@@ -291,42 +260,33 @@ void MainWindow::on_calidadSpinBox_valueChanged(int arg1)
 
 void MainWindow::on_bandeja2CheckBox_2_stateChanged(int arg1)
 {
-    // Se pausa o reanuda calidad
     calidad ->stop(arg1);
 }
 
 
 void MainWindow::on_inspector1SpinBox_valueChanged(int arg1)
 {
-    // Cambiar primera probabilidad
     calidad ->changeFirstProbability(arg1);
 }
 
 
 void MainWindow::on_inspector2SpinBox_valueChanged(int arg1)
 {
-    // Cambiar segunda probabilidad
     calidad -> changeSecondProbability(arg1);
 }
 
 
 #include <QTimer>
 
-// Suponiendo que _colaMounstros es un puntero a un objeto ColaMounstros
 void MainWindow::on_pushButton_clicked()
 {
-    // Mostrar la ventana modal de ColaMounstros
     _colaMounstros->show();
 
     // Crear un temporizador
     QTimer* timer = new QTimer(this);
-
-    // Conectar el temporizador para que ejecute el método `printColaMounstros` cada vez que el temporizador emita la señal
     connect(timer, &QTimer::timeout, [=]() {
         _colaMounstros->printColaMounstros();
     });
-
-    // Establecer que el temporizador se dispare cada 1000 milisegundos (1 segundo)
     timer->start(1000);
 }
 
@@ -392,8 +352,6 @@ void MainWindow::on_pedidos_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    // COLA MOUNSROS HISTORIAL
-    //qDebug() << readingStructure->read(1);
     verShowHistory -> show();
     verShowHistory ->printData(readingStructure->read(1));
 }
@@ -401,8 +359,6 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()
 {
-    // HORNO HISTORIAL
-    //qDebug() << readingStructure->read(2);
     verShowHistory -> show();
     verShowHistory ->printData(readingStructure->read(2));
 }
@@ -410,8 +366,6 @@ void MainWindow::on_pushButton_3_clicked()
 
 void MainWindow::on_historialPrimerInspector_clicked()
 {
-    // PRIMER INSPECTOR HISTORIAL
-    //qDebug() << readingStructure->read(3);
     verShowHistory -> show();
     verShowHistory ->printData(readingStructure->read(3));
 }
@@ -419,8 +373,6 @@ void MainWindow::on_historialPrimerInspector_clicked()
 
 void MainWindow::on_historialSegundoInspector_clicked()
 {
-    // SEGUNDO INSPECTOR HISTORIAL
-    //qDebug() << readingStructure->read(4);
     verShowHistory -> show();
     verShowHistory ->printData(readingStructure->read(4));
 }
@@ -428,8 +380,6 @@ void MainWindow::on_historialSegundoInspector_clicked()
 
 void MainWindow::on_historialEntregados_clicked()
 {
-    // ENTREGADOS HISTORIAL
-    //qDebug() << readingStructure->read(5);
     verShowHistory -> show();
     verShowHistory ->printData(readingStructure->read(5));
 }
@@ -437,6 +387,7 @@ void MainWindow::on_historialEntregados_clicked()
 
 void MainWindow::on_historialAlmacen_clicked()
 {
+    // Como el almacen cambia en tiempo real si el pedido esta entregado o no, se arma en ejecucion el historial
     QString var = "";
     for(int i = 0; i < colaAlmacen->cantItems; i++){
         Mounstro* mounstroAlmacen;
@@ -455,7 +406,6 @@ void MainWindow::on_historialAlmacen_clicked()
             ;
 
     }
-    //qDebug() << var;
     verShowHistory -> show();
     verShowHistory -> printData(var);
 }
@@ -463,13 +413,9 @@ void MainWindow::on_historialAlmacen_clicked()
 
 void MainWindow::on_historialPedidos_clicked()
 {
-    // Leer los datos con readingStructure -> read(6)
+
     QString data = readingStructure->read(6);
-
-    // Reemplazar todos los '=' por ' ' en la cadena
     data.replace("=", " ");
-
-    // Mostrar la ventana y los datos modificados
     verShowHistory->show();
     verShowHistory->printData(data);
 }

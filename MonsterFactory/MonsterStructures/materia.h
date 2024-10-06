@@ -12,7 +12,7 @@ public:
     QString type;
     int ranDes;
     Materia(){
-        ranDes =  QRandomGenerator::global()->bounded(1, 4);
+        ranDes =  QRandomGenerator::global()->bounded(1, 4); // Esto permite obtener un numero random del 1 al 3 con el que se escogera una materia arbitraria
         if(ranDes == 1){
             type = "Organico";
         } else if (ranDes == 2){

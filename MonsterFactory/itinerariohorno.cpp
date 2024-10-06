@@ -4,7 +4,7 @@
 ItinerarioHorno::ItinerarioHorno(QWidget *parent, Cola<Mounstro*>* primeraBandeja, Cola<Mounstro*>* segundaBandeja,
                                  Cola<Mounstro*>* terceraBandeja, Cola<Mounstro*>* cuartaBandeja)
     : QDialog(parent)
-    , ui(new Ui::ItinerarioHorno)
+    , ui(new Ui::ItinerarioHorno) // Ventana que permite ver en tiempo real el horno
 {
     ui->setupUi(this);
     this->primeraBandeja = primeraBandeja;
@@ -19,7 +19,7 @@ ItinerarioHorno::~ItinerarioHorno()
 }
 
 
-void ItinerarioHorno::printHorno(){
+void ItinerarioHorno::printHorno(){ // toma todas las bandejas y le da al usuario cuales mounstros estan en ella en tiempo real
     QString varPrimeraBandeja = "";
     QString varSegundaBandeja = "";
     QString varTerceraBandeja = "";
@@ -41,13 +41,3 @@ void ItinerarioHorno::printHorno(){
     ui->bandeja3->setText(varTerceraBandeja);
     ui->bandeja4->setText(varCuartaBandeja);
 }
-
-/**
-void ColaMounstros::printColaMounstros(){
-    QString var = "";
-    for(int i = 0; i < colaMounstros->getCantItems(); i++ ){
-        var += colaMounstros->getElementoEnIndice(i)->type + "\n";
-    }
-    ui->infoColaMounstros->setText(var);
-}
-**/

@@ -45,7 +45,7 @@ public:
         tiempoEntrega = QDateTime();
 
     }
-    Mounstro(QString _energia, QString _material, QString _maldad){
+    Mounstro(QString _energia, QString _material, QString _maldad){ // Se toma la materia creada y se van creando los mounstros
         energia = _energia;
         material = _material;
         maldad = _maldad;

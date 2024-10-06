@@ -4,7 +4,7 @@
 #include "MonsterStructures/mounstro.h"
 
 
-ColaMounstros::ColaMounstros(QWidget *parent, Cola<Mounstro*>* colaMounstros) :
+ColaMounstros::ColaMounstros(QWidget *parent, Cola<Mounstro*>* colaMounstros) : // ventana para ver en tiempo real que esta en la cola de mousntros
     QDialog(parent),
     ui(new Ui::ColaMounstros)
 {
@@ -18,7 +18,7 @@ ColaMounstros::~ColaMounstros()
 }
 
 
-void ColaMounstros::printColaMounstros(){
+void ColaMounstros::printColaMounstros(){ // toma todos los elementos de la cola de mousntros y los despliega en pantalla
     QString var = "";
     for(int i = 0; i < colaMounstros->getCantItems(); i++ ){
         var += colaMounstros->getElementoEnIndice(i)->type + "\n";

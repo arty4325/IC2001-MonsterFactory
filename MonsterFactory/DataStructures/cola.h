@@ -18,8 +18,8 @@
 template <typename T>
 class Cola {
 public:
-    int cantItems = 0;
-    int maxCant;
+    int cantItems = 0; // La cantidad de elementos que tiene esta cola
+    int maxCant; // La maxima cantidad de elementos que puede llegar a tener esta cola
     nodoCola<T>* primerNodo = nullptr;
     nodoCola<T>* ultimoNodo = nullptr;
     Cola(){
@@ -40,9 +40,7 @@ public:
     void changeMax(int val){
         if(val > cantItems){
             maxCant = val;
-            //qDebug() << "Se logro cambiar";
         } else {
-            //qDebug() << "No se permite este cambio";
         }
     }
 
@@ -62,12 +60,12 @@ public:
         }
     }
 
-    void push(T _data) {
+    void push(T _data) { // Se quiere poner mas informacion en la cola
         nodoCola<T>* nodo = new nodoCola<T>();
         nodo->data = _data;
         nodo->next = nullptr;
 
-        if(cantItems < maxCant){
+        if(cantItems < maxCant){ // Se revisa si la cola esta llena
             if (isEmpty()) {
                 primerNodo = ultimoNodo = nodo;
             } else {
@@ -76,11 +74,11 @@ public:
             }
             cantItems += 1;
         } else {
-            //qDebug() << "La lista esta llena";
+            // La lista esta llena
         }
     }
 
-    nodoCola<T>* pop() {
+    nodoCola<T>* pop() { // Elimina un nodo y lo devuelve
         if (isEmpty()) {
             return nullptr;
         }
@@ -97,14 +95,14 @@ public:
         return nodoEliminar;
     }
 
-    nodoCola<T>* peck() const {
+    nodoCola<T>* peck() const { // Ve un nodo
         if (isEmpty()) {
             return nullptr;
         }
         return primerNodo;
     }
 
-    T getElementoEnIndice(int indice) const {
+    T getElementoEnIndice(int indice) const { // Esto no es perteneciente a una cola, pero para efectos de mostrar informacion, se puede recorrer la cola
         if (indice < 0 || indice >= cantItems) {
             throw std::out_of_range("Índice fuera de rango");  // Manejo de error si el índice no es válido
         }
@@ -124,7 +122,6 @@ public:
 };
 
 
-// Ahora viene la cola FiFo
 
 
 

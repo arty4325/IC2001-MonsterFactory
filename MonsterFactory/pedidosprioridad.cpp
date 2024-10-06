@@ -1,7 +1,7 @@
 #include "pedidosprioridad.h"
 #include "ui_pedidosprioridad.h"
 
-PedidosPrioridad::PedidosPrioridad(QWidget *parent, ListaOrdenada<Pedido*>* listaPedidosPrioridad)
+PedidosPrioridad::PedidosPrioridad(QWidget *parent, ListaOrdenada<Pedido*>* listaPedidosPrioridad) // Laben permite ver los pedidos en prioridad
     : QDialog(parent)
     , ui(new Ui::PedidosPrioridad)
 {
@@ -15,7 +15,7 @@ PedidosPrioridad::~PedidosPrioridad()
 }
 
 
-void PedidosPrioridad::printPedidosPrioridad(){
+void PedidosPrioridad::printPedidosPrioridad(){ // Toma los pedidios que estan en prioridad y los mustra
     QString var = "";
     for(int i = 0; i < listaPedidosPrioridad->cantItems; i++){
         var += listaPedidosPrioridad->ver(i)->getName();
@@ -25,12 +25,3 @@ void PedidosPrioridad::printPedidosPrioridad(){
 
 
 
-/**
-void ColaMounstros::printColaMounstros(){
-    QString var = "";
-    for(int i = 0; i < colaMounstros->getCantItems(); i++ ){
-        var += colaMounstros->getElementoEnIndice(i)->type + "\n";
-    }
-    ui->infoColaMounstros->setText(var);
-}
-**/

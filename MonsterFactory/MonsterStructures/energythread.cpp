@@ -8,10 +8,9 @@ EnergyThread::EnergyThread(int sleepTime, Cola<Energia*>* cola) {
     this->sleepTime = sleepTime;
     this->cola = cola;
     this->running = true;
-    //this->queueLabel;
 }
 
-void EnergyThread::run()
+void EnergyThread::run() // Este es un hilo que va creando energia
 {
     this->running = true;
     while(true) {
@@ -25,32 +24,21 @@ void EnergyThread::run()
             secondsLeft--;
         }
 
-        Energia* energia = new Energia();
-        cola->push(energia);
-        //QString maxItems = QString::number(cola->maxCant);
-        //QString cantItems = QString::number(cola->getCantItems());
-        //queueLabel -> setText("Size Cola: " + maxItems + " - " + "Cant Items Cola: " + cantItems);
-        //qDebug() << energia->type;
+        Energia* energia = new Energia(); // Instancia una energia
+        cola->push(energia); // Y la guarda dentro de una cola energia
     }
 }
 
-/**
-void EnergyThread::setLabel(QLabel* label){
-    this->queueLabel = label;
-}
-**/
 
 
-void EnergyThread::changeTime(int time){
+void EnergyThread::changeTime(int time){ // Esto puede cambiar la velocidad a la que se van a estar creando estos items
     this-> sleepTime = time;
 }
 
-void EnergyThread::stop(int val){
+void EnergyThread::stop(int val){ // Funcion permite parar momentaneamente el hilo
     if(val == 2){
-        qDebug() << "Tengo que parar esta vara";
         this->running = false;
     } else {
-        qDebug() << "La tengo que reanudar";
         this->running = true;
     }
 }

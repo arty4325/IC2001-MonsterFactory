@@ -7,22 +7,21 @@
 
 readTextFiles::readTextFiles() {}
 
-QString readTextFiles::readTextFilesInFolder() {
-    QString folderPath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/ReadingStructures/ClientFiles";
+QString readTextFiles::readTextFilesInFolder() { // Esta funcion permite leer todo lo de todos los txt que estan en un folder
+    QString folderPath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/ReadingStructures/ClientFiles"; // La direccion a la que se lee
     QDir directory(folderPath);
     QStringList filters;
     QString retVar = "";
-    filters << "*.txt";
+    filters << "*.txt"; // Y que es a una direccion de tipo txt
     QStringList txtFiles = directory.entryList(filters, QDir::Files);
 
-    for (const QString& fileName : txtFiles) {
+    for (const QString& fileName : txtFiles) { // Se itera sobre los archivos que estan en el archivo
         // Verificar si el archivo ya fue renombrado con '=read'
         if (fileName.endsWith("=read.txt")) {
-            //qDebug() << "Saltando archivo ya leído:" << fileName;
             continue;  // Saltar el archivo si ya fue leído
         }
 
-        QString filePath = directory.absoluteFilePath(fileName);
+        QString filePath = directory.absoluteFilePath(fileName); // En el caso en el que el archivo no haya sido leido se continua
         QFile file(filePath);
 
         // Abre el archivo y lo lee
@@ -31,48 +30,47 @@ QString readTextFiles::readTextFilesInFolder() {
             retVar += in.readAll() +"\n" + fileName + "t=";
             file.close();  // Cierra el archivo después de leerlo
 
-            // Renombra el archivo: insertamos '=read' antes de la extensión .txt
+            // Quiero ponerle a los archivos que ya lei, la terminacion =read para no volver a leerlos
             QString baseName = fileName.left(fileName.lastIndexOf('.'));  // Obtener el nombre sin la extensión
             QString newFileName = baseName + "=read.txt";  // Agregar '=read' antes de la extensión
             QString newFilePath = directory.absoluteFilePath(newFileName);
 
             if (!file.rename(newFilePath)) {
-                //qDebug() << "No se pudo renombrar el archivo:" << fileName;
+                // No se pudo renombrar el archivo
             } else {
-                qDebug() << "Archivo renombrado a:" << newFileName;
+                // El archivo fue renombrado con exito
             }
         } else {
-            //qDebug() << "No se pudo abrir el archivo:" << fileName;
+            // En este caso no se pudo leer el archivo
         }
     }
 
     return retVar;
 }
 
-void readTextFiles::appendTextToFile(const QString& filePath, const QString& textToAdd) {
+void readTextFiles::appendTextToFile(const QString& filePath, const QString& textToAdd) { // Esta funcion lo que quiere es a un archivo, agregarle texto
     QFile file(filePath);
     QDir dir = QFileInfo(filePath).absoluteDir();
 
-    // Crear directorios si no existen
+    // Si el filePath que se esta pasando no existe, es creado
     if (!dir.exists()) {
         if (!dir.mkpath(".")) {
-            qDebug() << "No se pudieron crear los directorios:" << dir.path();
+            // Esto ocurre si no se pudo crear el directorio por alguna razon
             return;
         }
     }
 
-    // Abrir el archivo en modo de escritura (WriteOnly) y añadir al final (Append)
+    // Se abre el archivo, observe que esta en writeOnly, y Append para que no se pierda lo qeu se tiene
     if (file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)) {
         QTextStream out(&file);
         out << textToAdd << "\n";  // Escribe el texto en el archivo y añade un salto de línea
         file.close();
-        qDebug() << "Texto añadido correctamente a:" << filePath;
     } else {
-        qDebug() << "No se pudo abrir el archivo para escribir:" << filePath;
+        // Esto se ejecuta si no se pudo completar la accion
     }
 }
 
-QString readTextFiles::read(int option) {
+QString readTextFiles::read(int option) { // Funcion unicamente lee todo lo que esta en un txt dada una clave de su direccion
     QString filePath;
 
     // Seleccionar archivo basado en el número de opción
@@ -94,22 +92,14 @@ QString readTextFiles::read(int option) {
         break;
     case 6:
         filePath = "C:/Users/artur/OneDrive/Escritorio/ITCR/IIS2024/Estructuras de Datos/Proyectos/IC2001-MonsterFactory/MonsterFactory/Historicos/colaPedidosItinerario.txt";
-        break;
-    // ME FALTA ALMACEN Y COLA PEDIDOS CLIENTES
-
-    // Agrega más casos para otras opciones
-    // case 3:
-    //     filePath = "ruta/a/otroArchivo.txt";
-    //     break;
     default:
-        qDebug() << "Opción no válida.";
         return "";
     }
 
     // Intentar abrir el archivo seleccionado
     QFile file(filePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "No se pudo abrir el archivo:" << filePath;
+        // No se pudo abrir el archivo seleccionado
         return "";
     }
 
@@ -118,6 +108,6 @@ QString readTextFiles::read(int option) {
     QString content = in.readAll();
     file.close();  // Cerrar el archivo
 
-    return content;
+    return content; // Se devuelve todo el contenido del archivo plano de texto
 }
 

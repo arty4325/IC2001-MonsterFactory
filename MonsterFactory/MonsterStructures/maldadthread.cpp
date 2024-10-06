@@ -7,7 +7,6 @@ MaldadThread::MaldadThread(int sleepTime, Cola<Maldad*>* cola) {
     this->sleepTime = sleepTime;
     this->cola = cola;
     this->running = true;
-    //this->queueLabel;
 }
 
 void MaldadThread::run()
@@ -25,20 +24,10 @@ void MaldadThread::run()
             secondsLeft--;
         }
 
-        Maldad* maldad = new Maldad();
-        cola->push(maldad);
-        //QString maxItems = QString::number(cola->maxCant);
-        //QString cantItems = QString::number(cola->getCantItems());
-        //queueLabel -> setText("Size Cola: " + maxItems + " - " + "Cant Items Cola: " + cantItems);
-        //qDebug() << maldad->type;
+        Maldad* maldad = new Maldad(); // Instancia un objeto de maldad
+        cola->push(maldad); // Pone ese objeto en la cola
     }
 }
-
-/**
-void MaldadThread::setLabel(QLabel* label){
-    this->queueLabel = label;
-}
-**/
 
 void MaldadThread::changeTime(int time){
     this-> sleepTime = time;
@@ -46,10 +35,8 @@ void MaldadThread::changeTime(int time){
 
 void MaldadThread::stop(int val){
     if(val == 2){
-        qDebug() << "Tengo que parar esta vara";
         this->running = false;
     } else {
-        qDebug() << "La tengo que reanudar";
         this->running = true;
     }
 }

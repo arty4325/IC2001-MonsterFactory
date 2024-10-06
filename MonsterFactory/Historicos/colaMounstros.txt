@@ -84,3 +84,11 @@ Veneno Consecutivo: 22 Capacidad: 20 Cantidad 2
 Veneno Consecutivo: 26 Capacidad: 20 Cantidad 1
 Regeneracion Consecutivo: 32 Capacidad: 20 Cantidad 1
 Inteligencia Consecutivo: 34 Capacidad: 20 Cantidad 1
+Locura Consecutivo: 5 Capacidad: 20 Cantidad 1
+Inteligencia Consecutivo: 7 Capacidad: 20 Cantidad 1
+Velocidad Consecutivo: 8 Capacidad: 20 Cantidad 1
+Locura Consecutivo: 9 Capacidad: 20 Cantidad 2
+Tecnologia Consecutivo: 12 Capacidad: 20 Cantidad 1
+Tecnologia Consecutivo: 14 Capacidad: 20 Cantidad 1
+Locura Consecutivo: 16 Capacidad: 20 Cantidad 1
+Regeneracion Consecutivo: 18 Capacidad: 20 Cantidad 1

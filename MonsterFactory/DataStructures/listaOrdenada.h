@@ -32,7 +32,6 @@ public:
     T borrar(int indice) {
         // Verificar si el índice está dentro del rango
         if (indice < 0 || indice >= cantItems) {
-            qDebug() << "Índice fuera de rango: " << indice;
             return T();  // Devuelve un objeto por defecto si el índice es inválido
         }
 
@@ -98,7 +97,6 @@ public:
     // Método para ver el valor de un nodo en un índice específico
     T ver(int indice) const {
         if(indice < 0 || indice >= cantItems){
-            qDebug() << "Índice fuera de rango";
             return T();  // Devuelve un objeto por defecto si el índice es inválido
         }
 

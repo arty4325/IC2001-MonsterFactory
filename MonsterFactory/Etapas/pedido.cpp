@@ -2,7 +2,7 @@
 
 Pedido::Pedido() {}
 
-Pedido::Pedido(QString inputString, int cantItems){
+Pedido::Pedido(QString inputString, int cantItems){  // Constructor de pedido
     this->cantItems = cantItems;
     this->inputString = inputString;
 }

@@ -1,7 +1,7 @@
 #include "veralmacen.h"
 #include "ui_veralmacen.h"
 
-VerAlmacen::VerAlmacen(QWidget *parent, ListaOrdenada<Mounstro*>* listaAlmacen)
+VerAlmacen::VerAlmacen(QWidget *parent, ListaOrdenada<Mounstro*>* listaAlmacen) // Permite ver en tiempo real el almacen
     : QDialog(parent)
     , ui(new Ui::VerAlmacen)
 {
@@ -14,7 +14,7 @@ VerAlmacen::~VerAlmacen()
     delete ui;
 }
 
-void VerAlmacen::printAlmacen()
+void VerAlmacen::printAlmacen() // Toma la informacion del almacen y la muestra
 {
     QString var = "";
     for(int i = 0; i < listaAlmacen->size(); i++){
@@ -22,13 +22,3 @@ void VerAlmacen::printAlmacen()
     }
     ui->itemsAlmacen->setText(var);
 }
-
-/**
-void ColaMounstros::printColaMounstros(){
-    QString var = "";
-    for(int i = 0; i < colaMounstros->getCantItems(); i++ ){
-        var += colaMounstros->getElementoEnIndice(i)->type + "\n";
-    }
-    ui->infoColaMounstros->setText(var);
-}
-**/
