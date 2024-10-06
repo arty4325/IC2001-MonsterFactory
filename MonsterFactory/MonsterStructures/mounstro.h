@@ -26,6 +26,7 @@ public:
     QString cliente;
     QDateTime tiempoEntrega;
     QString pedido;
+    QDateTime enBasurero;
 
     Mounstro(){
         type = "";
@@ -43,6 +44,7 @@ public:
         enAlmacen = false;
         cliente = "";
         tiempoEntrega = QDateTime();
+        enBasurero = QDateTime();
 
     }
     Mounstro(QString _energia, QString _material, QString _maldad){ // Se toma la materia creada y se van creando los mounstros

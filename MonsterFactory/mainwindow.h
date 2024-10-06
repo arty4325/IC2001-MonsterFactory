@@ -103,6 +103,8 @@ private slots:
 
     void on_pausarTodo_stateChanged(int arg1);
 
+    void on_historialBasurero_clicked();
+
 private:
     Ui::MainWindow *ui;
     ColaMounstros* _colaMounstros;

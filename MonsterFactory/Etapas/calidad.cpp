@@ -41,6 +41,7 @@ void Calidad::run()
                                                             mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
                         // En el administrador de textos se guarda la informacion del itinerario de este inspector
                         basurero -> incert(mounstro); // Y este mounstro se va para el basurero ya que fue rechazado por este inspector
+                        mounstro ->enBasurero = QDateTime::currentDateTime();
                     }
 
                 } else {
@@ -65,6 +66,7 @@ void Calidad::run()
                                                                 mounstro->type + " Consecutivo: " + QString::number(mounstro->Consecutivo) + " Rechazado ");
                             // El evento tiene que ser guardado en el itinerario
                             basurero -> incert(mounstro); // En el basurero se guarda el mounstro
+                            mounstro ->enBasurero = QDateTime::currentDateTime();
                         }
                     } else {
                         // Si se llega a este punto quiere decir que me quede definitivamente con el mounstro y este continua el proceso de fabricacion

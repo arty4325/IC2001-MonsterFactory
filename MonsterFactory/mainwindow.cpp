@@ -433,3 +433,27 @@ void MainWindow::on_pausarTodo_stateChanged(int arg1)
     calidad -> stop(arg1);
 }
 
+
+void MainWindow::on_historialBasurero_clicked()
+{
+    Mounstro* mounstroBueno;
+    QString var = "";
+    for(int i = 0; i < basurero->cantItems; i++){
+        mounstroBueno = basurero->ver(i);
+        QString energia = mounstroBueno->energia;
+        QString materia = mounstroBueno -> material;
+        QString maldad = mounstroBueno -> maldad;
+        QString timeS = mounstroBueno ->enBasurero.toString("yyyy-MM-dd hh:mm:ss");
+        QString porInspector = mounstroBueno->fueRechazado ? "true" : "false";
+        var +=
+        energia + " " +
+        materia + " " +
+        maldad + " " +
+        timeS + " " +
+        porInspector +
+               "\n";
+    }
+    verShowHistory -> show();
+    verShowHistory -> printData(var);
+}
+

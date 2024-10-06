@@ -43,6 +43,7 @@ void Combinador::run()
             } else {
                 // Si se llega a este punto va para el basurero
                 this->basurero->incert(mounstro);
+                mounstro ->enBasurero = QDateTime::currentDateTime();
                 // Hay una lista basurero en la que todos estos elementos son incertados
             }
 

@@ -92,3 +92,13 @@ Tecnologia Consecutivo: 12 Capacidad: 20 Cantidad 1
 Tecnologia Consecutivo: 14 Capacidad: 20 Cantidad 1
 Locura Consecutivo: 16 Capacidad: 20 Cantidad 1
 Regeneracion Consecutivo: 18 Capacidad: 20 Cantidad 1
+Maldad Consecutivo: 3 Capacidad: 20 Cantidad 1
+Inteligencia Consecutivo: 8 Capacidad: 20 Cantidad 1
+Velocidad Consecutivo: 9 Capacidad: 20 Cantidad 1
+Locura Consecutivo: 3 Capacidad: 20 Cantidad 1
+Maldad Consecutivo: 9 Capacidad: 20 Cantidad 1
+Veneno Consecutivo: 14 Capacidad: 20 Cantidad 1
+Maldad Consecutivo: 15 Capacidad: 20 Cantidad 1
+Destruccion Consecutivo: 22 Capacidad: 20 Cantidad 1
+Tecnologia Consecutivo: 24 Capacidad: 20 Cantidad 1
+Inteligencia Consecutivo: 28 Capacidad: 20 Cantidad 1
